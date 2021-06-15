@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
 import { Card } from "react-bootstrap";
 import "../css/skills.css";
 
 export default function Skills() {
+	useEffect(() => {
+	  AOS.init({
+	    duration : 1000
+	  });
+	}, []);
   return (
 	<div className="skills-container" id="skills">
 		<h1 className="heading">Skills</h1>
 
 		<div className="skills">
-			<Card style={{ width: '18rem' }}>
+			<Card data-aos="fade-up" style={{ width: '18rem' }}>
 				  <Card.Body>
 				    <Card.Title>Frontend</Card.Title>
 				    <hr />
@@ -25,7 +31,7 @@ export default function Skills() {
 				  </Card.Body>
 				</Card>
 
-				<Card style={{ width: '18rem' }}>
+				<Card data-aos="fade-up" style={{ width: '18rem' }}>
 				  <Card.Body>
 				    <Card.Title>Backend</Card.Title>
 				    <hr />
@@ -40,7 +46,7 @@ export default function Skills() {
 				  </Card.Body>
 				</Card>
 
-				<Card style={{ width: '18rem' }}>
+				<Card data-aos="fade-up" style={{ width: '18rem' }}>
 				  <Card.Body>
 				    <Card.Title>Database</Card.Title>
 				    <hr />
@@ -53,7 +59,7 @@ export default function Skills() {
 				  </Card.Body>
 				</Card>
 
-				<Card style={{ width: '18rem' }}>
+				<Card data-aos="fade-up" style={{ width: '18rem' }}>
 				  <Card.Body>
 				    <Card.Title>Programming Languages</Card.Title>
 				    <hr />
@@ -68,7 +74,7 @@ export default function Skills() {
 				  </Card.Body>
 				</Card>
 
-				<Card style={{ width: '18rem' }}>
+				<Card data-aos="fade-up" style={{ width: '18rem' }}>
 				  <Card.Body>
 				    <Card.Title>Libraries and Frameworks</Card.Title>
 				    <hr />
@@ -83,7 +89,7 @@ export default function Skills() {
 				  </Card.Body>
 				</Card>
 
-				<Card style={{ width: '18rem' }}>
+				<Card data-aos="fade-up" style={{ width: '18rem' }}>
 				  <Card.Body>
 				    <Card.Title>Other</Card.Title>
 				    <hr />

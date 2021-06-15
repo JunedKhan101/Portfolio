@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Button, Card } from 'react-bootstrap';
+import AOS from "aos";
 import "../css/projects.css"
 
 export default function Projects() {
+	useEffect(() => {
+	  AOS.init({
+	    duration : 1000
+	  });
+	}, []);
   return (
   	<div className="projects-container" id="projects">
   		<h1 className="heading">Projects</h1>
 		<div className="projects">
-				<Card style={{ width: '18rem' }}>
+				<Card data-aos="fade-up" style={{ width: '18rem' }}>
 				  <Card.Img variant="top" src="static/img1.jpg" />
 				  <Card.Body>
 				    <Card.Title>Password Manager and Note Taking</Card.Title>
@@ -20,7 +26,7 @@ export default function Projects() {
 				  </Card.Body>
 				</Card>
 
-				<Card style={{ width: '18rem' }}>
+				<Card data-aos="fade-up" style={{ width: '18rem' }}>
 				  <Card.Img variant="top" src="static/img2.jpg" />
 				  <Card.Body>
 				    <Card.Title>Nutrial</Card.Title>
@@ -33,7 +39,7 @@ export default function Projects() {
 				  </Card.Body>
 				</Card>
 
-				<Card style={{ width: '18rem' }}>
+				<Card data-aos="fade-up" style={{ width: '18rem' }}>
 				  <Card.Img variant="top" src="static/img3.jpg" />
 				  <Card.Body>
 				    <Card.Title>Quiz Game</Card.Title>
