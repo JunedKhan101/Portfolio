@@ -13,7 +13,6 @@ export default function Contact() {
 	    message: '',
   	});
   	const handleChange = (e) => {
-  		console.log(process.env.REACT_APP_SERVICEID);
     	setToSend({ ...toSend, [e.target.name]: e.target.value });
   	};
   	const onSubmit = (e) => {
@@ -24,12 +23,12 @@ export default function Contact() {
 	      toSend,
 	      process.env.REACT_APP_USERID
 	    )
-	      .then((response) => {
-	        console.log('SUCCESS!', response.status, response.text);
-	      })
-	      .catch((err) => {
-	        console.log('FAILED.', err);
-	      });
+	    .then((response) => {
+	      console.log('SUCCESS!', response.status, response.text);
+	    })
+	    .catch((err) => {
+	      console.log('FAILED.', err);
+	    });
   	};
 	return (
 		<div className="contact-container" id="contact">
@@ -53,19 +52,19 @@ export default function Contact() {
 					<form onSubmit={onSubmit} className="form">
 						<Form.Group controlId="name">
 							<Form.Label>Name</Form.Label>
-						    <Form.Control required onChange={handleChange} type="text" />
+						    <Form.Control required name="name" onChange={handleChange} type="text" />
 						 </Form.Group>
 						 <Form.Group controlId="email">
 						    <Form.Label>Email address</Form.Label>
-						    <Form.Control required onChange={handleChange} type="email" />
+						    <Form.Control required name="email" onChange={handleChange} type="email" />
 						</Form.Group>
 						<Form.Group controlId="subject">
 							<Form.Label>Subject</Form.Label>
-						    <Form.Control required onChange={handleChange} type="text" />
+						    <Form.Control required name="subject" onChange={handleChange} type="text" />
 						 </Form.Group>
 						<Form.Group controlId="message">
 						    <Form.Label>Message</Form.Label>
-						    <Form.Control required onChange={handleChange} as="textarea" rows={5} />
+						    <Form.Control required name="message" onChange={handleChange} as="textarea" rows={5} />
 						</Form.Group>
 						<Button variant="dark" type="submit">Submit</Button>
 					</form>
