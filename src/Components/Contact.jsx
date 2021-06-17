@@ -1,9 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
+import { send } from 'emailjs-com';
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import { SocialIcon } from 'react-social-icons';
 import "../css/contact.css";
+require('dotenv').config();
 
 export default function Contact() {
+	const [toSend, setToSend] = useState({
+	    name: '',
+	    subject: '',
+	    email: '',
+	    message: '',
+  	});
+  	const handleChange = (e) => {
+  		console.log(process.env.REACT_APP_SERVICEID);
+    	setToSend({ ...toSend, [e.target.name]: e.target.value });
+  	};
+  	const onSubmit = (e) => {
+    	e.preventDefault();
+    	send(
+	      process.env.REACT_APP_SERVICEID,
+	      process.env.REACT_APP_TEMPLATEID,
+	      toSend,
+	      process.env.REACT_APP_USERID
+	    )
+	      .then((response) => {
+	        console.log('SUCCESS!', response.status, response.text);
+	      })
+	      .catch((err) => {
+	        console.log('FAILED.', err);
+	      });
+  	};
 	return (
 		<div className="contact-container" id="contact">
 			<h1 className="heading">Contact</h1>
@@ -23,22 +50,22 @@ export default function Contact() {
 			<Col>
 				<div className="form-container">
 					<h2 className="heading">Send me a message</h2>
-					<form className="form">
-						<Form.Group controlId="Name">
+					<form onSubmit={onSubmit} className="form">
+						<Form.Group controlId="name">
 							<Form.Label>Name</Form.Label>
-						    <Form.Control type="text" />
+						    <Form.Control required onChange={handleChange} type="text" />
 						 </Form.Group>
-						 <Form.Group controlId="Email">
+						 <Form.Group controlId="email">
 						    <Form.Label>Email address</Form.Label>
-						    <Form.Control type="email" />
+						    <Form.Control required onChange={handleChange} type="email" />
 						</Form.Group>
-						<Form.Group controlId="Subject">
+						<Form.Group controlId="subject">
 							<Form.Label>Subject</Form.Label>
-						    <Form.Control type="text" />
+						    <Form.Control required onChange={handleChange} type="text" />
 						 </Form.Group>
-						<Form.Group controlId="Message">
+						<Form.Group controlId="message">
 						    <Form.Label>Message</Form.Label>
-						    <Form.Control as="textarea" rows={5} />
+						    <Form.Control required onChange={handleChange} as="textarea" rows={5} />
 						</Form.Group>
 						<Button variant="dark" type="submit">Submit</Button>
 					</form>
