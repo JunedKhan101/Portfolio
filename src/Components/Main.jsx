@@ -10,7 +10,7 @@ export default function Main() {
   return (
 	<div className="main">
 		<NavBar />
-		<div className="intro">
+		<div className="intro" id="intro">
 			<h1>Hi, I'm Juned Khan</h1>
 			<h1>I'm a Web Developer</h1>
 		</div>

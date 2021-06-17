@@ -10,9 +10,9 @@ export default function NavBar() {
     'justifyContent': 'space-around'
   };
   return (
-    <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+    <Navbar collapseOnSelect expand="lg" variant="light">
       <Container>
-	  <Navbar.Brand href="#home">Juned Khan</Navbar.Brand>
+	  <Navbar.Brand href="#intro">Juned Khan</Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav style={navstyle} className="mx-auto my-auto">
