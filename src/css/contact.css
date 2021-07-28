@@ -37,8 +37,9 @@
 }
 .btn-dark {
 	position: relative;
-	left: 43%;
+	left: 50%;
 	top: 20px;
+	transform: translateX(-50%);
 }
 .form-group {
 	padding-bottom: 10px;
