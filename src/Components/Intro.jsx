@@ -3,8 +3,8 @@ import "../css/intro.css";
 
 export default function Intro() {
   return (
-  	<div className="intro-container">
-  		<div className="profile" id="intro">
+  	<div className="intro-container" id="intro">
+  		<div className="profile">
 		    <img
 		      className="profileimg"
 		      src="static/profileimg2.jpg"
