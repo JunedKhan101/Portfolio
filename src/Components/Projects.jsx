@@ -21,8 +21,10 @@ export default function Projects() {
 				      Some quick example text to build on the card title and make up the bulk of
 				      the card's content.
 				    </Card.Text>
-				    <Button variant="outline-dark">Open/View</Button>&nbsp;
-				    <Button variant="outline-dark">Code</Button>
+				    <Button onClick={() => window.open("https://pwdmanager-and-notetaking.herokuapp.com/")}
+				    variant="outline-dark">Open/View</Button>&nbsp;
+				    <Button onClick={() => window.open("https://github.com/JunedKhan101/PWDManager-And-NoteTaking")} 
+				    variant="outline-dark">Code</Button>
 				  </Card.Body>
 				</Card>
 
@@ -34,8 +36,10 @@ export default function Projects() {
 				      Nutrition Analysis, Some quick example text to build on the card title and make up the bulk of
 				      the card's content.
 				    </Card.Text>
-				    <Button variant="outline-dark">Open/View</Button>&nbsp;
-				    <Button variant="outline-dark">Code</Button>
+				    <Button onClick={() => window.open("https://nutrial.herokuapp.com/")}
+				    variant="outline-dark">Open/View</Button>&nbsp;
+				    <Button onClick={() => window.open("https://github.com/JunedKhan101/NutriAl")}
+				    variant="outline-dark">Code</Button>
 				  </Card.Body>
 				</Card>
 
@@ -47,8 +51,10 @@ export default function Projects() {
 				      Some quick example text to build on the card title and make up the bulk of
 				      the card's content.
 				    </Card.Text>
-				    <Button variant="outline-dark">Open/View</Button>&nbsp;
-				    <Button variant="outline-dark">Code</Button>
+				    <Button onClick={() => window.open("https://quiz-game42101.herokuapp.com/")}
+				    variant="outline-dark">Open/View</Button>&nbsp;
+				    <Button onClick={() => window.open("https://github.com/JunedKhan101/Quiz-game")}
+				    variant="outline-dark">Code</Button>
 				  </Card.Body>
 				</Card>
 		</div>
