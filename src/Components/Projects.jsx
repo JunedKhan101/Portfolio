@@ -18,8 +18,7 @@ export default function Projects() {
 				  <Card.Body>
 				    <Card.Title>Password Manager and Note Taking</Card.Title>
 				    <Card.Text>
-				      Some quick example text to build on the card title and make up the bulk of
-				      the card's content.
+				      Built in Node.js, Express and EJS, that uses JWT Authentication.
 				    </Card.Text>
 				    <Button onClick={() => window.open("https://pwdmanager-and-notetaking.herokuapp.com/")}
 				    variant="outline-dark">Open/View</Button>&nbsp;
@@ -33,8 +32,9 @@ export default function Projects() {
 				  <Card.Body>
 				    <Card.Title>Nutrial</Card.Title>
 				    <Card.Text>
-				      Nutrition Analysis, Some quick example text to build on the card title and make up the bulk of
-				      the card's content.
+				      Nutrition Analysis, Built in React and react-router-dom and Chart.js.<br />
+				      Users can efficiently see the nutrients a food contains.<br />
+				      It returns basic and complex nutrients information, Graph view displays nutrients in a graph.<br />
 				    </Card.Text>
 				    <Button onClick={() => window.open("https://nutrial.herokuapp.com/")}
 				    variant="outline-dark">Open/View</Button>&nbsp;
@@ -48,8 +48,8 @@ export default function Projects() {
 				  <Card.Body>
 				    <Card.Title>Quiz Game</Card.Title>
 				    <Card.Text>
-				      Some quick example text to build on the card title and make up the bulk of
-				      the card's content.
+				      Built in React.js and Material UI.<br />
+				      It has form view and focused view, which displays all quiz like a form in form view and one at a time in focused view.
 				    </Card.Text>
 				    <Button onClick={() => window.open("https://quiz-game42101.herokuapp.com/")}
 				    variant="outline-dark">Open/View</Button>&nbsp;
