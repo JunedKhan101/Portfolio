@@ -11,18 +11,25 @@
 	margin: 0 auto;
 
 	position: relative;
-	top: 15%;
+	top: 25%;
+
+	border: 5px solid grey;
 }
 .profileimg {
 	width: 300px;
-	height: 400px;
+	height: 300px;
 	object-fit: cover;
 }
-.intro {
+.intro-text {
 	width: 100%;
 	height: 100%;
 	text-align: center;
 
 	position: relative;
-	top: 15%;
+	top: 25%;
+}
+.intro {
+	width: 100%;
+	height: 100%;
+	margin: auto auto;
 }
