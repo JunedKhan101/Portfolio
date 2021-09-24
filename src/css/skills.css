@@ -15,6 +15,9 @@
 	justify-content: center;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	grid-row-gap: 50px;
+
+	position: relative;
+	top: 50px;
 }
 #skills {
 	padding-top: 52px;
@@ -24,26 +27,16 @@ ul {
   list-style: square outside none;
 }
 .skills > .card {
-	/*box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-	border-radius: 20px;*/
 	border: none;
 	align-self: start;
 	justify-self: center;
-
-	position: relative;
-	top: 20px;
 }
-@media only screen and (max-width: 918px) {
+@media only screen and (max-width: 901px) {
 	.skills-container {
 		height: 150%;
 	}
 }
-@media only screen and (max-width: 718px) {
-	.skills-container{
-		height: 200%;
-	}
-}
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 601px) {
 	.skills-container{
 		height: 250%;
 	}
@@ -54,6 +47,6 @@ ul {
 		width: 80%;
 		margin: 0 auto;
 		position: relative;
-		top: 20%;
+		top: 10%;
 	}
 }

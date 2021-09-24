@@ -13,4 +13,9 @@
     position: relative;
     top: 50px;
 }
-.description { text-align: center; }
+.oneline-intro { text-align: center; }
+
+.sub-description {
+	position: relative;
+	top: 10%;
+}
