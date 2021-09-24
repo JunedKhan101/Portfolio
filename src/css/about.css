@@ -9,6 +9,8 @@
 
     padding-top: 52px;
     margin-top: -52px;
-}
 
- .description { text-align: center; }
+    position: relative;
+    top: 50px;
+}
+.description { text-align: center; }

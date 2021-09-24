@@ -11,7 +11,7 @@ export default function Projects() {
 	}, []);
   return (
   	<div className="projects-container" id="projects">
-  		<h1 className="heading">Projects</h1>
+  		<h1 className="projects-heading">Projects</h1>
 		<div className="projects">
 				<Card data-aos="fade-up" style={{ width: '18rem' }}>
 				  <Card.Img variant="top" src="static/img1.jpg" />

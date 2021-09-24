@@ -39,7 +39,7 @@ export default function Contact() {
   		if (bool === undefined) {
   			return (
   				<div>
-  				<h2 className="heading">Send me a message</h2>
+  				<h2 className="form-heading">Send me a message</h2>
   				<form onSubmit={onSubmit} className="form">
 						<Form.Group controlId="name">
 							<Form.Label>Name</Form.Label>
@@ -81,12 +81,13 @@ export default function Contact() {
   	}
 	return (
 		<div className="contact-container" id="contact">
-			<h1 className="heading">Contact</h1>
+			<h1 className="contact-heading">Contact</h1>
+			<small className="primary-email">junedkhanc101@gmail.com</small>
 			<Container className="contact">
 			<Row>
 			<Col>
 				<div className="social-media">
-					<h2 className="heading">Let's Chat!</h2>
+					<h2 className="chat-heading">Wanna Chat?</h2>
 					<div className="icons">
 						<SocialIcon target="_blank" url="https://www.linkedin.com/in/juned-khan-22b041204/" />
 						<SocialIcon target="_blank" url="https://twitter.com/JunedK101" />

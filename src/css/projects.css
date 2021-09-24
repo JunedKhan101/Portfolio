@@ -1,8 +1,11 @@
 .projects-container {
 	width: 100%;
 	height: 100%;
+
+	position: relative;
+	top: 0px;
 }
-.heading {
+.projects-heading {
 	text-align: center;
 }
 .projects {
@@ -22,14 +25,14 @@
 	position: relative;
 	top: 50px;
 }
-@media only screen and (max-width: 1068px) {
-	.projects-container, .projects {
-		height: 150%;
+@media only screen and (max-width: 1051px) {
+	.projects-container, .projects{
+		height: 200%;
 	}
 }
-@media only screen and (max-width: 717px) {
+@media only screen and (max-width: 701px) {
 	.projects-container, .projects {
-		height: 200%;
+		height: 250%;
 	}
 }
 #projects {

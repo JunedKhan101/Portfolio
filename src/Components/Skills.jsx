@@ -11,7 +11,7 @@ export default function Skills() {
 	}, []);
   return (
 	<div className="skills-container" id="skills">
-		<h1 className="heading">Skills</h1>
+		<h1 className="skills-heading">Skills</h1>
 
 		<div className="skills">
 			<Card data-aos="fade-up" style={{ width: '18rem' }}>
@@ -98,8 +98,6 @@ export default function Skills() {
 				      	<li>Data Visualization</li>
 				      	<li>Data Structures and Algorithms</li>
 				      	<li>Git and GitHub</li>
-				      	<li>Excel</li>
-				      	<li>GUI</li>
 				      </ul>
 				    </Card.Text>
 				  </Card.Body>

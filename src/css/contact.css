@@ -2,7 +2,7 @@
 	width: 100%;
 	height: 100%;
 	position: relative;
-	top: 100px;
+	top: 40%;
 }
 .contact {
 	width: 100%;
@@ -15,8 +15,11 @@
 	padding-top: 52px;
     margin-top: -52px;
 }
-.heading {
-	text-align: center;
+.contact-heading, .chat-heading, .form-heading { text-align: center; }
+.primary-email {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
 }
 .social-media {
 	width: 300px;
