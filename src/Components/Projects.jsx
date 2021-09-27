@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { Button, Card } from 'react-bootstrap';
 import AOS from "aos";
 import "../css/projects.css"
 
@@ -13,50 +12,33 @@ export default function Projects() {
   	<div className="projects-container" id="projects">
   		<h1 className="projects-heading">Projects</h1>
 		<div className="projects">
-				<Card data-aos="fade-up" style={{ width: '18rem' }}>
-				  <Card.Img variant="top" src="static/img1.jpg" />
-				  <Card.Body>
-				    <Card.Title>Password Manager and Note Taking</Card.Title>
-				    <Card.Text>
-				      Built in Node.js, Express and EJS, that uses JWT Authentication.
-				    </Card.Text>
-				    <Button onClick={() => window.open("https://pwdmanager-and-notetaking.herokuapp.com/")}
-				    variant="outline-dark">Open/View</Button>&nbsp;
-				    <Button onClick={() => window.open("https://github.com/JunedKhan101/PWDManager-And-NoteTaking")} 
-				    variant="outline-dark">Code</Button>
-				  </Card.Body>
-				</Card>
-
-				<Card data-aos="fade-up" style={{ width: '18rem' }}>
-				  <Card.Img variant="top" src="static/img2.jpg" />
-				  <Card.Body>
-				    <Card.Title>Nutrial</Card.Title>
-				    <Card.Text>
-				      Nutrition Analysis, Built in React and react-router-dom and Chart.js.<br />
-				      Users can efficiently see the nutrients a food contains.<br />
-				      It returns basic and complex nutrients information, Graph view displays nutrients in a graph.<br />
-				    </Card.Text>
-				    <Button onClick={() => window.open("https://nutrial.herokuapp.com/")}
-				    variant="outline-dark">Open/View</Button>&nbsp;
-				    <Button onClick={() => window.open("https://github.com/JunedKhan101/NutriAl")}
-				    variant="outline-dark">Code</Button>
-				  </Card.Body>
-				</Card>
-
-				<Card data-aos="fade-up" style={{ width: '18rem' }}>
-				  <Card.Img variant="top" src="static/img3.jpg" />
-				  <Card.Body>
-				    <Card.Title>Quiz Game</Card.Title>
-				    <Card.Text>
-				      Built in React.js and Material UI.<br />
-				      It has form view and focused view, which displays all quiz like a form in form view and one at a time in focused view.
-				    </Card.Text>
-				    <Button onClick={() => window.open("https://quiz-game42101.herokuapp.com/")}
-				    variant="outline-dark">Open/View</Button>&nbsp;
-				    <Button onClick={() => window.open("https://github.com/JunedKhan101/Quiz-game")}
-				    variant="outline-dark">Code</Button>
-				  </Card.Body>
-				</Card>
+				<div className="p1">
+					<h3>Password Manager and Note Taking</h3>&nbsp;&nbsp;[&nbsp;<a className="link" target="_blank" rel="noreferrer" href="https://pwdmanager-and-notetaking.herokuapp.com/">View</a>&nbsp;|&nbsp;<a className="link" target="_blank" rel="noreferrer" href="https://github.com/JunedKhan101/PWDManager-And-NoteTaking">Code</a>&nbsp;]
+					<hr />
+					<p>
+						Built in Node.js, MongoDB, Express and EJS, that uses JWT Authentication.<br />
+						MongoDB handles User model and saves the user notes and passwords in a MongoDB cluster.
+					</p>
+				</div>
+				<div className="p2">
+					<h3>Nutrial</h3>&nbsp;&nbsp;[&nbsp;<a className="link" target="_blank" rel="noreferrer" href="https://nutrial.herokuapp.com/">View</a>&nbsp;|&nbsp;<a className="link" target="_blank" rel="noreferrer" href="https://github.com/JunedKhan101/NutriAl">Code</a>&nbsp;]
+					<hr />
+					<p>
+						Nutrition Analysis, Built in React and react-router-dom and Chart.js.<br />
+						Data is fetched from an API.<br />
+				     	Users can efficiently see the nutrients a food contains.<br />
+				     	It returns basic and complex nutrients information, Graph view displays nutrients in a graph.<br />
+					</p>
+				</div>
+				<div className="p3">
+					<h3>Quiz Game</h3>&nbsp;&nbsp;[&nbsp;<a className="link" target="_blank" rel="noreferrer" href="https://quiz-game42101.herokuapp.com/">View</a>&nbsp;|&nbsp;<a className="link" target="_blank" rel="noreferrer" href="https://github.com/JunedKhan101/Quiz-game">Code</a>&nbsp;]
+					<hr />
+					<p>
+						Built in React.js, react-router-dom and Material UI.<br />
+						Data is fetched from an API.<br />
+				     	Form view displays all quiz like a form and one at a time in focused view.<br />
+					</p>
+				</div>
 		</div>
 	</div>
   );

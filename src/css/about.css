@@ -19,7 +19,7 @@
 	width: 80%;
 	margin: 0 auto;
 	position: relative;
-	top: 10%;
+	top: 5%;
 }
 @media screen and (max-height: 444px) {
 	.about {
