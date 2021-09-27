@@ -2,36 +2,49 @@
 	width: 100%;
 	height: 100%;
 
-	position: relative;
+	padding-top: 52px;
+    margin-top: -52px;
 }
 .profile {
 	width: 300px;
 	height: 300px;
-	border-radius: 50%;
+	border-radius: 100%;
 	overflow: hidden;
-
-	margin: 0 auto;
-
-	position: relative;
-	top: 25%;
 
 	border: 5px solid #212529;
 }
 .profileimg {
-	width: 300px;
-	height: 300px;
+	width: 100%;
+	height: 100%;
 	object-fit: cover;
 }
 .intro-text {
 	width: 100%;
-	height: 100%;
 	text-align: center;
-
-	position: relative;
-	top: 25%;
 }
 .intro {
 	width: 100%;
 	height: 100%;
-	margin: auto auto;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+@media only screen and (max-height: 416px) {
+	.intro-container {
+		height: 110%;
+	}
+}
+@media only screen and (max-height: 600px) {
+	.profile, .intro-text {
+		position: relative;
+		top: 10%;
+	}
+}
+@media only screen and (max-height: 472px) {
+	.profile {
+		width: 200px;
+		height: 200px;
+	}
 }
