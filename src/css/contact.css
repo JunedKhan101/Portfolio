@@ -15,7 +15,7 @@
 	padding-top: 52px;
     margin-top: -52px;
 }
-.contact-heading, .chat-heading, .form-heading { text-align: center; }
+.contact-heading, .chat-heading, .form-heading, .heading-success { text-align: center; }
 .primary-email {
 	position: absolute;
 	left: 50%;

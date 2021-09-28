@@ -25,14 +25,12 @@ export default function Contact() {
 	      process.env.REACT_APP_USERID
 	    )
 	    .then((response) => {
-	      // alert("Message sent successfully!");
 	      setBool(true);
-	      console.log('SUCCESS!', response.status, response.text);
 	    })
 	    .catch((err) => {
-	      // alert("Something went wrong :(");
 	      setBool(false);
-	      console.log('FAILED.', err);
+	      alert("Something went wrong :(");
+	      console.log('FAILED: ', err);
 	    });
   	};
   	const renderForm = () => {
@@ -65,7 +63,7 @@ export default function Contact() {
   		else if (bool === true) {
   			return (
   				<div className="form-msg">
-	  				<h2 className="heading success">Message sent successfully!</h2>
+	  				<h2 className="heading-success">Message sent successfully!</h2>
 	  				<Button className="back-btn" onClick={() => setBool(undefined)} variant="dark">Back</Button>
   				</div>
   			);	
