@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Container, Row } from "react-bootstrap";
 import AOS from "aos";
 import "../css/projects.css"
 
@@ -11,7 +12,8 @@ export default function Projects() {
   return (
   	<div className="projects-container" id="projects">
   		<h1 className="projects-heading">Projects</h1>
-		<div className="projects">
+		<Container className="projects">
+			<Row>
 				<div className="p1">
 					<h3>Password Manager and Note Taking</h3>&nbsp;&nbsp;[&nbsp;<a className="link" target="_blank" rel="noreferrer" href="https://pwdmanager-and-notetaking.herokuapp.com/">View</a>&nbsp;|&nbsp;<a className="link" target="_blank" rel="noreferrer" href="https://github.com/JunedKhan101/PWDManager-And-NoteTaking">Code</a>&nbsp;]
 					<hr />
@@ -20,6 +22,8 @@ export default function Projects() {
 						MongoDB handles User model and saves the user notes and passwords in a MongoDB cluster.
 					</p>
 				</div>
+			</Row>
+			<Row>
 				<div className="p2">
 					<h3>Nutrial</h3>&nbsp;&nbsp;[&nbsp;<a className="link" target="_blank" rel="noreferrer" href="https://nutrial.herokuapp.com/">View</a>&nbsp;|&nbsp;<a className="link" target="_blank" rel="noreferrer" href="https://github.com/JunedKhan101/NutriAl">Code</a>&nbsp;]
 					<hr />
@@ -30,6 +34,8 @@ export default function Projects() {
 				     	It returns basic and complex nutrients information, Graph view displays nutrients in a graph.<br />
 					</p>
 				</div>
+			</Row>
+			<Row>
 				<div className="p3">
 					<h3>Quiz Game</h3>&nbsp;&nbsp;[&nbsp;<a className="link" target="_blank" rel="noreferrer" href="https://quiz-game42101.herokuapp.com/">View</a>&nbsp;|&nbsp;<a className="link" target="_blank" rel="noreferrer" href="https://github.com/JunedKhan101/Quiz-game">Code</a>&nbsp;]
 					<hr />
@@ -39,7 +45,8 @@ export default function Projects() {
 				     	Form view displays all quiz like a form and one at a time in focused view.<br />
 					</p>
 				</div>
-		</div>
+			</Row>
+		</Container>
 	</div>
   );
 }
