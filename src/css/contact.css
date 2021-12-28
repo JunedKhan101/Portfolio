@@ -38,7 +38,7 @@
 }
 .form-container {
 	width: 450px;
-	height: 550px;
+	height: 750px;
 	margin: 0 auto;
 }
 .btn-dark {
@@ -53,4 +53,10 @@
 	.form-container {
 		width: 90%;
 	}
+}
+#loading {
+	display: none;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
 }

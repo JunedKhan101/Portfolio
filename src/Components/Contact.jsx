@@ -18,6 +18,9 @@ export default function Contact() {
   };
   const onSubmit = (e) => {
     e.preventDefault();
+    document.getElementById("loading").style.display = "block";
+    document.getElementsByClassName("form")[0].style.display = "none";
+
     send(
       process.env.REACT_APP_SERVICEID,
       process.env.REACT_APP_TEMPLATEID,
@@ -26,11 +29,12 @@ export default function Contact() {
     )
       .then((response) => {
         setBool(true);
+        document.getElementById("loading").style.display = "none";
       })
       .catch((err) => {
         setBool(false);
-        alert("Something went wrong :(");
-        console.log("FAILED: ", err);
+        document.getElementById("loading").style.display = "none";
+        console.log("SENDING MSG FAILED: ", err);
       });
   };
   const renderForm = () => {
@@ -140,7 +144,10 @@ export default function Contact() {
             </div>
           </Col>
           <Col>
-            <div className="form-container">{renderForm()}</div>
+            <div className="form-container">
+              {renderForm()}
+              <img id="loading" src="static/loading.gif" alt="loading" />
+            </div>
           </Col>
         </Row>
       </Container>
