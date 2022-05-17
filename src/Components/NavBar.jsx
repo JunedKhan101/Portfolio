@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
+import Switch from "react-switch";
 import { Navbar, Nav, Container } from "react-bootstrap";
 
 export default function NavBar() {
+  const [togglestate, setToggleState] = useState(false);
+  const handleChange = () => {
+    setToggleState(!togglestate);
+  }
+  const style = {
+    'width': '28px',
+    'height': '28px'
+  };
   var navstyle = {
     width: "100%",
     display: "flex",
@@ -9,12 +18,12 @@ export default function NavBar() {
     justifyContent: "space-around",
   };
   var linkstyle = {
-    color: "#FFFFFF",
+    color: "#000000",
   };
   return (
-    <Navbar fixed="top" collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar fixed="top" collapseOnSelect expand="lg" variant="light" style={{'backgroundColor': '#F5F5F5'}}>
       <Container>
-        <Navbar.Brand href="#intro">Juned Khan</Navbar.Brand>
+        <Navbar.Brand href="#intro" style={linkstyle}>Juned Khan</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav style={navstyle} className="mx-auto my-auto">
@@ -41,6 +50,22 @@ export default function NavBar() {
             </Nav.Link>
             <Nav.Link className="mynav-links" style={linkstyle} href="#contact">
               Contact
+            </Nav.Link>
+            <Nav.Link className="mynav-links" style={linkstyle} href="#contact">
+            <label>
+              <Switch onChange={handleChange} 
+                checked={togglestate}
+                width={60}
+                offColor="#fecea8"
+                onColor="#142d4c"
+                offHandleColor="#f96d00"
+                onHandleColor="#ffffff" 
+                uncheckedIcon={<img src="https://img.icons8.com/color/48/000000/sun--v1.png" style={style} />} 
+                checkedIcon={
+                  <img src="https://img.icons8.com/external-icongeek26-linear-colour-icongeek26/28/000000/external-moon-magic-and-fairy-tale-icongeek26-linear-colour-icongeek26.png"/>
+                }
+                />
+            </label>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
