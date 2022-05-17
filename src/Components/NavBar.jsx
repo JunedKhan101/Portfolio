@@ -5,12 +5,8 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 export default function NavBar() {
   const [togglestate, setToggleState] = useState(false);
   const handleChange = () => {
-    setToggleState(!togglestate);
+    setToggleState(togglestate => !togglestate);
   }
-  const style = {
-    'width': '28px',
-    'height': '28px'
-  };
   var navstyle = {
     width: "100%",
     display: "flex",
@@ -60,9 +56,11 @@ export default function NavBar() {
                 onColor="#142d4c"
                 offHandleColor="#f96d00"
                 onHandleColor="#ffffff" 
-                uncheckedIcon={<img src="https://img.icons8.com/color/48/000000/sun--v1.png" style={style} />} 
+                uncheckedIcon={
+                  <img alt="sun" src="https://img.icons8.com/color/28/000000/sun--v1.png"/>
+                } 
                 checkedIcon={
-                  <img src="https://img.icons8.com/external-icongeek26-linear-colour-icongeek26/28/000000/external-moon-magic-and-fairy-tale-icongeek26-linear-colour-icongeek26.png"/>
+                  <img alt="moon" src="https://img.icons8.com/external-icongeek26-linear-colour-icongeek26/28/000000/external-moon-magic-and-fairy-tale-icongeek26-linear-colour-icongeek26.png"/>
                 }
                 />
             </label>
