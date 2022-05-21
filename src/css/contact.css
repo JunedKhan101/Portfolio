@@ -17,6 +17,7 @@
 }
 .contact-heading, .chat-heading, .form-heading, .heading-success { text-align: center; }
 .primary-email {
+	color: gray;
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
@@ -41,13 +42,28 @@
 	height: 750px;
 	margin: 0 auto;
 }
-.btn-dark {
+.submit-btn, .back-btn {
 	position: relative;
 	left: 50%;
 	top: 10px;
 	transform: translateX(-50%);
 }
+#dark .submit-btn {
+	background-color: #2f3338 !important;
+	color: #eee;
+}
+#dark .back-btn {
+	background-color: #2f3338 !important;
+	color: #eee;
+}
 .form-group { padding-bottom: 10px; }
+
+#dark .form-control {
+	background-color: #212529;
+	color: #EEE;
+	border-color: rgb(80, 80, 80);
+	/* border: none; */
+}
 
 @media only screen and (max-width: 485px) {
 	.form-container {

@@ -7,7 +7,7 @@ export default function About() {
       <h2 className="about-heading">About Myself</h2>
       <div className="description-container">
         <p className="oneline-intro">
-          Lifelong learner, Introvert, Inquisitive, Geek, Nerd and Bookworm.
+          Lifelong learner, Introvert, Inquisitive, Geek, Nerd, Bookworm.
         </p>
 
         <div className="sub-description">

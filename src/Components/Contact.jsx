@@ -80,7 +80,7 @@ export default function Contact() {
                 rows={5}
               />
             </Form.Group>
-            <Button variant="dark" type="submit">
+            <Button className="submit-btn" variant="dark" type="submit">
               Submit
             </Button>
           </form>
@@ -106,7 +106,7 @@ export default function Contact() {
           <Button
             className="back-btn"
             onClick={() => setBool(undefined)}
-            variant="dark"
+            variant="primary"
           >
             Back
           </Button>
