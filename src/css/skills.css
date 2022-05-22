@@ -19,9 +19,13 @@
 	position: relative;
 	top: 50px;
 }
+#dark .card {
+	background-color: #1b1e21;
+	color: #EEE;
+}
 #skills {
 	padding-top: 52px;
-  margin-top: -52px;
+  	margin-top: -52px;
 }
 ul {
   list-style: square outside none;
@@ -40,57 +44,3 @@ ul {
 		top: 100px;
 	}
 }
-/*@media only screen and (min-width: 780px) and (max-height: 531px) {
-	.skills-container { height: 140%; }
-}
-@media only screen and (min-width: 780px) and (max-height: 400px) {
-	.skills-container { height: 180%; }
-}
-
-
-
-@media only screen and (max-width: 780px) and (max-height: 745px) {
-	.skills-container { height: 125%; }	
-}
-@media only screen and (max-width: 780px) and (max-height: 616px) {
-	.skills-container { height: 150%; }	
-}
-@media only screen and (max-width: 780px) and (max-height: 521px) {
-	.skills-container { height: 170%; }	
-}
-@media only screen and (max-width: 780px) and (max-height: 464px) {
-	.skills-container { height: 190%; }	
-}
-@media only screen and (max-width: 780px) and (max-height: 416px) {
-	.skills-container { height: 210%; }	
-}
-@media only screen and (max-width: 780px) and (max-height: 380px) {
-	.skills-container { height: 230%; }	
-}
-@media only screen and (max-width: 780px) and (max-height: 349px) {
-	.skills-container { height: 250%; }	
-}
-
-
-
-@media only screen and (max-width: 519px) and (max-height: 840px) {
-	.skills-container { height: 190%; }
-}
-@media only screen and (max-width: 519px) and (max-height: 761px) {
-	.skills-container { height: 210%; }
-}
-@media only screen and (max-width: 519px) and (max-height: 691px) {
-	.skills-container { height: 230%; }
-}
-@media only screen and (max-width: 519px) and (max-height: 635px) {
-	.skills-container { height: 250%; }
-}
-@media only screen and (max-width: 519px) and (max-height: 587px) {
-	.skills-container { height: 270%; }
-}
-@media only screen and (max-width: 519px) and (max-height: 547px) {
-	.skills-container { height: 290%; }
-}
-@media only screen and (max-width: 519px) and (max-height: 509px) {
-	.skills-container { height: 310%; }
-}*/

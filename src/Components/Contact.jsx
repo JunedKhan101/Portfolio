@@ -80,7 +80,7 @@ export default function Contact() {
                 rows={5}
               />
             </Form.Group>
-            <Button variant="dark" type="submit">
+            <Button className="submit-btn" variant="dark" type="submit">
               Submit
             </Button>
           </form>
@@ -102,11 +102,11 @@ export default function Contact() {
     } else {
       return (
         <div className="form-msg">
-          <h2 className="heading fail">Oops! Something went wrong :(</h2>
+          <h2 className="heading fail">Something went wrong :(</h2>
           <Button
             className="back-btn"
             onClick={() => setBool(undefined)}
-            variant="dark"
+            variant="primary"
           >
             Back
           </Button>
@@ -146,7 +146,7 @@ export default function Contact() {
           <Col>
             <div className="form-container">
               {renderForm()}
-              <img id="loading" src="static/loading.gif" alt="loading" />
+              <img id="loading" src="static/loading.png" alt="loading" />
             </div>
           </Col>
         </Row>
