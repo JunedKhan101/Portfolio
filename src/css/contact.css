@@ -71,6 +71,7 @@
 	}
 }
 #loading {
+	border: none;
 	display: none;
 	position: relative;
 	left: 50%;
