@@ -6,9 +6,6 @@ import "../css/navbar.css";
 
 export default function NavBar() {
   const {themeflag, theme, toggleTheme} = useContext(ThemeContext);
-  console.log('themeflag', themeflag);
-  console.log('theme', theme);
-  
   return (
     <Navbar className="navbar-container" fixed="top" collapseOnSelect expand="lg" variant={theme}>
       <Container>
