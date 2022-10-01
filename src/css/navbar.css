@@ -1,15 +1,24 @@
 .navbar {
     background-color: #F8F9FA;
 }
+
 #dark .navbar {
     background-color: #212529;
 }
-#dark .nav-links {
-    color: #eee !important;
+#dark .nav-link {
+    color: #EEE !important;
+}
+.offcanvas a:hover {
+    color: #2C7AE0 !important;
 }
 .my-nav {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+@media only screen and (max-width: 768px) {
+    .my-nav {
+        display: none !important;
+    }
 }
