@@ -96,7 +96,7 @@ export default function NavBar() {
           <Nav.Link className="mynav-links" href="#contact">
             Contact
           </Nav.Link>
-          <Nav.Link className="mynav-links">
+          <Nav.Link className="mynav-links dark-mode-toggle-nav">
             <label>
               <Switch onChange={toggleTheme}
                 checked={themeflag}
