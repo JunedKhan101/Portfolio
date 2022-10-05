@@ -1,7 +1,6 @@
 .navbar {
     background-color: #F8F9FA;
 }
-
 #dark .navbar {
     background-color: #212529;
 }
@@ -16,6 +15,22 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+/* offcanvas backdrop manually written in css because these properties were not applying automatically in bootstrap classes */
+.offcanvas-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+}
+.offcanvas-backdrop.show {
+    opacity: 0.5 !important;
+}
+.offcanvas-backdrop.fade {
+    opacity: 0;
 }
 @media only screen and (max-width: 767px) {
     .my-nav {

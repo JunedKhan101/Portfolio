@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Switch from "react-switch";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import Offcanvas from 'react-bootstrap/Offcanvas'
@@ -7,6 +7,10 @@ import "../css/navbar.css";
 
 export default function NavBar() {
   const { themeflag, theme, toggleTheme } = useContext(ThemeContext);
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false)
+  const handleShow = () => setShow(true)
 
   const offcanvasStyle = {
     backgroundColor: theme === "dark" ? '#242526' : '#FFFFFF'
@@ -18,9 +22,9 @@ export default function NavBar() {
     <Navbar key='md' expand='md' fixed="top" className="navbar-container mb-3" variant={theme}>
       <Container>
         <Navbar.Brand className="nav-brand" href="#intro">Juned Khan</Navbar.Brand>
-        <Navbar.Toggle aria-controls='offcanvasNavbar-expand-md' />
+        <Navbar.Toggle aria-controls='offcanvasNavbar-expand-md' onClick={() => handleShow()} />
         <Navbar.Offcanvas id="offcanvasNavbar-expand-md" aria-labelledby='offcanvasNavbarLabel-expand-md'
-          placement="start" style={offcanvasStyle}>
+          placement="start" style={offcanvasStyle} show={show} onHide={() => handleClose()}> 
           <Offcanvas.Header closeButton closeVariant={theme === "dark" ? "white" : ""}>
             <Offcanvas.Title id='offcanvasNavbarLabel-expand-md'>
               Juned Khan
@@ -54,20 +58,21 @@ export default function NavBar() {
               >
                 Resume
               </Nav.Link>
-              <Nav.Link className="mynav-links" href="#about" style={offcanvasLinkStyle}>
+              <Nav.Link className="mynav-links" href="#about" style={offcanvasLinkStyle} onClick={() => handleClose()}>
                 About
               </Nav.Link>
               <Nav.Link
                 className="mynav-links"
                 href="#projects"
                 style={offcanvasLinkStyle}
+                onClick={() => handleClose()}
               >
                 Projects
               </Nav.Link>
-              <Nav.Link className="mynav-links" href="#skills" style={offcanvasLinkStyle}>
+              <Nav.Link className="mynav-links" href="#skills" style={offcanvasLinkStyle} onClick={() => handleClose()}>
                 Skills
               </Nav.Link>
-              <Nav.Link className="mynav-links" href="#contact" style={offcanvasLinkStyle}>
+              <Nav.Link className="mynav-links" href="#contact" style={offcanvasLinkStyle} onClick={() => handleClose()}>
                 Contact
               </Nav.Link>
             </Nav>
