@@ -9,9 +9,8 @@ export default function NavBar() {
   const { themeflag, theme, toggleTheme } = useContext(ThemeContext);
   const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false)
-  const handleShow = () => setShow(true)
-
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   const offcanvasStyle = {
     backgroundColor: theme === "dark" ? '#242526' : '#FFFFFF'
   }
@@ -25,7 +24,7 @@ export default function NavBar() {
         <Navbar.Toggle aria-controls='offcanvasNavbar-expand-md' onClick={() => handleShow()} />
         <Navbar.Offcanvas id="offcanvasNavbar-expand-md" aria-labelledby='offcanvasNavbarLabel-expand-md'
           placement="start" style={offcanvasStyle} show={show} onHide={() => handleClose()}> 
-          <Offcanvas.Header closeButton closeVariant={theme === "dark" ? "white" : ""}>
+          <Offcanvas.Header closeButton closeVariant={theme === "dark" ? "white" : null}>
             <Offcanvas.Title id='offcanvasNavbarLabel-expand-md'>
               Juned Khan
             </Offcanvas.Title>
