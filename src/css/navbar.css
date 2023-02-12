@@ -13,3 +13,20 @@
     align-items: center;
     justify-content: space-around;
 }
+@media (max-width: 992px) {
+    .dark-mode-toggler {
+        display: none !important;
+    }
+    .dark-mode-toggler-mobile {
+        display: block;
+        flex: 1;
+    }
+    .nav-brand {
+        margin-right: 0px !important;
+    }
+}
+@media (min-width: 992px) {
+    .dark-mode-toggler-mobile {
+        display: none !important;
+    }
+}
