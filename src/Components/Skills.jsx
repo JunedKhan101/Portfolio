@@ -10,7 +10,7 @@ export default function Skills() {
     });
   }, []);
   return (
-    <div className="skills-container" id="skills">
+    <section className="skills-container" id="skills">
       <h1 className="skills-heading">Skills</h1>
 
       <div className="skills">
@@ -91,6 +91,6 @@ export default function Skills() {
           </Card.Body>
         </Card>
       </div>
-    </div>
+    </section>
   );
 }

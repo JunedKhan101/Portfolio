@@ -40,10 +40,10 @@ export default function Contact() {
   const renderForm = () => {
     if (bool === undefined) {
       return (
-        <div>
+        <div className="form-subcontainer">
           <h2 className="form-heading">Send me a message</h2>
           <form onSubmit={onSubmit} className="form">
-            <Form.Group controlId="name">
+            <Form.Group className="form-group" controlId="name">
               <Form.Label>Name</Form.Label>
               <Form.Control
                 required
@@ -52,7 +52,7 @@ export default function Contact() {
                 type="text"
               />
             </Form.Group>
-            <Form.Group controlId="email">
+            <Form.Group className="form-group" controlId="email">
               <Form.Label>Email address</Form.Label>
               <Form.Control
                 required
@@ -61,7 +61,7 @@ export default function Contact() {
                 type="email"
               />
             </Form.Group>
-            <Form.Group controlId="subject">
+            <Form.Group className="form-group" controlId="subject">
               <Form.Label>Subject</Form.Label>
               <Form.Control
                 required
@@ -70,7 +70,7 @@ export default function Contact() {
                 type="text"
               />
             </Form.Group>
-            <Form.Group controlId="message">
+            <Form.Group className="form-group" controlId="message">
               <Form.Label>Message</Form.Label>
               <Form.Control
                 required
@@ -86,10 +86,10 @@ export default function Contact() {
           </form>
         </div>
       );
-    } else if (bool === true) {
+    } else {
       return (
         <div className="form-msg">
-          <h2 className="heading-success">Message sent successfully!</h2>
+          <h2 className={bool === true ? "heading-success" : "heading fail"}>{bool === true ? "Message sent successfully!" : "Something went wrong :("}</h2>
           <Button
             className="back-btn"
             onClick={() => setBool(undefined)}
@@ -99,27 +99,18 @@ export default function Contact() {
           </Button>
         </div>
       );
-    } else {
-      return (
-        <div className="form-msg">
-          <h2 className="heading fail">Something went wrong :(</h2>
-          <Button
-            className="back-btn"
-            onClick={() => setBool(undefined)}
-            variant="primary"
-          >
-            Back
-          </Button>
-        </div>
-      );
     }
   };
   return (
-    <div className="contact-container" id="contact">
-      <h1 className="contact-heading">Contact</h1>
-      <small className="primary-email">junedkhanc101@gmail.com</small>
+    <section className="contact-container" id="contact">
       <Container className="contact">
         <Row>
+          <h1 className="contact-heading">Contact</h1>
+        </Row>
+        <Row>
+          <small className="primary-email">junedkhanc101@gmail.com</small>
+        </Row>
+        <Row className="pt-4">
           <Col>
             <div className="social-media">
               <h2 className="chat-heading">Wanna Chat?</h2>
@@ -151,6 +142,6 @@ export default function Contact() {
           </Col>
         </Row>
       </Container>
-    </div>
+    </section>
   );
 }

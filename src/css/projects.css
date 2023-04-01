@@ -1,13 +1,10 @@
 #projects {
 	padding-top: 52px;
-    margin-top: -52px;
+    /* margin-top: -52px; margin removed due to nav highlighting issue */
 }
 .projects-container {
 	max-width: 100%;
 	min-height: 110%;
-
-	position: relative;
-	top: 20%;
 }
 .projects-heading { text-align: center; }
 .projects {
