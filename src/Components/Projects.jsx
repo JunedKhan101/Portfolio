@@ -47,7 +47,7 @@ export default function Projects() {
             className="link"
             target="_blank"
             rel="noopener noreferrer"
-            href="https://nutrial.herokuapp.com/"
+            href="https://develop.d1bkj1bfnxlb5h.amplifyapp.com/"
           >
             View
           </a>
@@ -81,7 +81,7 @@ export default function Projects() {
             className="link"
             target="_blank"
             rel="noopener noreferrer"
-            href="https://quiz-game42101.herokuapp.com/"
+            href="https://master.d3adgxpkxcfa42.amplifyapp.com/"
           >
             View
           </a>
