@@ -9,7 +9,7 @@ export default function Projects() {
     });
   }, []);
   return (
-    <div className="projects-container" id="projects">
+    <section className="projects-container" id="projects">
       <h1 className="projects-heading">Projects</h1>
       <div className="projects">
         <div className="p1">
@@ -107,6 +107,6 @@ export default function Projects() {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

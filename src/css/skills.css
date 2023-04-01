@@ -1,8 +1,6 @@
 .skills-container {
 	width: 100%;
-	min-height: 110%;
-	position: relative;
-	top: 20%;
+	min-height: 100%;
 }
 .skills-heading { text-align: center; }
 
@@ -25,7 +23,7 @@
 }
 #skills {
 	padding-top: 52px;
-  	margin-top: -52px;
+  	/* margin-top: -52px; margin removed due to nav highlighting issue */ 
 }
 ul {
   list-style: square outside none;
@@ -42,5 +40,11 @@ ul {
 		margin: 0 auto;
 		position: relative;
 		top: 100px;
+	}
+}
+@media only screen and (max-width: 576px) {
+	.skills {
+		top: 30px;
+		grid-row-gap: 0;
 	}
 }
