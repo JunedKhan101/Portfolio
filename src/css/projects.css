@@ -4,9 +4,16 @@
 }
 .projects-container {
 	max-width: 100%;
-	min-height: 110%;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
-.projects-heading { text-align: center; }
+.projects-subcontainer {
+	width: auto;
+	height: auto;
+}
+.projects-heading { text-align: center; padding-bottom: 10px;}
 .projects {
 	max-width: 100%;
 	min-height: 100%;
@@ -22,3 +29,9 @@
 .link { text-decoration: none; }
 h3 { display: inline; }
 hr { width: 100%;}
+
+@media only screen and (max-width: 576px) {
+	#projects {
+		padding-top: 60px;
+	}
+}
