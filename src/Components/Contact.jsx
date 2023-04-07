@@ -37,6 +37,14 @@ export default function Contact() {
         console.log("SENDING MSG FAILED: ", err);
       });
   };
+  const handleFacebookIconClick = (e) => {
+    e.preventDefault();
+    alert(`I don't use Facebook anymore`);
+  }
+  const handleInstagramIconClick = (e) => {
+    e.preventDefault();
+    alert(`I don't use Instagram anymore`);
+  }
   const renderForm = () => {
     if (bool === undefined) {
       return (
@@ -125,11 +133,13 @@ export default function Contact() {
                 />
                 <SocialIcon
                   target="_blank"
-                  url="https://www.instagram.com/its_juned42/"
+                  url="https://www.instagram.com/"
+                  onClick={handleInstagramIconClick}
                 />
                 <SocialIcon
                   target="_blank"
-                  url="https://www.facebook.com/JunedKhanc101"
+                  url="https://www.facebook.com/"
+                  onClick={handleFacebookIconClick}
                 />
               </div>
             </div>
