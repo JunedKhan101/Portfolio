@@ -12,7 +12,7 @@ export default function Projects() {
     <div className="projects-container" id="projects">
       <h1 className="projects-heading">Projects</h1>
       <div className="projects">
-        <div className="p1">
+        {/* <div className="p1">
           <h3>Password Manager and Note Taking</h3>&nbsp;&nbsp;[&nbsp;
           <a
             className="link"
@@ -40,7 +40,7 @@ export default function Projects() {
             MongoDB handles User model and saves the user notes and passwords in
             a MongoDB cluster.
           </p>
-        </div>
+        </div> */}
         <div className="p2">
           <h3>Nutrial</h3>&nbsp;&nbsp;[&nbsp;
           <a

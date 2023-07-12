@@ -3,7 +3,6 @@ import { send } from "emailjs-com";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import { SocialIcon } from "react-social-icons";
 import "../css/contact.css";
-require("dotenv").config();
 
 export default function Contact() {
   const [toSend, setToSend] = useState({
