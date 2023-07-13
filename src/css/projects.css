@@ -19,12 +19,16 @@
 	min-height: 100%;
 	text-decoration: none;
 }
-.p1, .p2, .p3 {
+.project-instance {
 	width: 90%;
 	padding-bottom: 20px;
 	position: relative;
 	left: 5%;
 	overflow: hidden;
+}
+.project-description {
+	white-space: pre-line;  
+	vertical-align: bottom;
 }
 .link { text-decoration: none; }
 h3 { display: inline; }

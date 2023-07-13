@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
+import ProjectData from "../data/projects.json";
 import "../css/projects.css";
 
 export default function Projects() {
@@ -8,12 +9,44 @@ export default function Projects() {
       duration: 1000,
     });
   }, []);
+  function renderProjects() {
+    var ProjectArray = ProjectData.projects;
+    var content = [];
+    for (var i = 0; i < ProjectArray.length; ++i) {
+        content.push(
+          <div className="project-instance">
+            <h3>{ProjectArray[i].ProjectName}</h3>&nbsp;&nbsp;[&nbsp;
+            <a
+              className="link"
+              target="_blank"
+              rel="noopener noreferrer"
+              href={ProjectArray[i].SiteLink}
+            >
+              View
+            </a>
+            &nbsp;|&nbsp;
+            <a
+              className="link"
+              target="_blank"
+              rel="noopener noreferrer"
+              href={ProjectArray[i].GithubLink}
+            >
+              Code
+            </a>
+            &nbsp;]
+            <hr />
+            <p className="project-description">{ProjectArray[i].Description}</p>
+          </div>
+        );
+    }
+    return content;
+  }
   return (
     <section className="projects-container" id="projects">
       <div className="projects-subcontainer">
         <h1 className="projects-heading">Projects</h1>
         <div className="projects">
-          <div className="p1">
+          {/* <div className="p1">
             <h3>Password Manager and Note Taking</h3>&nbsp;&nbsp;[&nbsp;
             <a
               className="link"
@@ -41,72 +74,8 @@ export default function Projects() {
               MongoDB handles User model and saves the user notes and passwords in
               a MongoDB cluster.
             </p>
-          </div>
-          <div className="p2">
-            <h3>Nutrial</h3>&nbsp;&nbsp;[&nbsp;
-            <a
-              className="link"
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://develop.d1bkj1bfnxlb5h.amplifyapp.com/"
-            >
-              View
-            </a>
-            &nbsp;|&nbsp;
-            <a
-              className="link"
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://github.com/JunedKhan101/NutriAl"
-            >
-              Code
-            </a>
-            &nbsp;]
-            <hr />
-            <p>
-              Nutrition Analysis, Built in React and react-router-dom and
-              Chart.js.
-              <br />
-              Data is fetched from an API.
-              <br />
-              Users can efficiently see the nutrients a food contains.
-              <br />
-              It returns basic and complex nutrients information, Graph view
-              displays nutrients in a graph.
-              <br />
-            </p>
-          </div>
-          <div className="p3">
-            <h3>Quiz Game</h3>&nbsp;&nbsp;[&nbsp;
-            <a
-              className="link"
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://master.d3adgxpkxcfa42.amplifyapp.com/"
-            >
-              View
-            </a>
-            &nbsp;|&nbsp;
-            <a
-              className="link"
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://github.com/JunedKhan101/Quiz-game"
-            >
-              Code
-            </a>
-            &nbsp;]
-            <hr />
-            <p>
-              Built in React.js, react-router-dom and Material UI.
-              <br />
-              Data is fetched from an API.
-              <br />
-              Form view displays all quiz like a form and one at a time in focused
-              view.
-              <br />
-            </p>
-          </div>
+          </div> */}
+          {renderProjects()}
         </div>
       </div>
     </section>
