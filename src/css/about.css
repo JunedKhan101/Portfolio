@@ -4,14 +4,11 @@
 
 	display: flex;
 	align-items: center;
-	justify-content: flex-start;
+	justify-content: center;
 	flex-direction: column;
 
     padding-top: 52px;
-    margin-top: -52px;
-
-    position: relative;
-    top: 50px;
+    /* margin-top: -52px; margin removed due to nav highlighting issue */
 }
 .oneline-intro { text-align: center;}
 

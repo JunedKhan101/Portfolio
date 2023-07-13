@@ -1,26 +1,24 @@
 .contact-container {
 	max-width: 100%;
 	min-height: 100%;
-	position: relative;
-	top: 40%;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 }
 .contact {
 	width: 100%;
 	height: 100%;
-
-	position: relative;
-	top: 50px;
 }
 #contact {
 	padding-top: 52px;
-    margin-top: -52px;
+    /* margin-top: -52px; margin removed due to nav highlighting issue*/
 }
 .contact-heading, .chat-heading, .form-heading, .heading-success { text-align: center; }
+
 .primary-email {
 	color: gray;
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
 }
 .social-media {
 	width: 300px;
@@ -33,20 +31,26 @@
 	justify-content: center;
 	grid-template-columns: auto auto auto auto;
 	grid-gap: 20px;
-
-	position: relative;
-	top: 10%;
+	padding-top: 10px;
+	/* position: relative;
+	top: 10%; */
 }
 .form-container {
 	width: 450px;
-	height: 750px;
+	height: auto;
 	margin: 0 auto;
+	text-align: left;
 }
-.submit-btn, .back-btn {
-	position: relative;
-	left: 50%;
-	top: 10px;
-	transform: translateX(-50%);
+.form {
+	display: flex;
+	flex-direction: column;
+}
+.form-msg {
+	text-align: center;
+}
+/* .submit-btn, */
+.back-btn {
+	margin-top: 10px;
 }
 #dark .submit-btn {
 	background-color: #2f3338 !important;
@@ -64,16 +68,24 @@
 	border-color: rgb(80, 80, 80);
 	/* border: none; */
 }
-
+@media only screen and (max-width: 768px) {
+	.chat-heading {
+		padding-top: 10px;;
+	}
+}
 @media only screen and (max-width: 485px) {
 	.form-container {
 		width: 90%;
 	}
 }
+@media only screen and (max-width: 576px) {
+	.contact-container {
+		position: relative;
+		top: 10%;	
+	}
+}
 #loading {
 	border: none;
 	display: none;
-	position: relative;
-	left: 50%;
-	transform: translateX(-50%);
+	margin: 0 auto;
 }

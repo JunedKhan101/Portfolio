@@ -1,23 +1,29 @@
 .skills-container {
 	width: 100%;
-	min-height: 110%;
-	position: relative;
-	top: 20%;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.skills-subcontainer {
+	width: auto;
+	height: auto;
+	overflow: visible;
 }
 .skills-heading { text-align: center; }
 
 .skills {
 	width: 100%;
-	min-height: 110%;
+	min-height: 100%;
 
 	display: grid;
-	align-content: start;
+	align-content: center;
 	justify-content: center;
 	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 	grid-row-gap: 50px;
 
 	position: relative;
-	top: 50px;
+	top: 30px;
 }
 #dark .card {
 	background-color: #1b1e21;
@@ -25,7 +31,7 @@
 }
 #skills {
 	padding-top: 52px;
-  	margin-top: -52px;
+  	/* margin-top: -52px; margin removed due to nav highlighting issue */ 
 }
 ul {
   list-style: square outside none;
@@ -40,7 +46,14 @@ ul {
 	.skills {
 		width: 80%;
 		margin: 0 auto;
-		position: relative;
-		top: 100px;
+	}
+}
+@media only screen and (max-width: 576px) {
+	.skills {
+		top: 10px;
+		grid-row-gap: 0;
+	}
+	#skills {
+		padding-top: 60px;
 	}
 }

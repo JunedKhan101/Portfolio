@@ -9,7 +9,7 @@ export default function NavBar() {
   return (
     <Navbar className="navbar-container" fixed="top" collapseOnSelect expand="lg" variant={theme}>
       <Container>
-        <Navbar.Brand className="nav-brand" href="#intro">Juned Khan</Navbar.Brand>
+        <Navbar.Brand className="nav-brand" href="#intro">Juned Khan</Navbar.Brand>&nbsp;
         <Nav.Link className="mynav-links dark-mode-toggler-mobile">
             <label>
               <Switch onChange={toggleTheme} 
