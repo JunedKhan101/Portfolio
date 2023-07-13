@@ -14,7 +14,7 @@ export default function Projects() {
     var content = [];
     for (var i = 0; i < ProjectArray.length; ++i) {
         content.push(
-          <div className="project-instance">
+          <div key={i} className="project-instance">
             <h3>{ProjectArray[i].ProjectName}</h3>&nbsp;&nbsp;[&nbsp;
             <a
               className="link"
