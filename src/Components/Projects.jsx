@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Container, Button, Modal, CloseButton } from "react-bootstrap";
+import { Container, Button, Modal } from "react-bootstrap";
 import AOS from "aos";
 import { ThemeContext } from "./App";
 import ProjectData from "../data/projects.json";
@@ -21,9 +21,15 @@ export default function Projects() {
     "textDecoration": "none"
   };
   const [show, setShow] = useState(false);
+  const [projectName, setProjectName] = useState("");
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const handleVideoClick = (event) => {
+    var pname = event.target.getAttribute("data-name");
+    setProjectName(pname);
+    handleShow();
+  }
   function renderProjects() {
     var ProjectArray = ProjectData.projects;
     var content = [];
@@ -53,10 +59,12 @@ export default function Projects() {
                 </a>
                 &nbsp;|&nbsp;
                 <a
+                  id="video-link"
                   className="link"
                   href="#modal"
                   rel="noopener noreferrer"
-                  onClick={handleShow}
+                  data-name={ProjectArray[i].ProjectName}
+                  onClick={handleVideoClick}
                 >
                   Video
                 </a>
@@ -79,7 +87,7 @@ export default function Projects() {
           <Modal show={show} onHide={handleClose}>
             <Container className="modal-container" style={ModalStyle}>
               <Modal.Header>
-                <Modal.Title>Project</Modal.Title>
+                <Modal.Title>{projectName}</Modal.Title>
                 <a className="close-btn" href="#close-btn" onClick={handleClose} style={CloseButtonLinkStyle}>X</a>
               </Modal.Header>
               <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
