@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "./NavBar";
 import About from "./About";
+import Experience from "./Experience";
 import Projects from "./Projects";
 import Skills from "./Skills";
 import Contact from "./Contact";
@@ -16,7 +17,7 @@ export default function Main() {
 
 	function navHighlighter() {
 		// Get current scroll position
-		let scrollY = window.pageYOffset;
+		let scrollY = window.scrollY;
 
 		// Now we loop through sections to get height, top and ID values for each
 		sections.forEach(current => {
@@ -40,6 +41,7 @@ export default function Main() {
 			<NavBar />
 			<Intro />
 			<About />
+			<Experience />
 			<Projects />
 			<Skills />
 			<Contact />

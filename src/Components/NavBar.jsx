@@ -41,6 +41,9 @@ export default function NavBar() {
             <Nav.Link className="mynav-links" href="#about">
               About
             </Nav.Link>
+            <Nav.Link className="mynav-links" href="#experience">
+              Experience
+            </Nav.Link>
             <Nav.Link
               className="mynav-links"
               href="#projects"

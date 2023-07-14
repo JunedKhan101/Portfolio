@@ -35,6 +35,7 @@
 	vertical-align: bottom;
 }
 .link { text-decoration: none; }
+.link:hover { text-decoration:underline; }
 .project-header h3 { 
 	display: inline;
 	margin-right: 0.5rem;
