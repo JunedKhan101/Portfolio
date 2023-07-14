@@ -11,7 +11,7 @@ export default function Experience() {
             SFCC Developer | Salesforce Commerce Cloud | B2C Commerce
           </h3>
           <h3>
-            At <a href="https://www.linkedin.com/company/apexon/" target="_blank" class="link" rel="noopener noreferrer">Apexon</a> (Nov 2021 - Present)
+            At <a href="https://www.linkedin.com/company/apexon/" target="_blank" className="link" rel="noopener noreferrer">Apexon</a> (Nov 2021 - Present)
           </h3>
           <ul>
             <li>
