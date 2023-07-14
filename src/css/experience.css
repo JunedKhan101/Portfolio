@@ -16,9 +16,20 @@
 	position: relative;
 	top: 5%;
 }
+.open-source h3 {
+	display: inline;
+}
 .link { text-decoration: none; }
 .link:hover { text-decoration:underline; }
 .github-icon { 
     position: relative;
     bottom: 3px;
+}
+@media only screen and (max-width: 576px) {
+	.open-source h3 {
+		display: block;
+	}
+	.experience-description {
+		max-width: 90%;
+	}
 }
