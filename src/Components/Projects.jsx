@@ -121,7 +121,7 @@ export default function Projects() {
               </Modal.Header>
               <Modal.Body>
                 <Container>
-                  <video className="video" controls muted autoplay>
+                  <video className="video" controls muted autoPlay>
                     <source src={videoLink} type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
