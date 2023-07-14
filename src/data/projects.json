@@ -2,14 +2,16 @@
     "projects": [
         {
             "ProjectName": "NutriAl",
-            "SiteLink": "https://nutrial.herokuapp.com/",
-            "GithubLink": "https://github.com/JunedKhan101/NutriAl",
+            "SiteLink": "https://develop.d1bkj1bfnxlb5h.amplifyapp.com/",
+            "GithubLink": "https://github.com/JunedKhan101/",
+            "staticVideoLink": "static/NutriAl.mp4",
             "Description": "Nutrition Analysis, Built in React and react-router-dom and Chart.js.\nData is fetched from an API.\nUsers can efficiently see the nutrients a food contains.\nIt returns basic and complex nutrients information, Graph view displays nutrients in a graph."
         },
         {
             "ProjectName": "Quiz Game",
-            "SiteLink": "https://quiz-game42101.herokuapp.com/",
+            "SiteLink": "https://master.d3adgxpkxcfa42.amplifyapp.com/",
             "GithubLink": "https://github.com/JunedKhan101/Quiz-game",
+            "staticVideoLink": "static/QuizGame.mp4",
             "Description": "Built in React.js, react-router-dom and Material UI.\nData is fetched from an API.\nForm view displays all quiz like a form and one at a time in focused view."
         }
     ]
