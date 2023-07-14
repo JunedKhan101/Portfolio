@@ -43,6 +43,12 @@ hr {
 	margin: 0.5rem 0;
 	width: 100%;
 }
+.modal-close-btn {
+	background-color: #2f3338 !important;
+}
+.video {
+	width: 100%;
+}
 @media only screen and (max-width: 576px) {
 	#projects {
 		padding-top: 60px;
