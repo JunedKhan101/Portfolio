@@ -1,5 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { Container, Button, Modal, CloseButton } from "react-bootstrap";
 import AOS from "aos";
+import { ThemeContext } from "./App";
 import ProjectData from "../data/projects.json";
 import "../css/projects.css";
 
@@ -9,31 +11,58 @@ export default function Projects() {
       duration: 1000,
     });
   }, []);
+  const ThemeContextLocal = useContext(ThemeContext);
+  var ModalStyle = {
+    "backgroundColor": ThemeContextLocal.theme === "dark" ? "#1b1e21" : "#FFFFFF",
+    "color": ThemeContextLocal.theme === "dark" ? "#eee" : "#000000"
+  };
+  var CloseButtonLinkStyle = {
+    "color": ThemeContextLocal.theme === "dark" ? "#eee" : "#000000",
+    "textDecoration": "none"
+  };
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   function renderProjects() {
     var ProjectArray = ProjectData.projects;
     var content = [];
     for (var i = 0; i < ProjectArray.length; ++i) {
         content.push(
           <div key={i} className="project-instance">
-            <h3>{ProjectArray[i].ProjectName}</h3>&nbsp;&nbsp;[&nbsp;
-            <a
-              className="link"
-              target="_blank"
-              rel="noopener noreferrer"
-              href={ProjectArray[i].SiteLink}
-            >
-              View
-            </a>
-            &nbsp;|&nbsp;
-            <a
-              className="link"
-              target="_blank"
-              rel="noopener noreferrer"
-              href={ProjectArray[i].GithubLink}
-            >
-              Code
-            </a>
-            &nbsp;]
+            <div className="project-header">
+              <h3>{ProjectArray[i].ProjectName}</h3>
+              <div className="project-links">
+                [&nbsp;
+                <a
+                  className="link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={ProjectArray[i].SiteLink}
+                >
+                  Open
+                </a>
+                &nbsp;|&nbsp;
+                <a
+                  className="link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={ProjectArray[i].GithubLink}
+                >
+                  Github
+                </a>
+                &nbsp;|&nbsp;
+                <a
+                  className="link"
+                  href="#modal"
+                  rel="noopener noreferrer"
+                  onClick={handleShow}
+                >
+                  Video
+                </a>
+                &nbsp;]
+              </div>
+            </div>
             <hr />
             <p className="project-description">{ProjectArray[i].Description}</p>
           </div>
@@ -46,36 +75,24 @@ export default function Projects() {
       <div className="projects-subcontainer">
         <h1 className="projects-heading">Projects</h1>
         <div className="projects">
-          {/* <div className="p1">
-            <h3>Password Manager and Note Taking</h3>&nbsp;&nbsp;[&nbsp;
-            <a
-              className="link"
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://pwdmanager-and-notetaking.herokuapp.com/"
-            >
-              View
-            </a>
-            &nbsp;|&nbsp;
-            <a
-              className="link"
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://github.com/JunedKhan101/PWDManager-And-NoteTaking"
-            >
-              Code
-            </a>
-            &nbsp;]
-            <hr />
-            <p>
-              Built in Node.js, MongoDB, Express and EJS, that uses JWT
-              Authentication.
-              <br />
-              MongoDB handles User model and saves the user notes and passwords in
-              a MongoDB cluster.
-            </p>
-          </div> */}
           {renderProjects()}
+          <Modal show={show} onHide={handleClose}>
+            <Container className="modal-container" style={ModalStyle}>
+              <Modal.Header>
+                <Modal.Title>Project</Modal.Title>
+                <a className="close-btn" href="#close-btn" onClick={handleClose} style={CloseButtonLinkStyle}>X</a>
+              </Modal.Header>
+              <Modal.Body>Woohoo, you are reading this text in a modal!</Modal.Body>
+              <Modal.Footer className="border-0 justify-content-center">
+                <Button variant="secondary" onClick={handleClose}>
+                  Close
+                </Button>
+                <Button variant="dark" onClick={handleClose}>
+                  Save Changes
+                </Button>
+              </Modal.Footer>
+            </Container>
+          </Modal>
         </div>
       </div>
     </section>

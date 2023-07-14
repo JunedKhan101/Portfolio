@@ -26,16 +26,29 @@
 	left: 5%;
 	overflow: hidden;
 }
+.project-header {
+	display: flex;
+	align-items: center;
+}
 .project-description {
 	white-space: pre-line;  
 	vertical-align: bottom;
 }
 .link { text-decoration: none; }
-h3 { display: inline; }
-hr { width: 100%;}
-
+.project-header h3 { 
+	display: inline;
+	margin-right: 0.5rem;
+}
+hr { 
+	margin: 0.5rem 0;
+	width: 100%;
+}
 @media only screen and (max-width: 576px) {
 	#projects {
 		padding-top: 60px;
+	}
+	.project-header {
+		flex-direction: column;
+		align-items: start;
 	}
 }
