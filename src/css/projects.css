@@ -39,6 +39,13 @@
 	display: inline;
 	margin-right: 0.5rem;
 }
+.project-links {
+	display: inline;
+}
+.project-links svg {
+    position: relative;
+    bottom: 3px;
+}
 hr { 
 	margin: 0.5rem 0;
 	width: 100%;
