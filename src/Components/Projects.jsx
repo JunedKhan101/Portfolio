@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Container, Row, Button, Modal } from "react-bootstrap";
+import { Container, Button, Modal } from "react-bootstrap";
 import AOS from "aos";
 import { ThemeContext } from "./App";
 import ProjectData from "../data/projects.json";
