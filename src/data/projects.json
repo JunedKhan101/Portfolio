@@ -2,7 +2,7 @@
     "projects": [
         {
             "ProjectName": "NutriAl",
-            "SiteLink": "https://develop.d1bkj1bfnxlb5h.amplifyapp.com/",
+            "SiteLink": "https://nutrial.netlify.app/",
             "GithubLink": "https://github.com/JunedKhan101/NutriAl",
             "staticVideoLink": "static/NutriAl.mp4",
             "Description": "Nutrition Analysis, Built in React and react-router-dom and Chart.js.\nData is fetched from an API.\nUsers can efficiently see the nutrients a food contains.\nIt returns basic and complex nutrients information, Graph view displays nutrients in a graph."
