@@ -1,0 +1,35 @@
+.experience {
+	width: 100%;
+	min-height: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+    padding-top: 52px;
+    /* margin-top: -52px; margin removed due to nav highlighting issue */
+}
+.experience-description {
+	margin: 0 auto;
+    width: auto;
+	position: relative;
+	top: 5%;
+}
+.open-source h3 {
+	display: inline;
+}
+.link { text-decoration: none; }
+.link:hover { text-decoration:underline; }
+.github-icon { 
+    position: relative;
+    bottom: 3px;
+}
+@media only screen and (max-width: 576px) {
+	.open-source h3 {
+		display: block;
+	}
+	.experience-description {
+		max-width: 90%;
+	}
+}

@@ -26,16 +26,43 @@
 	left: 5%;
 	overflow: hidden;
 }
+.project-header {
+	display: flex;
+	align-items: center;
+}
 .project-description {
 	white-space: pre-line;  
 	vertical-align: bottom;
 }
 .link { text-decoration: none; }
-h3 { display: inline; }
-hr { width: 100%;}
-
+.link:hover { text-decoration:underline; }
+.project-header h3 { 
+	display: inline;
+	margin-right: 0.5rem;
+}
+.project-links {
+	display: inline;
+}
+.project-links svg {
+    position: relative;
+    bottom: 3px;
+}
+hr { 
+	margin: 0.5rem 0;
+	width: 100%;
+}
+.modal-close-btn {
+	background-color: #2f3338 !important;
+}
+.video {
+	width: 100%;
+}
 @media only screen and (max-width: 576px) {
 	#projects {
 		padding-top: 60px;
+	}
+	.project-header {
+		flex-direction: column;
+		align-items: start;
 	}
 }
