@@ -85,8 +85,9 @@ export default function Skills() {
               <hr />
               <ul>
                 <li>Data Visualization</li>
-                <li>Data Structures and Algorithms</li>
+                <li>DSA</li>
                 <li>Git and GitHub</li>
+                <li><b>Agile</b> Development</li>
               </ul>
             </Card.Body>
           </Card>
