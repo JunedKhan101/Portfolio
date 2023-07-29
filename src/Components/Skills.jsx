@@ -84,10 +84,11 @@ export default function Skills() {
               <Card.Title>Other</Card.Title>
               <hr />
               <ul>
-                <li>Data Visualization</li>
-                <li>DSA</li>
                 <li>Git and GitHub</li>
+                <li>Jenkins</li>
                 <li><b>Agile</b> Development</li>
+                <li>DSA</li>
+                <li>Data Visualization</li>
               </ul>
             </Card.Body>
           </Card>
