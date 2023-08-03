@@ -34,6 +34,8 @@ export default function Experience() {
           </ul>
 
           <div className="open-source">
+            <p>July 2023 - Present</p>
+            <hr />
             <h3>
               Open Source Contributor&nbsp;-&nbsp;
             </h3>
