@@ -86,7 +86,7 @@ export default function Skills() {
               <ul>
                 <li>Git and GitHub</li>
                 <li>Jenkins</li>
-                <li><b>Agile</b> Development</li>
+                <li><b>Agile-Scrum</b> Model</li>
                 <li>DSA</li>
                 <li>Data Visualization</li>
               </ul>
