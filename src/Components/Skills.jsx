@@ -12,7 +12,7 @@ export default function Skills() {
   return (
     <section className="skills-container" id="skills">
       <div className="skills-subcontainer">
-        <h1 className="skills-heading">Skills</h1>
+        <h2 className="skills-heading">Skills</h2>
         <div className="skills">
           <Card data-aos="fade-up" style={{ width: "18rem" }}>
             <Card.Body>
