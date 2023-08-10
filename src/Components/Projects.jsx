@@ -103,7 +103,7 @@ export default function Projects() {
   return (
     <section className="projects-container" id="projects">
       <div className="projects-subcontainer">
-        <h1 className="projects-heading">Projects</h1>
+        <h2 className="projects-heading">Projects</h2>
         <div className="projects">
           {renderProjects()}
           <Modal size="xl" centered show={show} onHide={handleClose}>

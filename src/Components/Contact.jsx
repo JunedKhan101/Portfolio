@@ -112,7 +112,7 @@ export default function Contact() {
     <section className="contact-container" id="contact">
       <Container className="contact">
         <Row>
-          <h1 className="contact-heading">Contact</h1>
+          <h2 className="contact-heading">Contact</h2>
         </Row>
         <Row>
           <small className="primary-email">junedkhanc101@gmail.com</small>
