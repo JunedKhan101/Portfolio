@@ -79,7 +79,6 @@ export default function Projects() {
                   <path d="M9 6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM7 3a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
                 </svg>&nbsp;
                 <a
-                  id="video-link"
                   className="link"
                   href="#modal"
                   rel="noopener noreferrer"
