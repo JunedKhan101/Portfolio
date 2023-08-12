@@ -71,6 +71,7 @@ function App() {
 				document.querySelector(".my-nav a[href*=" + sectionId + "]").classList.add("active");
 			} else {
 				document.querySelector(".my-nav a[href*=" + sectionId + "]").classList.remove("active");
+        document.querySelector(".my-nav .resume-nav-link").classList.remove("active");
 			}
 		});
 	}

@@ -32,7 +32,7 @@ export default function NavBar() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mx-auto my-auto my-nav">
             <Nav.Link
-              className="mynav-links"
+              className="mynav-links resume-nav-link"
               href="static/JunedKhan.pdf"
               target="_blank"
             >
