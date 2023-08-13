@@ -1,0 +1,12 @@
+.blog {
+	width: 100%;
+	min-height: 100%;
+
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+    padding-top: 52px;
+    /* margin-top: -52px; margin removed due to nav highlighting issue */
+}

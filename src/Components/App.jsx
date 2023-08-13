@@ -1,10 +1,8 @@
 import React, { useState, useEffect, createContext } from "react";
+import { Routes, Route } from "react-router-dom";
 import NavBar from "./NavBar";
-import About from "./About";
-import Projects from "./Projects";
-import Skills from "./Skills";
-import Contact from "./Contact";
-import Intro from "./Intro";
+import Main from "./Main";
+import Blog from "./Blog";
 import "../css/app.css";
 
 export const ThemeContext = createContext(null);
@@ -79,11 +77,10 @@ function App() {
     <ThemeContext.Provider value={{themeflag, theme, toggleTheme}}>
       <div className="app" id={theme}>
         <NavBar />
-        <Intro />
-        <About />
-        <Projects />
-        <Skills />
-        <Contact />
+        <Routes>
+          <Route exact path='/' element={<Main />}></Route>
+          <Route exact path='/blog' element={<Blog />}></Route>
+        </Routes>
 	    </div>
     </ThemeContext.Provider>
   );
