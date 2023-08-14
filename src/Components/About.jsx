@@ -6,11 +6,10 @@ export default function About() {
 		<section className="about" id="about">
 			<h2 className="about-heading">About Myself</h2>
 			<div className="description-container">
-				<p className="oneline-intro">
-					Lifelong learner, Introvert, Inquisitive, Geek, Nerd, Bookworm.
-				</p>
-
 				<div className="sub-description">
+					<p className="oneline-intro">
+						Lifelong learner, Introvert, Inquisitive, Geek, Nerd, Bookworm.
+					</p>
 					<p>
 						I did a Bachelor degree in Information Technology from University of
 						Mumbai, and graduated in August 2021.

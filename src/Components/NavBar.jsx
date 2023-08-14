@@ -16,35 +16,37 @@ export default function NavBar() {
 				variant={theme}
 			>
 				<Container>
-					<Navbar.Brand className="nav-brand" href="/">
-						Juned Khan
-					</Navbar.Brand>
-					&nbsp;
-					<Nav.Link className="mynav-links dark-mode-toggler-mobile">
-						<label>
-							<Switch
-								onChange={toggleTheme}
-								checked={themeflag}
-								width={60}
-								offColor="#fecea8"
-								onColor="#142d4c"
-								offHandleColor="#f96d00"
-								onHandleColor="#ffffff"
-								uncheckedIcon={
-									<img
-										alt="sun"
-										src="https://img.icons8.com/color/28/000000/sun--v1.png"
-									/>
-								}
-								checkedIcon={
-									<img
-										alt="moon"
-										src="https://img.icons8.com/external-icongeek26-linear-colour-icongeek26/28/000000/external-moon-magic-and-fairy-tale-icongeek26-linear-colour-icongeek26.png"
-									/>
-								}
-							/>
-						</label>
-					</Nav.Link>
+					<div className="brand-container">
+						<Navbar.Brand className="nav-brand" href="/">
+							Juned Khan
+						</Navbar.Brand>
+						&nbsp;
+						<Nav.Link className="mynav-links dark-mode-toggler-mobile">
+							<label>
+								<Switch
+									onChange={toggleTheme}
+									checked={themeflag}
+									width={60}
+									offColor="#fecea8"
+									onColor="#142d4c"
+									offHandleColor="#f96d00"
+									onHandleColor="#ffffff"
+									uncheckedIcon={
+										<img
+											alt="sun"
+											src="https://img.icons8.com/color/28/000000/sun--v1.png"
+										/>
+									}
+									checkedIcon={
+										<img
+											alt="moon"
+											src="https://img.icons8.com/external-icongeek26-linear-colour-icongeek26/28/000000/external-moon-magic-and-fairy-tale-icongeek26-linear-colour-icongeek26.png"
+										/>
+									}
+								/>
+							</label>
+						</Nav.Link>
+					</div>
 					<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 					<Navbar.Collapse id="responsive-navbar-nav">
 						<Nav className="mx-auto my-auto my-nav">
@@ -94,7 +96,7 @@ export default function NavBar() {
 				</Container>
 				<Container className="custom-nav-container">
 					<div className="container-wrapper d-flex flex-column align-items-center justify-content-center w-100">
-						{/* <p className="page-nav-info">On this page:&nbsp;</p> */}
+						<p className="page-nav-info">On this page:&nbsp;</p>
 						<Nav className="my-auto flex-row custom-nav justify-content-around">
 							<Nav.Link className="mynav-links" href="#about">
 								About

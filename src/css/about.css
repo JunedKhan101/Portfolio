@@ -7,13 +7,14 @@
 	justify-content: center;
 	flex-direction: column;
 
-    padding-top: 52px;
+    /* padding-top: 52px; before custom nav */
+	padding-top: 120px;
     /* margin-top: -52px; margin removed due to nav highlighting issue */
 }
 .oneline-intro { text-align: center;}
 
 .sub-description {
-	max-width: 80%;
+	max-width: 90%;
 	margin: 0 auto;
 	position: relative;
 	top: 5%;

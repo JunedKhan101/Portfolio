@@ -1,6 +1,6 @@
 #projects {
 	/* padding-top: 52px; before custom-nav */
-	padding-top: 95px;
+	padding-top: 120px;
     /* margin-top: -52px; margin removed due to nav highlighting issue */
 }
 .projects-container {
@@ -60,7 +60,8 @@ hr {
 }
 @media only screen and (max-width: 576px) {
 	#projects {
-		padding-top: 60px;
+		/* padding-top: 60px; before custom nav */
+		padding-top: 120px;
 	}
 	.project-header {
 		flex-direction: column;

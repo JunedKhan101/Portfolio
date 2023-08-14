@@ -12,7 +12,7 @@
 	height: 100%;
 }
 #contact {
-	padding-top: 95px;
+	padding-top: 120px;
     /* margin-top: -52px; margin removed due to nav highlighting issue*/
 }
 .contact-heading, .chat-heading, .form-heading, .heading-success { text-align: center; }

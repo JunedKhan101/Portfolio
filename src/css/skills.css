@@ -31,7 +31,7 @@
 }
 #skills {
 	/* padding-top: 52px; before custom nav */
-	padding-top: 95px;
+	padding-top: 120px;
   	/* margin-top: -52px; margin removed due to nav highlighting issue */ 
 }
 ul {
@@ -56,6 +56,6 @@ ul {
 	}
 	#skills {
 		/* padding-top: 60px; before custom-nav */
-		padding-top: 95px;
+		padding-top: 120px;
 	}
 }
