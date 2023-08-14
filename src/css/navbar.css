@@ -18,7 +18,7 @@
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    padding-left: 70px;
+    padding-right: 50px;
 }
 .custom-nav-container {
     padding-top: 5px;
@@ -45,6 +45,14 @@
     padding-bottom: 3px;
     font-size: 12px;
 }
+.offcanvas-nav {
+    display: flex;
+    align-items: flex-start;
+}
+.offcanvas {
+    border: none !important;
+}
+
 @media (max-width: 992px) {
     .dark-mode-toggler {
         display: none !important;
@@ -66,6 +74,11 @@
 @media (min-width: 992px) {
     .dark-mode-toggler-mobile {
         display: none !important;
+    }
+}
+@media (max-width: 992px) {
+    #responsive-navbar-nav {
+        display: none;
     }
 }
 @media only screen and (max-width: 576px) {
