@@ -16,7 +16,7 @@ export default function NavBar() {
 				variant={theme}
 			>
 				<Container>
-					<Navbar.Brand className="nav-brand" href="#intro">
+					<Navbar.Brand className="nav-brand" href="/">
 						Juned Khan
 					</Navbar.Brand>
 					&nbsp;
@@ -55,17 +55,14 @@ export default function NavBar() {
 							>
 								Resume
 							</Nav.Link>
-							<Nav.Link className="mynav-links" href="#about">
-								About
+							<Nav.Link className="mynav-links" href="/blog">
+								Blog
 							</Nav.Link>
-							<Nav.Link className="mynav-links" href="#projects">
-								Projects
+							<Nav.Link className="mynav-links" href="/code-snippets">
+								Code Snippets
 							</Nav.Link>
-							<Nav.Link className="mynav-links" href="#skills">
-								Skills
-							</Nav.Link>
-							<Nav.Link className="mynav-links" href="#contact">
-								Contact
+							<Nav.Link className="mynav-links" href="/gear">
+								Gear
 							</Nav.Link>
 							<Nav.Link className="mynav-links dark-mode-toggler">
 								<label>

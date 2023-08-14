@@ -78,6 +78,8 @@ function App() {
 				<Routes>
 					<Route exact path="/" element={<Main />}></Route>
 					<Route exact path="/blog" element={<Blog />}></Route>
+					<Route exact path="/code-snippets" element={<Blog />}></Route>
+					<Route exact path="/gear" element={<Blog />}></Route>
 				</Routes>
 			</div>
 		</ThemeContext.Provider>
