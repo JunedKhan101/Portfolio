@@ -13,6 +13,27 @@
     align-items: center;
     justify-content: space-around;
 }
+.custom-nav-container {
+    padding-top: 5px;
+    width: 100%;
+    text-decoration: none;
+    font-size: 15px;
+}
+.custom-nav {
+    width: 250px;
+    font-size: 12px;;
+    text-align: center;
+    border: 1px solid gray;
+    border-radius: 20px;
+}
+.page-nav-info {
+    margin: 0 auto;
+    width: fit-content;
+    text-align: start;
+    padding-left: 5px;
+    padding-bottom: 3px;
+    font-size: 12px;
+}
 @media (max-width: 992px) {
     .dark-mode-toggler {
         display: none !important;

@@ -1,5 +1,6 @@
 #projects {
-	padding-top: 52px;
+	/* padding-top: 52px; before custom-nav */
+	padding-top: 95px;
     /* margin-top: -52px; margin removed due to nav highlighting issue */
 }
 .projects-container {
