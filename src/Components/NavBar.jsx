@@ -5,18 +5,18 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import { ThemeContext } from "./App";
 import "../css/navbar.css";
 
+function getRelativeURL() {
+	const currentURL = window.location.href;
+	const parsedURL = new URL(currentURL);
+	return parsedURL.pathname || "/";
+}
+
 export default function NavBar() {
 	const { themeflag, theme, toggleTheme } = useContext(ThemeContext);
 	const [show, setShow] = useState(false);
 
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
-
-	function getRelativeURL() {
-		const currentURL = window.location.href;
-		const parsedURL = new URL(currentURL);
-		return parsedURL.pathname || "/";
-	}
 	const textColorStyle = {
 		color: theme === "dark" ? "#EEE" : "",
 	};
@@ -188,3 +188,4 @@ export default function NavBar() {
 		</>
 	);
 }
+export { getRelativeURL };

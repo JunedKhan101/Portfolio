@@ -3,6 +3,8 @@ import { Routes, Route } from "react-router-dom";
 import NavBar from "./NavBar";
 import Main from "./Main";
 import Blog from "./Blog";
+import Gear from "./Gear";
+import { getRelativeURL } from "./NavBar";
 import "../css/app.css";
 
 export const ThemeContext = createContext(null);
@@ -44,7 +46,10 @@ function App() {
 	const sections = document.querySelectorAll("section[id]");
 
 	// Add an event listener listening for scroll
-	window.addEventListener("scroll", navHighlighter);
+	var currentURL = getRelativeURL();
+	if (currentURL === '/') {
+		window.addEventListener("scroll", navHighlighter);
+	}
 
 	function navHighlighter() {
 		// Get current scroll position
@@ -79,7 +84,7 @@ function App() {
 					<Route exact path="/" element={<Main />}></Route>
 					<Route exact path="/blog" element={<Blog />}></Route>
 					<Route exact path="/code-snippets" element={<Blog />}></Route>
-					<Route exact path="/gear" element={<Blog />}></Route>
+					<Route exact path="/gear" element={<Gear />}></Route>
 				</Routes>
 			</div>
 		</ThemeContext.Provider>
