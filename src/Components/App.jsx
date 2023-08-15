@@ -2,8 +2,8 @@ import React, { useState, useEffect, createContext } from "react";
 import { Routes, Route } from "react-router-dom";
 import NavBar from "./NavBar";
 import Main from "./Main";
-import Blog from "./Blog";
-import Gear from "./Gear";
+import Blog from "../pages/Blog";
+import Gear from "../pages/Gear";
 import { getRelativeURL } from "./NavBar";
 import "../css/app.css";
 
@@ -16,14 +16,12 @@ function App() {
 		setThemeFlag((themeflag) => !themeflag);
 
 		var localtheme = localStorage.getItem("theme");
-
 		if (localtheme === "light") localStorage.setItem("theme", "dark");
 		else if (localtheme === "dark") localStorage.setItem("theme", "light");
 	};
 	useEffect(() => {
 		if (localStorage) {
 			var localtheme = localStorage.getItem("theme");
-
 			if (!localtheme) localStorage.setItem("theme", "light");
 			else if (localtheme === "light") setThemeFlag(false);
 			else if (localtheme === "dark") setThemeFlag(true);

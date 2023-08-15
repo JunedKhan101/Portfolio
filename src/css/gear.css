@@ -21,7 +21,6 @@
 	align-content: center;
 	justify-content: center;
 	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    /* grid-template-columns: auto auto auto; */
 	grid-row-gap: 50px;
 }
 #dark .card {

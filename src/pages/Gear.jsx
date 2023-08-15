@@ -44,7 +44,7 @@ export default function Gear() {
 					</Card>
 					<Card style={{ width: "18rem" }}>
 						<Card.Body>
-							<Card.Title>Coding Apps, Tools and Fonts</Card.Title>
+							<Card.Title>For Coding</Card.Title>
 							<hr />
 							<ul>
 								<li>VSCode</li>
