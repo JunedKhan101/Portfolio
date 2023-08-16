@@ -13,6 +13,9 @@
 .blog-homepage h1 {
 	text-align: center;
 }
+.blog-intro-text {
+	width: 90%;
+}
 .blog-homepage-subcontainer {
 	width: 100%;
 	height: 100%;
@@ -88,8 +91,16 @@
 .tag-filter-btn:hover {
 	color: #7c7c7c;
 }
+.tag-filter-btn.active {
+	background-color: #0069D9;
+	color: white;
+}
 #dark .tag-filter-btn {
 	background-color: gray;
+	color: white;
+}
+#dark .tag-filter-btn.active {
+	background-color: #0069D9;
 	color: white;
 }
 #dark .tag-filter-btn:hover {
@@ -139,6 +150,7 @@
 		display: none;
 	}
 	.filter-tags-container-small {
+		width: 90%;
 		display: flex;
 		align-items: center;
 		justify-content: center;

@@ -1,17 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { Card } from "react-bootstrap";
 import { createBucketClient } from "@cosmicjs/sdk";
+import { ThemeContext } from "../components/App";
 import "../css/bloghomepage.css";
 
 export default function BlogHomePage() {
 	const [cosmicObj, setCosmicObj] = useState({});
 	const [filter, setFilter] = useState("");
 	const [isLoading, setIsLoading] = useState(false);
+	const { theme } = useContext(ThemeContext);
 	useEffect(() => {
 		setIsLoading(true);
 		initializeCosmic();
 		setIsLoading(false);
 	}, []);
+	useEffect(() => {
+		console.log(filter);
+	}, [filter]);
 	const initializeCosmic = async () => {
 		const cosmic = createBucketClient({
 			bucketSlug: process.env.REACT_APP_COSMIC_BUCKET_SLUG,
@@ -101,29 +106,44 @@ export default function BlogHomePage() {
 	}
 	const handleFilterClick = (tag) => {
 		setFilter(tag);
+
 	};
+	const handleClearFilter = () => {
+		setFilter("");
+		const buttons = document.querySelectorAll(".tag-filter-btn");
+		buttons.forEach((button) => {
+			button.classList.remove("active");
+		});
+	}
 	const uniqueTags = getAllUniqueTags();
 	return (
 		<>
 			<section className="blog-homepage" id="blog-homepage">
 				<div className="blog-homepage-subcontainer">
 					<h1>Blog</h1>
-					<p className="w-100 text-center">
+					<p className="blog-intro-text text-center">
 						Writing on software development, system design, and in
 						general tech.
 					</p>
-					<div className={!isLoading && cosmicObj ? 'filter-tags-container-small' : 'd-none'}>
-						<p className="w-100 text-left">Filter by tags:</p>
+					<div
+						className={
+							!isLoading && cosmicObj
+								? "filter-tags-container-small"
+								: "d-none"
+						}
+					>
+						<p className="w-100 text-center">Filter by tags:</p>
 						<div className="filter-tags-small">
 							{uniqueTags.map((tag, index) => (
 								<button
+									key={index}
 									className={
-										filter
-											? "border-0 tag-filter-btn"
-											: "tag-filter-btn border-0"
-										}
+										filter === tag
+											? "border-0 tag-filter-btn active"
+											: "tag-filter-btn border-0 "
+									}
 									onClick={() => handleFilterClick(tag)}
-									>
+								>
 									{tag}
 								</button>
 							))}
@@ -131,15 +151,24 @@ export default function BlogHomePage() {
 					</div>
 					{renderBlogs()}
 				</div>
-				<div className={!isLoading && cosmicObj ? 'filter-tags-container' : 'd-none'}>
+				<div
+					className={
+						!isLoading && cosmicObj
+							? "filter-tags-container"
+							: "d-none"
+					}
+				>
 					<p className="w-100 text-left">Filter by tags:</p>
+					<div className={filter ? "clear-filter-btn-container w-100 pb-4" : "d-none"}>
+						<button className={theme === "dark" ? "btn btn-secondary clear-filter-btn" : "btn btn-dark clear-filter-btn"} onClick={() => handleClearFilter()}>X Clear Filter</button>
+					</div>
 					<div className="filter-tags">
 						{uniqueTags.map((tag, index) => (
 							<button
 								key={index}
 								className={
-									filter
-										? "border-0 tag-filter-btn"
+									filter === tag
+										? "border-0 tag-filter-btn active"
 										: "tag-filter-btn border-0"
 								}
 								onClick={() => handleFilterClick(tag)}
