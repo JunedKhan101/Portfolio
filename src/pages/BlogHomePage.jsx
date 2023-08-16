@@ -107,10 +107,6 @@ export default function BlogHomePage() {
 	};
 	const handleClearFilter = () => {
 		setFilter("");
-		const buttons = document.querySelectorAll(".tag-filter-btn");
-		buttons.forEach((button) => {
-			button.classList.remove("active");
-		});
 	}
 	const uniqueTags = getAllUniqueTags();
 	return (
