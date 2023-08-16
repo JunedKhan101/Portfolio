@@ -112,7 +112,7 @@ export default function BlogHomePage() {
 						Writing on software development, system design, and in
 						general tech.
 					</p>
-					<div className="filter-tags-container-small">
+					<div className={!isLoading && cosmicObj ? 'filter-tags-container-small' : 'd-none'}>
 						<p className="w-100 text-left">Filter by tags:</p>
 						<div className="filter-tags-small">
 							{uniqueTags.map((tag, index) => (
@@ -131,7 +131,7 @@ export default function BlogHomePage() {
 					</div>
 					{renderBlogs()}
 				</div>
-				<div className="filter-tags-container">
+				<div className={!isLoading && cosmicObj ? 'filter-tags-container' : 'd-none'}>
 					<p className="w-100 text-left">Filter by tags:</p>
 					<div className="filter-tags">
 						{uniqueTags.map((tag, index) => (
