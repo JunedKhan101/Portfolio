@@ -1,7 +1,8 @@
 import React, { useState, useEffect, createContext } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useParams } from "react-router-dom";
 import NavBar from "./NavBar";
 import Main from "./Main";
+import BlogHomePage from "../pages/BlogHomePage";
 import Blog from "../pages/Blog";
 import Gear from "../pages/Gear";
 import { getRelativeURL } from "./NavBar";
@@ -80,9 +81,10 @@ function App() {
 				<NavBar />
 				<Routes>
 					<Route exact path="/" element={<Main />}></Route>
-					<Route exact path="/blog" element={<Blog />}></Route>
-					<Route exact path="/code-snippets" element={<Blog />}></Route>
+					<Route exact path="/blog" element={<BlogHomePage />}></Route>
+					<Route exact path="/code-snippets" element={<Gear />}></Route>
 					<Route exact path="/gear" element={<Gear />}></Route>
+					<Route path="/blog/:slug" element={<Blog />} />;
 				</Routes>
 			</div>
 		</ThemeContext.Provider>
