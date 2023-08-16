@@ -38,7 +38,7 @@ export default function Gear() {
 								<li>Bitwarden and KeePass</li>
 								<li>IrfanView</li>
 								<li>Everything</li>
-                                <li><a href="https://learn.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite" target="_blank">Sysinternal Tools</a></li>
+                                <li><a href="https://learn.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite" rel="noreferrer" target="_blank">Sysinternal Tools</a></li>
 							</ul>
 						</Card.Body>
 					</Card>

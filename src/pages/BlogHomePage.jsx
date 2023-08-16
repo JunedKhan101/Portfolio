@@ -5,6 +5,7 @@ import "../css/bloghomepage.css";
 
 export default function BlogHomePage() {
 	const [cosmicObj, setCosmicObj] = useState({});
+	const [filter, setFilter] = useState("");
 	const [isLoading, setIsLoading] = useState(false);
 	useEffect(() => {
 		setIsLoading(true);
@@ -16,7 +17,6 @@ export default function BlogHomePage() {
 			bucketSlug: process.env.REACT_APP_COSMIC_BUCKET_SLUG,
 			readKey: process.env.REACT_APP_COSMIC_API_KEY,
 		});
-
 		const obj = await cosmic.objects
 			.find({
 				type: "posts",
@@ -27,13 +27,11 @@ export default function BlogHomePage() {
 	};
 	const getAllUniqueTags = () => {
 		const allTags = new Set(); // Use a Set to store unique tags
-
-		cosmicObj.forEach((item) => {
-			item.metadata.tags.forEach((tag) => {
+		for (var i = 0; i < cosmicObj.length; i++) {
+			cosmicObj[i].metadata.tags.forEach((tag) => {
 				allTags.add(tag.title);
 			});
-		});
-
+		}
 		return Array.from(allTags); // Convert the Set back to an array
 	};
 	function renderBlogs() {
@@ -46,9 +44,9 @@ export default function BlogHomePage() {
 			for (var i = 0; i < cosmicObj.length; i++) {
 				blog.push(
 					<a
+						key={cosmicObj[i].slug}
 						className="blog-card-link"
-						key={i}
-						href={"/blog/" + cosmicObj[i].slug}
+						href={`/blog/${cosmicObj[i].slug}`}
 					>
 						<Card style={{ width: "18rem" }}>
 							<Card.Body className="blog-card-body">
@@ -101,13 +99,55 @@ export default function BlogHomePage() {
 			return <h1>No Blog content to show</h1>;
 		}
 	}
+	const handleFilterClick = (tag) => {
+		setFilter(tag);
+	};
+	const uniqueTags = getAllUniqueTags();
 	return (
 		<>
 			<section className="blog-homepage" id="blog-homepage">
 				<div className="blog-homepage-subcontainer">
 					<h1>Blog</h1>
-					<p>Writing on software development, system design, and in general tech.</p>
+					<p className="w-100 text-center">
+						Writing on software development, system design, and in
+						general tech.
+					</p>
+					<div className="filter-tags-container-small">
+						<p className="w-100 text-left">Filter by tags:</p>
+						<div className="filter-tags-small">
+							{uniqueTags.map((tag, index) => (
+								<button
+									className={
+										filter
+											? "border-0 tag-filter-btn"
+											: "tag-filter-btn border-0"
+										}
+									onClick={() => handleFilterClick(tag)}
+									>
+									{tag}
+								</button>
+							))}
+						</div>
+					</div>
 					{renderBlogs()}
+				</div>
+				<div className="filter-tags-container">
+					<p className="w-100 text-left">Filter by tags:</p>
+					<div className="filter-tags">
+						{uniqueTags.map((tag, index) => (
+							<button
+								key={index}
+								className={
+									filter
+										? "border-0 tag-filter-btn"
+										: "tag-filter-btn border-0"
+								}
+								onClick={() => handleFilterClick(tag)}
+							>
+								{tag}
+							</button>
+						))}
+					</div>
 				</div>
 			</section>
 		</>

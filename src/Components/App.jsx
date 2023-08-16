@@ -1,5 +1,5 @@
 import React, { useState, useEffect, createContext } from "react";
-import { Routes, Route, useParams } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import NavBar from "./NavBar";
 import Main from "./Main";
 import BlogHomePage from "../pages/BlogHomePage";
