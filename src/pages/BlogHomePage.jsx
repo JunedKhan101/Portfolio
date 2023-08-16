@@ -14,9 +14,6 @@ export default function BlogHomePage() {
 		initializeCosmic();
 		setIsLoading(false);
 	}, []);
-	useEffect(() => {
-		console.log(filter);
-	}, [filter]);
 	const initializeCosmic = async () => {
 		const cosmic = createBucketClient({
 			bucketSlug: process.env.REACT_APP_COSMIC_BUCKET_SLUG,
