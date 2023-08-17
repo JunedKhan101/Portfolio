@@ -36,7 +36,7 @@ export default function BlogCard({cosmicObject}) {
 										// 		val.metadata.color,
 										// };
 										return (
-											<>
+											<div key={key}>
 												<p
 													key={key}
 													className="m-0 tag"
@@ -45,7 +45,7 @@ export default function BlogCard({cosmicObject}) {
 													{val.title}
 												</p>
 												&nbsp;
-											</>
+											</div>
 										);
 									}
 								)}
@@ -56,5 +56,5 @@ export default function BlogCard({cosmicObject}) {
 			</a>
 		);
 	}
-	return (<div className="blog-card-section pt-4">{blog}</div>);
+	return (<div className="blog-card-section pt-4 pb-4">{blog}</div>);
 }
