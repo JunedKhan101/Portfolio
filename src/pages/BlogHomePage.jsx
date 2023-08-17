@@ -41,7 +41,7 @@ export default function BlogHomePage() {
 			return (
 				<img id="loading-blog" src="static/loading.png" alt="loading" />
 			);
-		} else if (cosmicObj && !isLoading) {
+		} else if (cosmicObj.length > 0 && !isLoading) {
 			var blog = [];
 			for (var i = 0; i < cosmicObj.length; i++) {
 				blog.push(
@@ -103,11 +103,35 @@ export default function BlogHomePage() {
 	}
 	const handleFilterClick = (tag) => {
 		setFilter(tag);
-
+		const filteredObjects = filterObjectsBySingleTag();
+		// setCosmicObj(filteredObjects);
+		console.log(filteredObjects);
 	};
 	const handleClearFilter = () => {
 		setFilter("");
-	}
+	};
+	// const filterObjectsByTags = (cosmicObj, filter) => {
+	// 	const matchingObjects = [];
+
+	// 	dataArray.forEach(item => {
+	// 	  const tags = item.metadata.tags;
+	// 	  const tagTitles = tags.map(tag => tag.title);
+
+	// 	  if (tagsToMatch.every(tagToMatch => tagTitles.includes(tagToMatch))) {
+	// 		matchingObjects.push(item);
+	// 	  }
+	// 	});
+
+	// 	return matchingObjects;
+	//   };
+	const filterObjectsBySingleTag = () => {
+		const matchingObjects = cosmicObj.filter((item) => {
+			const tags = item.metadata.tags;
+			return tags.some((tag) => tag.title === filter);
+			debugger;
+		});
+		return matchingObjects;
+	};
 	const uniqueTags = getAllUniqueTags();
 	return (
 		<>
@@ -126,6 +150,24 @@ export default function BlogHomePage() {
 						}
 					>
 						<p className="w-100 text-center">Filter by tags:</p>
+						<div
+							className={
+								filter
+									? "clear-filter-btn-container-small w-100 pb-4"
+									: "d-none"
+							}
+						>
+							<button
+								className={
+									theme === "dark"
+										? "btn btn-secondary clear-filter-btn-small"
+										: "btn btn-dark clear-filter-btn-small"
+								}
+								onClick={() => handleClearFilter()}
+							>
+								X Clear Filter
+							</button>
+						</div>
 						<div className="filter-tags-small">
 							{uniqueTags.map((tag, index) => (
 								<button
@@ -146,14 +188,29 @@ export default function BlogHomePage() {
 				</div>
 				<div
 					className={
-						!isLoading && cosmicObj
+						!isLoading && cosmicObj.length > 0
 							? "filter-tags-container"
 							: "d-none"
 					}
 				>
 					<p className="w-100 text-left">Filter by tags:</p>
-					<div className={filter ? "clear-filter-btn-container w-100 pb-4" : "d-none"}>
-						<button className={theme === "dark" ? "btn btn-secondary clear-filter-btn" : "btn btn-dark clear-filter-btn"} onClick={() => handleClearFilter()}>X Clear Filter</button>
+					<div
+						className={
+							filter
+								? "clear-filter-btn-container w-100 pb-4"
+								: "d-none"
+						}
+					>
+						<button
+							className={
+								theme === "dark"
+									? "btn btn-secondary clear-filter-btn"
+									: "btn btn-dark clear-filter-btn"
+							}
+							onClick={() => handleClearFilter()}
+						>
+							X Clear Filter
+						</button>
 					</div>
 					<div className="filter-tags">
 						{uniqueTags.map((tag, index) => (

@@ -135,6 +135,9 @@
 	column-gap: 10px;
     align-content: center;
 }
+.clear-filter-btn-container-small {
+	display: none;
+}
 @media only screen and (max-width: 576px) {
 	.blog-homepage-subcontainer h1 {
 		padding-top: 20px;
@@ -150,6 +153,13 @@
 		display: none;
 	}
 	.filter-tags-container-small {
+		width: 90%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+	.clear-filter-btn-container-small {
 		width: 90%;
 		display: flex;
 		align-items: center;
