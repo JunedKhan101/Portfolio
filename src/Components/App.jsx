@@ -2,9 +2,9 @@ import React, { useState, useEffect, createContext } from "react";
 import { Routes, Route } from "react-router-dom";
 import NavBar from "./NavBar";
 import Main from "./Main";
-import BlogHomePage from "../pages/BlogHomePage";
-import Blog from "../pages/Blog";
-import Gear from "../pages/Gear";
+import BlogHomePage from "./BlogHomePage";
+import Blog from "./Blog";
+import Gear from "./Gear";
 import { getRelativeURL } from "./NavBar";
 import "../css/app.css";
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
-import { Card } from "react-bootstrap";
 import { createBucketClient } from "@cosmicjs/sdk";
 import { ThemeContext } from "../components/App";
+import BlogCard from "./BlogCard";
 import "../css/bloghomepage.css";
 
 export default function BlogHomePage() {
@@ -18,7 +18,7 @@ export default function BlogHomePage() {
 	useEffect(() => {
 		const filterObjectsByTags = () => {
 			const matchingObjects = [];
-	
+			
 			cosmicObj.forEach((item) => {
 				const tags = item.metadata.tags;
 				const tagTitles = tags.map((tag) => tag.title);
@@ -62,121 +62,9 @@ export default function BlogHomePage() {
 			return (
 				<img id="loading-blog" src="static/loading.png" alt="loading" />
 			);
-		} else if (cosmicFilterObj.length > 0 && !isLoading) {
-			var blog = [];
-			for (var i = 0; i < cosmicFilterObj.length; i++) {
-				blog.push(
-					<a
-						key={cosmicFilterObj[i].slug}
-						className="blog-card-link"
-						href={`/blog/${cosmicFilterObj[i].slug}`}
-					>
-						<Card style={{ width: "18rem" }}>
-							<Card.Body className="blog-card-body">
-								<Card.Title
-									className={
-										cosmicFilterObj[i].metadata.description
-											? "pb-2 w-100"
-											: "m-0"
-									}
-								>
-									{cosmicFilterObj[i].title}
-								</Card.Title>
-								{cosmicFilterObj[i].metadata.description ? (
-									<p className="m-0">
-										{
-											cosmicFilterObj[i].metadata
-												.description
-										}
-									</p>
-								) : null}
-								<div className="tags-container pt-2 w-100">
-									<p className="tags-text m-0">tags:&nbsp;</p>
-									<div className="tags">
-										{cosmicFilterObj[i].metadata.tags.map(
-											(val, key) => {
-												// const tagStyle = {
-												// 	backgroundColor:
-												// 		val.metadata.color,
-												// };
-												return (
-													<>
-														<p
-															key={key}
-															className="m-0 tag"
-															// style={tagStyle}
-														>
-															{val.title}
-														</p>
-														&nbsp;
-													</>
-												);
-											}
-										)}
-									</div>
-								</div>
-							</Card.Body>
-						</Card>
-					</a>
-				);
-			}
-			return <div className="blog-card-section pt-4">{blog}</div>;
-		} else if (cosmicObj.length > 0 && !isLoading) {
-			let blog = [];
-			for (let i = 0; i < cosmicObj.length; i++) {
-				blog.push(
-					<a
-						key={cosmicObj[i].slug}
-						className="blog-card-link"
-						href={`/blog/${cosmicObj[i].slug}`}
-					>
-						<Card style={{ width: "18rem" }}>
-							<Card.Body className="blog-card-body">
-								<Card.Title
-									className={
-										cosmicObj[i].metadata.description
-											? "pb-2 w-100"
-											: "m-0"
-									}
-								>
-									{cosmicObj[i].title}
-								</Card.Title>
-								{cosmicObj[i].metadata.description ? (
-									<p className="m-0">
-										{cosmicObj[i].metadata.description}
-									</p>
-								) : null}
-								<div className="tags-container pt-2 w-100">
-									<p className="tags-text m-0">tags:&nbsp;</p>
-									<div className="tags">
-										{cosmicObj[i].metadata.tags.map(
-											(val, key) => {
-												// const tagStyle = {
-												// 	backgroundColor:
-												// 		val.metadata.color,
-												// };
-												return (
-													<>
-														<p
-															key={key}
-															className="m-0 tag"
-															// style={tagStyle}
-														>
-															{val.title}
-														</p>
-														&nbsp;
-													</>
-												);
-											}
-										)}
-									</div>
-								</div>
-							</Card.Body>
-						</Card>
-					</a>
-				);
-			}
-			return <div className="blog-card-section pt-4">{blog}</div>;
+		} 
+		else if (cosmicObj.length > 0 && !isLoading) {
+			return <BlogCard cosmicObject={cosmicFilterObj.length > 0 ? cosmicFilterObj : cosmicObj} />
 		} else {
 			return <h1>No Blog content to show</h1>;
 		}
