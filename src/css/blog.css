@@ -5,6 +5,13 @@
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-    padding-top: 52px;
-    /* margin-top: -52px; margin removed due to nav highlighting issue */
+    padding-top: 60px;
+}
+.blog-heading {
+	font-weight: bold;
+}
+.md-content img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }

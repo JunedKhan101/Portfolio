@@ -49,13 +49,13 @@ export default function BlogHomePage() {
 		console.log(obj);
 	};
 	const getAllUniqueTags = () => {
-		const allTags = new Set(); // Use a Set to store unique tags
+		const allTags = new Set();
 		for (var i = 0; i < cosmicObj.length; i++) {
 			cosmicObj[i].metadata.tags.forEach((tag) => {
 				allTags.add(tag.title);
 			});
 		}
-		return Array.from(allTags); // Convert the Set back to an array
+		return Array.from(allTags);
 	};
 	function renderBlogs() {
 		if (isLoading) {
