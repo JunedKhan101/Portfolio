@@ -6,7 +6,8 @@ import "../css/bloghomepage.css";
 
 export default function BlogHomePage() {
 	const [cosmicObj, setCosmicObj] = useState({});
-	const [filter, setFilter] = useState("");
+	const [cosmicFilterObj, setCosmicFilterObj] = useState({});
+	const [filter, setFilter] = useState([]);
 	const [isLoading, setIsLoading] = useState(false);
 	const { theme } = useContext(ThemeContext);
 	useEffect(() => {
@@ -14,6 +15,26 @@ export default function BlogHomePage() {
 		initializeCosmic();
 		setIsLoading(false);
 	}, []);
+	useEffect(() => {
+		const filterObjectsByTags = () => {
+			const matchingObjects = [];
+	
+			cosmicObj.forEach((item) => {
+				const tags = item.metadata.tags;
+				const tagTitles = tags.map((tag) => tag.title);
+				if (filter.some((tagToMatch) => tagTitles.includes(tagToMatch))) {
+					matchingObjects.push(item);
+				}
+			});
+			return matchingObjects;
+		};
+		if (filter.length > 0) {
+			const filteredObjects = filterObjectsByTags();
+			setCosmicFilterObj(filteredObjects);
+		} else {
+			setCosmicFilterObj({});
+		}
+	}, [filter, cosmicObj]);
 	const initializeCosmic = async () => {
 		const cosmic = createBucketClient({
 			bucketSlug: process.env.REACT_APP_COSMIC_BUCKET_SLUG,
@@ -41,9 +62,68 @@ export default function BlogHomePage() {
 			return (
 				<img id="loading-blog" src="static/loading.png" alt="loading" />
 			);
-		} else if (cosmicObj.length > 0 && !isLoading) {
+		} else if (cosmicFilterObj.length > 0 && !isLoading) {
 			var blog = [];
-			for (var i = 0; i < cosmicObj.length; i++) {
+			for (var i = 0; i < cosmicFilterObj.length; i++) {
+				blog.push(
+					<a
+						key={cosmicFilterObj[i].slug}
+						className="blog-card-link"
+						href={`/blog/${cosmicFilterObj[i].slug}`}
+					>
+						<Card style={{ width: "18rem" }}>
+							<Card.Body className="blog-card-body">
+								<Card.Title
+									className={
+										cosmicFilterObj[i].metadata.description
+											? "pb-2 w-100"
+											: "m-0"
+									}
+								>
+									{cosmicFilterObj[i].title}
+								</Card.Title>
+								{cosmicFilterObj[i].metadata.description ? (
+									<p className="m-0">
+										{
+											cosmicFilterObj[i].metadata
+												.description
+										}
+									</p>
+								) : null}
+								<div className="tags-container pt-2 w-100">
+									<p className="tags-text m-0">tags:&nbsp;</p>
+									<div className="tags">
+										{cosmicFilterObj[i].metadata.tags.map(
+											(val, key) => {
+												// const tagStyle = {
+												// 	backgroundColor:
+												// 		val.metadata.color,
+												// };
+												return (
+													<>
+														<p
+															key={key}
+															className="m-0 tag"
+															// style={tagStyle}
+														>
+															{val.title}
+														</p>
+														&nbsp;
+													</>
+												);
+											}
+										)}
+									</div>
+								</div>
+							</Card.Body>
+						</Card>
+					</a>
+				);
+			}
+			return <div className="blog-card-section pt-4">{blog}</div>;
+		} else if (cosmicObj.length > 0 && !isLoading) {
+			let blog = [];
+			for (let i = 0; i < cosmicObj.length; i++) {
 				blog.push(
 					<a
 						key={cosmicObj[i].slug}
@@ -101,36 +181,23 @@ export default function BlogHomePage() {
 			return <h1>No Blog content to show</h1>;
 		}
 	}
-	const handleFilterClick = (tag) => {
-		setFilter(tag);
-		const filteredObjects = filterObjectsBySingleTag();
-		// setCosmicObj(filteredObjects);
-		console.log(filteredObjects);
+	const handleFilterClick = (event, tag) => {
+		if (event.target.classList.contains('active')) {
+			event.target.classList.remove('active');
+			var arr = [...filter];
+			var index = arr.indexOf(tag);
+			if (index > -1) {
+				arr.splice(index, 1);
+				setFilter(arr);
+			}
+		}
+		else {
+			event.target.classList.add('active');
+			setFilter([...filter, tag]);
+		}
 	};
 	const handleClearFilter = () => {
-		setFilter("");
-	};
-	// const filterObjectsByTags = (cosmicObj, filter) => {
-	// 	const matchingObjects = [];
-
-	// 	dataArray.forEach(item => {
-	// 	  const tags = item.metadata.tags;
-	// 	  const tagTitles = tags.map(tag => tag.title);
-
-	// 	  if (tagsToMatch.every(tagToMatch => tagTitles.includes(tagToMatch))) {
-	// 		matchingObjects.push(item);
-	// 	  }
-	// 	});
-
-	// 	return matchingObjects;
-	//   };
-	const filterObjectsBySingleTag = () => {
-		const matchingObjects = cosmicObj.filter((item) => {
-			const tags = item.metadata.tags;
-			return tags.some((tag) => tag.title === filter);
-			debugger;
-		});
-		return matchingObjects;
+		setFilter([]);
 	};
 	const uniqueTags = getAllUniqueTags();
 	return (
@@ -152,7 +219,7 @@ export default function BlogHomePage() {
 						<p className="w-100 text-center">Filter by tags:</p>
 						<div
 							className={
-								filter
+								filter.length > 0
 									? "clear-filter-btn-container-small w-100 pb-4"
 									: "d-none"
 							}
@@ -173,11 +240,11 @@ export default function BlogHomePage() {
 								<button
 									key={index}
 									className={
-										filter === tag
+										filter.includes(tag)
 											? "border-0 tag-filter-btn active"
 											: "tag-filter-btn border-0 "
 									}
-									onClick={() => handleFilterClick(tag)}
+									onClick={(event) => handleFilterClick(event, tag)}
 								>
 									{tag}
 								</button>
@@ -196,7 +263,7 @@ export default function BlogHomePage() {
 					<p className="w-100 text-left">Filter by tags:</p>
 					<div
 						className={
-							filter
+							filter.length > 0
 								? "clear-filter-btn-container w-100 pb-4"
 								: "d-none"
 						}
@@ -217,11 +284,11 @@ export default function BlogHomePage() {
 							<button
 								key={index}
 								className={
-									filter === tag
+									filter.includes(tag)
 										? "border-0 tag-filter-btn active"
 										: "tag-filter-btn border-0"
 								}
-								onClick={() => handleFilterClick(tag)}
+								onClick={(event) => handleFilterClick(event, tag)}
 							>
 								{tag}
 							</button>
