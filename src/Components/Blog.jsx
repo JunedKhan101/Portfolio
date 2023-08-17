@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import { createBucketClient } from "@cosmicjs/sdk";
 import "../css/blog.css";
+// import Prism from "prismjs";
 
 export default function Blog() {
 	var { slug } = useParams();
@@ -11,8 +12,8 @@ export default function Blog() {
 	useEffect(() => {
 		const getBlogPost = async () => {
 			const cosmic = createBucketClient({
-				bucketSlug: process.env.REACT_APP_COSMIC_BUCKET_SLUG,
-				readKey: process.env.REACT_APP_COSMIC_API_KEY,
+				bucketSlug: import.meta.env.VITE_COSMIC_BUCKET_SLUG,
+				readKey: import.meta.env.VITE_COSMIC_API_KEY,
 			});
 
 			var obj = await cosmic.objects
@@ -34,6 +35,9 @@ export default function Blog() {
 		getBlogPost();
 		setIsLoading(false);
 	}, [slug]);
+	// useEffect(() => {
+	// 	Prism.highlightAll();
+	// });
 	const renderBlogContent = () => {
 		if (isLoading) {
 			return (

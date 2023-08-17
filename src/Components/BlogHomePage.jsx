@@ -37,8 +37,8 @@ export default function BlogHomePage() {
 	}, [filter, cosmicObj]);
 	const initializeCosmic = async () => {
 		const cosmic = createBucketClient({
-			bucketSlug: process.env.REACT_APP_COSMIC_BUCKET_SLUG,
-			readKey: process.env.REACT_APP_COSMIC_API_KEY,
+			bucketSlug: import.meta.env.VITE_COSMIC_BUCKET_SLUG,
+			readKey: import.meta.env.VITE_COSMIC_API_KEY,
 		});
 		const obj = await cosmic.objects
 			.find({
