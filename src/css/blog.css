@@ -15,3 +15,28 @@
     height: auto;
     object-fit: contain;
 }
+code span {
+	font-size: 15px;
+}
+.blog-tags .tag {
+	display: inline-block;
+	border-radius: 3px;
+	background-color: lightblue;
+	padding: 5px;
+}
+#dark .tag {
+	background-color: gray;
+}
+.blog-tags-container {
+	width: fit-content;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	row-gap: 5px;
+}
+p img {
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+}

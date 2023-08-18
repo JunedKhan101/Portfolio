@@ -5,8 +5,8 @@ import BlogCard from "./BlogCard";
 import "../css/bloghomepage.css";
 
 export default function BlogHomePage() {
-	const [cosmicObj, setCosmicObj] = useState({});
-	const [cosmicFilterObj, setCosmicFilterObj] = useState({});
+	const [cosmicObj, setCosmicObj] = useState([]);
+	const [cosmicFilterObj, setCosmicFilterObj] = useState([]);
 	const [filter, setFilter] = useState([]);
 	const [isLoading, setIsLoading] = useState(false);
 	const { theme } = useContext(ThemeContext);
@@ -63,8 +63,8 @@ export default function BlogHomePage() {
 				<img id="loading-blog" src="static/loading.png" alt="loading" />
 			);
 		} 
-		else if (cosmicObj.length > 0 && !isLoading) {
-			return <BlogCard cosmicObject={cosmicFilterObj.length > 0 ? cosmicFilterObj : cosmicObj} />
+		else if (cosmicObj && cosmicObj.length > 0 && !isLoading) {
+			return <BlogCard cosmicObject={cosmicFilterObj && cosmicFilterObj.length > 0 ? cosmicFilterObj : cosmicObj} />
 		} else {
 			return <h1>No Blog content to show</h1>;
 		}
