@@ -1,15 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import { createBucketClient } from "@cosmicjs/sdk";
+import { ThemeContext } from "../components/App";
 import "../css/blog.css";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { vs } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 export default function Blog() {
 	var { slug } = useParams();
 	const [isLoading, setIsLoading] = useState(false);
 	const [cosmicObj, setCosmicObj] = useState({});
+	const { theme } = useContext(ThemeContext);
 	useEffect(() => {
 		const getBlogPost = async () => {
 			const cosmic = createBucketClient({
@@ -94,7 +97,7 @@ export default function Blog() {
 												/\n$/,
 												""
 											)}
-											style={vscDarkPlus}
+											style={theme == "dark" ? vscDarkPlus : vs}
 											language={match[1]}
 											PreTag="div"
 										/>
