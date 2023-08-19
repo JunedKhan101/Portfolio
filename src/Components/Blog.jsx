@@ -20,7 +20,7 @@ export default function Blog() {
 				bucketSlug: import.meta.env.VITE_COSMIC_BUCKET_SLUG,
 				readKey: import.meta.env.VITE_COSMIC_API_KEY,
 			});
-
+			setIsLoading(true);
 			var obj = await cosmic.objects
 				.findOne({
 					type: "posts",
@@ -35,10 +35,9 @@ export default function Blog() {
 				]);
 			console.log(obj.object);
 			setCosmicObj(obj.object);
+			setIsLoading(false);
 		};
-		setIsLoading(true);
 		getBlogPost();
-		setIsLoading(false);
 	}, [slug]);
 	function createCopyButton(codeEl) {
 		const button = document.createElement("button");
@@ -88,7 +87,10 @@ export default function Blog() {
 					alt="loading"
 				/>
 			);
-		} else if (!isLoading && cosmicObj && cosmicObj.metadata) {
+		} else if (Object.keys(cosmicObj).length === 0) {
+			return <h1>No Blog content to show</h1>;
+		}
+		else {
 			return (
 				<>
 					<div className="blogpost-container container pt-4">

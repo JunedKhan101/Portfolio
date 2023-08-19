@@ -11,9 +11,7 @@ export default function BlogHomePage() {
 	const [isLoading, setIsLoading] = useState(false);
 	const { theme } = useContext(ThemeContext);
 	useEffect(() => {
-		setIsLoading(true);
 		initializeCosmic();
-		setIsLoading(false);
 	}, []);
 	useEffect(() => {
 		const filterObjectsByTags = () => {
@@ -40,13 +38,15 @@ export default function BlogHomePage() {
 			bucketSlug: import.meta.env.VITE_COSMIC_BUCKET_SLUG,
 			readKey: import.meta.env.VITE_COSMIC_API_KEY,
 		});
+		setIsLoading(true);
 		const obj = await cosmic.objects
 			.find({
 				type: "posts",
 			})
 			.props(["title", "slug", "metadata.description", "metadata.tags"]);
 		setCosmicObj(obj.objects);
-		console.log(obj);
+		console.log(obj.objects);
+		setIsLoading(false);
 	};
 	const getAllUniqueTags = () => {
 		const allTags = new Set();
@@ -62,11 +62,11 @@ export default function BlogHomePage() {
 			return (
 				<img id="loading-blog" src="static/loading.png" alt="loading" />
 			);
-		} 
-		else if (cosmicObj && cosmicObj.length > 0 && !isLoading) {
-			return <BlogCard cosmicObject={cosmicFilterObj && cosmicFilterObj.length > 0 ? cosmicFilterObj : cosmicObj} />
-		} else {
+		} else if (cosmicObj && cosmicObj.length === 0) {
 			return <h1>No Blog content to show</h1>;
+		}
+		else if (cosmicObj && cosmicObj.length > 0) {
+			return <BlogCard cosmicObject={cosmicFilterObj && cosmicFilterObj.length > 0 ? cosmicFilterObj : cosmicObj} />
 		}
 	}
 	const handleFilterClick = (event, tag) => {
