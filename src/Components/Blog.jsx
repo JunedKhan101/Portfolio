@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useContext, useLayoutEffect } from "react";
 import { useParams } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
-import CopyToClipboard from "react-copy-to-clipboard";
 import { createBucketClient } from "@cosmicjs/sdk";
 import { ThemeContext } from "./App";
 import "../css/blog.css";
