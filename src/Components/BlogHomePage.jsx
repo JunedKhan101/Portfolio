@@ -120,7 +120,7 @@ export default function BlogHomePage() {
 								}
 								onClick={() => handleClearFilter()}
 							>
-								X Clear Filter
+								Clear Filters
 							</button>
 						</div>
 						<div className="filter-tags-small">
@@ -164,7 +164,7 @@ export default function BlogHomePage() {
 							}
 							onClick={() => handleClearFilter()}
 						>
-							X Clear Filter
+							Clear Filters
 						</button>
 					</div>
 					<div className="filter-tags">
