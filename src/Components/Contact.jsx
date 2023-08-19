@@ -150,7 +150,7 @@ export default function Contact() {
 					<Col>
 						<div className="form-container">
 							{renderForm()}
-							<img id="loading" src="static/loading.png" alt="loading" />
+							<img id="loading" src="/static/loading.png" alt="loading" />
 						</div>
 					</Col>
 				</Row>

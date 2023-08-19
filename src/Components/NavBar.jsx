@@ -70,7 +70,7 @@ export default function NavBar() {
 						<Nav className="mx-auto my-auto my-nav">
 							<Nav.Link
 								className="mynav-links resume-nav-link"
-								href="static/JunedKhan.pdf"
+								href="/static/JunedKhan.pdf"
 								target="_blank"
 							>
 								Resume
@@ -140,7 +140,7 @@ export default function NavBar() {
 								>
 									<Nav.Link
 										className="mynav-links resume-nav-link"
-										href="static/JunedKhan.pdf"
+										href="/static/JunedKhan.pdf"
 										target="_blank"
 									>
 										Resume

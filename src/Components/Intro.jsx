@@ -8,7 +8,7 @@ export default function Intro() {
 				<div className="profile">
 					<img
 						className="profileimg"
-						src="static/profileimg.png"
+						src="/static/profileimg.png"
 						alt="profileimg"
 					/>
 				</div>
