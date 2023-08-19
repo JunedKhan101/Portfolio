@@ -6,14 +6,13 @@ import { createBucketClient } from "@cosmicjs/sdk";
 import { ThemeContext } from "./App";
 import "../css/blog.css";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
-import { vs } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export default function Blog() {
 	var { slug } = useParams();
 	const [isLoading, setIsLoading] = useState(false);
 	const [cosmicObj, setCosmicObj] = useState({});
-	// const [code, setCode] = useState(false);
 	const { theme } = useContext(ThemeContext);
 	useEffect(() => {
 		const getBlogPost = async () => {
@@ -96,15 +95,6 @@ export default function Blog() {
 						<h1 className="blog-heading pb-4 display-1">
 							{cosmicObj.title}
 						</h1>
-						{/* <ReactMarkdown className="md-content">
-							{cosmicObj.metadata.content}
-						</ReactMarkdown>
-						<SyntaxHighlighter
-							language="javascript"
-							style={dracula}
-						>
-							{"(num) => num + 1"}
-						</SyntaxHighlighter> */}
 						<div className="blog-tags-container pb-2">
 							<div>
 								<span>Tags:</span>&nbsp;
@@ -138,8 +128,8 @@ export default function Blog() {
 											)}
 											style={
 												theme == "dark"
-													? vscDarkPlus
-													: vs
+													? oneDark
+													: oneLight
 											}
 											language={match[1]}
 											PreTag="div"
