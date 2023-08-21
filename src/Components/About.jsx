@@ -3,23 +3,19 @@ import "../css/about.css";
 
 export default function About() {
 	return (
-		<section className="about" id="about">
-			<h2 className="about-heading">About Myself</h2>
+		<section className="bio" id="bio">
+			<h2 className="bio-heading">Bio</h2>
 			<div className="description-container">
 				<div className="sub-description">
-					<p className="oneline-intro">
-						Lifelong learner, Introvert, Inquisitive, Geek, Nerd, Bookworm.
-					</p>
 					<p>
-						I did a Bachelor degree in Information Technology from University of
-						Mumbai, and graduated in August 2021.
+						I hold a Bachelor degree in Information Technology from University of
+						Mumbai, graduated in August 2021.
 					</p>
 					<p>
 						I like to build projects, I'm always working on one behind the
 						scenes.
 						<br />
-						I'm currently teaching myself and reserching about Machine Learning,
-						Web Scraping and Automation to build a project.
+						I'm currently teaching myself and reserching about image comparison algorithms to help me build a project.
 					</p>
 					<p>
 						I really enjoy learning, and programming has taught me that there's

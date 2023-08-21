@@ -1,4 +1,4 @@
-.bio {
+.aboutpage {
 	width: 100%;
 	min-height: 100%;
 
@@ -7,10 +7,9 @@
 	justify-content: center;
 	flex-direction: column;
 
-    /* padding-top: 52px; before custom nav */
-	padding-top: 120px;
-    /* margin-top: -52px; margin removed due to nav highlighting issue */
+    padding-top: 52px;
 }
+.oneline-intro { text-align: center;}
 
 .sub-description {
 	max-width: 90%;

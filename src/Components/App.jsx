@@ -5,6 +5,8 @@ import Main from "./Main";
 import BlogHomePage from "./BlogHomePage";
 import Blog from "./Blog";
 import Gear from "./Gear";
+import AboutPage from "./AboutPage";
+import ProjectsPage from "./ProjectsPage";
 import { getRelativeURL } from "./NavBar";
 import "../css/app.css";
 
@@ -85,6 +87,8 @@ function App() {
 					<Route exact path="/code-snippets" element={<Gear />}></Route>
 					<Route exact path="/gear" element={<Gear />}></Route>
 					<Route path="/blog/:slug" element={<Blog />} />;
+					<Route path="/about" element={<AboutPage />} />;
+					<Route path="/projects" element={<ProjectsPage />} />;
 				</Routes>
 			</div>
 		</ThemeContext.Provider>

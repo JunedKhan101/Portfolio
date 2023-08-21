@@ -78,9 +78,15 @@ export default function NavBar() {
 							<Nav.Link className="mynav-links" href="/blog">
 								Blog
 							</Nav.Link>
-							<Nav.Link className="mynav-links" href="/code-snippets">
-								Code Snippets
+							<Nav.Link className="mynav-links" href="/about">
+								About
 							</Nav.Link>
+							<Nav.Link className="mynav-links" href="/projects">
+								All Projects
+							</Nav.Link>
+							{/* <Nav.Link className="mynav-links" href="/code-snippets">
+								Code Snippets
+							</Nav.Link> */}
 							<Nav.Link className="mynav-links" href="/gear">
 								Gear
 							</Nav.Link>
@@ -169,11 +175,11 @@ export default function NavBar() {
 					<div className="container-wrapper d-flex flex-column align-items-center justify-content-center w-100">
 						<p className="page-nav-info">On this page:&nbsp;</p>
 						<Nav className="my-auto flex-row custom-nav justify-content-around">
-							<Nav.Link className="mynav-links" href="#about">
-								About
+							<Nav.Link className="mynav-links" href="#bio">
+								Bio
 							</Nav.Link>
 							<Nav.Link className="mynav-links" href="#projects">
-								Projects
+								Top Projects
 							</Nav.Link>
 							<Nav.Link className="mynav-links" href="#skills">
 								Skills
