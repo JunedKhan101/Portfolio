@@ -8,6 +8,7 @@ import Gear from "./Gear";
 import AboutPage from "./AboutPage";
 import ProjectsPage from "./ProjectsPage";
 import { getRelativeURL } from "./NavBar";
+import Contact from "./Contact";
 import "../css/app.css";
 
 export const ThemeContext = createContext(null);
@@ -89,6 +90,7 @@ function App() {
 					<Route path="/blog/:slug" element={<Blog />} />;
 					<Route path="/about" element={<AboutPage />} />;
 					<Route path="/projects" element={<ProjectsPage />} />;
+					<Route path="/contact" element={<Contact />} />;
 				</Routes>
 			</div>
 		</ThemeContext.Provider>

@@ -4,7 +4,7 @@ import "../css/aboutpage.css";
 export default function AboutPage() {
 	return (
 		<section className="aboutpage" id="aboutpage">
-			<h2 className="aboutpage-heading text-center display-4">About Myself</h2>
+			<h2 className="aboutpage-heading text-center">About Myself</h2>
 			<p className="oneline-intro">
 				Lifelong learner, Inquisitive, Geek, Nerd, Bookworm.
 			</p>

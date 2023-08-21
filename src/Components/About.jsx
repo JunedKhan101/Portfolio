@@ -15,7 +15,7 @@ export default function About() {
 						I like to build projects, I'm always working on one behind the
 						scenes.
 						<br />
-						I'm currently teaching myself and reserching about image comparison algorithms to help me build a project.
+						I'm currently teaching myself and reserching about image comparison algorithms to build a project.
 					</p>
 					<p>
 						I really enjoy learning, and programming has taught me that there's

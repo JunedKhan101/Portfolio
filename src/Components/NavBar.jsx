@@ -160,6 +160,9 @@ export default function NavBar() {
 									<Nav.Link className="mynav-links" href="/projects">
 										All Projects
 									</Nav.Link>
+									<Nav.Link className="mynav-links" href="/contact">
+										Contact
+									</Nav.Link>
 									<Nav.Link className="mynav-links" href="/gear">
 										Gear
 									</Nav.Link>
