@@ -128,20 +128,24 @@ export default function Contact() {
 							<div className="icons">
 								<SocialIcon
 									target="_blank"
+									rel="noopener noreferrer"
 									url="https://www.linkedin.com/in/juned-khan-22b041204/"
 								/>
 								<SocialIcon
 									target="_blank"
+									rel="noopener noreferrer"
 									url="https://twitter.com/dev_junedkhan"
 								/>
 								<SocialIcon
 									target="_blank"
 									url="https://www.instagram.com/"
+									rel="noopener noreferrer"
 									onClick={handleInstagramIconClick}
 								/>
 								<SocialIcon
 									target="_blank"
 									url="https://www.facebook.com/"
+									rel="noopener noreferrer"
 									onClick={handleFacebookIconClick}
 								/>
 							</div>

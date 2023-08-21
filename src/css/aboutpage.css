@@ -7,13 +7,46 @@
 	justify-content: center;
 	flex-direction: column;
 
-    padding-top: 52px;
+    padding-top: 60px;
 }
 .oneline-intro { text-align: center;}
-
-.sub-description {
-	max-width: 90%;
-	margin: 0 auto;
+.aboutpage-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/* height: 100%; */
+	max-width: 95%;
+}
+.sub-description-aboutpage {
+	max-width: 95%;
+	margin: auto;
 	position: relative;
 	top: 5%;
+}
+.profileimg-container {
+	width: 300px;
+	height: 310px;
+	border: 3px solid #212529;
+	border-radius: 10px;
+}
+#dark .profileimg-container {
+	border: 3px solid lightgray;
+}
+.profileimg-aboutpage {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+@media screen and (max-width: 769px) {
+	.aboutpage-container {
+		justify-content: center;
+		flex-direction: column;
+	}
+	.profileimg-container {
+		margin-bottom: 20px;
+		flex: 15%;
+	}
+	.description-container {
+		flex: 50%;
+	}
 }

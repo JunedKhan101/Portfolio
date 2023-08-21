@@ -84,9 +84,6 @@ export default function NavBar() {
 							<Nav.Link className="mynav-links" href="/projects">
 								All Projects
 							</Nav.Link>
-							{/* <Nav.Link className="mynav-links" href="/code-snippets">
-								Code Snippets
-							</Nav.Link> */}
 							<Nav.Link className="mynav-links" href="/gear">
 								Gear
 							</Nav.Link>
@@ -154,8 +151,11 @@ export default function NavBar() {
 									<Nav.Link className="mynav-links" href="/blog">
 										Blog
 									</Nav.Link>
-									<Nav.Link className="mynav-links" href="/code-snippets">
-										Code Snippets
+									<Nav.Link className="mynav-links" href="/about">
+										About
+									</Nav.Link>
+									<Nav.Link className="mynav-links" href="/projects">
+										All Projects
 									</Nav.Link>
 									<Nav.Link className="mynav-links" href="/gear">
 										Gear
