@@ -4,7 +4,7 @@ import "../css/about.css";
 export default function About() {
 	return (
 		<section className="bio" id="bio">
-			<h2 className="bio-heading">Bio</h2>
+			<h2 className="bio-heading">Background</h2>
 			<div className="description-container">
 				<div className="sub-description">
 					<p>

@@ -87,6 +87,9 @@ export default function NavBar() {
 							<Nav.Link className="mynav-links" href="/gear">
 								Gear
 							</Nav.Link>
+							<Nav.Link className="mynav-links" href="/contact">
+								Contact
+							</Nav.Link>
 							<Nav.Link className="mynav-links dark-mode-toggler">
 								<label>
 									<Switch
@@ -176,7 +179,7 @@ export default function NavBar() {
 						<p className="page-nav-info">On this page:&nbsp;</p>
 						<Nav className="my-auto flex-row custom-nav justify-content-around">
 							<Nav.Link className="mynav-links" href="#bio">
-								Bio
+								Background
 							</Nav.Link>
 							<Nav.Link className="mynav-links" href="#projects">
 								Top Projects

@@ -59,7 +59,7 @@ function App() {
 		// Now we loop through sections to get height, top and ID values for each
 		sections.forEach((current) => {
 			const sectionHeight = current.offsetHeight;
-			const sectionTop = current.offsetTop - 62;
+			const sectionTop = current.offsetTop - 400; // earlier I was substracting 62
 			var sectionId = current.getAttribute("id");
 			/*
 			- If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it

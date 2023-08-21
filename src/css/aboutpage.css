@@ -44,9 +44,15 @@
 	}
 	.profileimg-container {
 		margin-bottom: 20px;
-		flex: 15%;
 	}
-	.description-container {
-		flex: 50%;
+}
+/* tablet and mobile in landscape */
+@media screen and (min-width: 769px) and (max-height: 769px) {
+	.aboutpage-container {
+		justify-content: center;
+		flex-direction: column;
+	}
+	.profileimg-container {
+		margin-bottom: 20px;
 	}
 }

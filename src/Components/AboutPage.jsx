@@ -16,7 +16,7 @@ export default function AboutPage() {
 						alt="profile.png"
 					/>
 				</div>
-				<div className="description-container">
+				<div className="description-container-aboutpage">
 					<div className="sub-description-aboutpage">
 						<p>
 							I'm currently working as a B2C Commerce Saleforce Developer at Apexon
@@ -24,7 +24,7 @@ export default function AboutPage() {
 							Salesforce B2C Commerce is Salesforce proprietary
 							platform to create E-Commerce sites.
 							<br />
-							The tech stack is an express like framework
+							The tech stack is an express like Node.js framework
 							with HTML (ISML to be precise), SCSS, and
 							JavaScript.
 						</p>
@@ -46,7 +46,7 @@ export default function AboutPage() {
 								I have contributed to some Open Source Projects
 								on <a href="https://github.com/JunedKhan101" rel="noopener noreferrer">GitHub</a>
 							</li>
-							<li>I use tabs instead of spaces</li>
+							<li>I prefer tabs instead of spaces</li>
 						</ul>
 					</div>
 				</div>
