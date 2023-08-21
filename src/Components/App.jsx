@@ -9,6 +9,7 @@ import AboutPage from "./AboutPage";
 import ProjectsPage from "./ProjectsPage";
 import { getRelativeURL } from "./NavBar";
 import Contact from "./Contact";
+import Footer from "./Footer";
 import "../css/app.css";
 
 export const ThemeContext = createContext(null);
@@ -85,13 +86,13 @@ function App() {
 				<Routes>
 					<Route exact path="/" element={<Main />}></Route>
 					<Route exact path="/blog" element={<BlogHomePage />}></Route>
-					<Route exact path="/code-snippets" element={<Gear />}></Route>
 					<Route exact path="/gear" element={<Gear />}></Route>
 					<Route path="/blog/:slug" element={<Blog />} />;
 					<Route path="/about" element={<AboutPage />} />;
 					<Route path="/projects" element={<ProjectsPage />} />;
 					<Route path="/contact" element={<Contact />} />;
 				</Routes>
+				<Footer />
 			</div>
 		</ThemeContext.Provider>
 	);
