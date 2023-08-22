@@ -21,10 +21,10 @@ export default function Contact() {
 		document.getElementsByClassName("form")[0].style.display = "none";
 
 		send(
-			process.env.REACT_APP_SERVICEID,
-			process.env.REACT_APP_TEMPLATEID,
+			import.meta.env.VITE_SERVICEID,
+			import.meta.env.VITE_TEMPLATEID,
 			toSend,
-			process.env.REACT_APP_USERID
+			import.meta.env.VITE_USERID
 		)
 			.then((response) => {
 				setBool(true);

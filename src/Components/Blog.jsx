@@ -16,8 +16,8 @@ export default function Blog() {
 	useEffect(() => {
 		const getBlogPost = async () => {
 			const cosmic = createBucketClient({
-				bucketSlug: process.env.REACT_APP_COSMIC_BUCKET_SLUG,
-				readKey: process.env.REACT_APP_COSMIC_API_KEY,
+				bucketSlug: import.meta.env.VITE_COSMIC_BUCKET_SLUG,
+				readKey: import.meta.env.VITE_COSMIC_API_KEY,
 			});
 			setIsLoading(true);
 			var obj = await cosmic.objects
