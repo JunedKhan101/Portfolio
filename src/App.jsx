@@ -1,16 +1,16 @@
 import React, { useState, useEffect, createContext } from "react";
 import { Routes, Route } from "react-router-dom";
-import NavBar from "./NavBar";
-import Main from "./Main";
-import BlogHomePage from "./BlogHomePage";
-import Blog from "./Blog";
-import Gear from "./Gear";
-import AboutPage from "./AboutPage";
-import ProjectsPage from "./ProjectsPage";
-import { getRelativeURL } from "./NavBar";
-import Contact from "./Contact";
-import Footer from "./Footer";
-import "../css/app.css";
+import NavBar from "./components/NavBar";
+import Main from "./components/Main";
+import BlogHomePage from "./components/BlogHomePage";
+import Blog from "./components/Blog";
+import Gear from "./components/Gear";
+import AboutPage from "./components/AboutPage";
+import ProjectsPage from "./components/ProjectsPage";
+import { getRelativeURL } from "./components/NavBar";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import "./css/app.css";
 
 export const ThemeContext = createContext(null);
 

@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext, useLayoutEffect } from "react";
 import { useParams } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import { createBucketClient } from "@cosmicjs/sdk";
-import { ThemeContext } from "./App";
+import { ThemeContext } from "../App";
 import "../css/blog.css";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";

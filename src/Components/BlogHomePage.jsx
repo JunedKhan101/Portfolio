@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from "react";
 import { createBucketClient } from "@cosmicjs/sdk";
-import { ThemeContext } from "../components/App";
+import { ThemeContext } from "../App";
 import BlogCard from "./BlogCard";
 import "../css/bloghomepage.css";
 

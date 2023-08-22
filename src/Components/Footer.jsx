@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Row, Container, Navbar, Nav } from "react-bootstrap";
 import { SocialIcon } from "react-social-icons";
-import { ThemeContext } from "./App";
+import { ThemeContext } from "../App";
 import "../css/footer.css";
 
 export default function Footer() {
