@@ -1,6 +1,6 @@
 import React, { useState, useEffect, createContext } from "react";
 import { Routes, Route } from "react-router-dom";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/NavBar.jsx";
 import Main from "./components/Main";
 import BlogHomePage from "./components/BlogHomePage";
 import Blog from "./components/Blog";
