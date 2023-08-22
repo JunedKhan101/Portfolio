@@ -7,12 +7,12 @@ import Intro from "./Intro";
 
 export default function Main() {
 	return (
-		<div className="main">
+		<>
 			<Intro />
 			<About />
 			<Projects />
 			<Skills />
 			<Contact />
-		</div>
+		</>
 	);
 }

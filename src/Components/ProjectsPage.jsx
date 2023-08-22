@@ -5,9 +5,10 @@ import { ThemeContext } from "./App";
 import GitHubSVG from "./svg/GitHubSVG";
 import VideoSVG from "./svg/VideoSVG";
 import OpenLinkSVG from "./svg/OpenLinkSVG";
-import "../css/projects.css";
+import PrivateSVG from "./svg/PrivateSVG";
+import "../css/projectspage.css";
 
-export default function Projects() {
+export default function ProjectsPage() {
 	useEffect(() => {
 		AOS.init({
 			duration: 1000,
@@ -15,7 +16,8 @@ export default function Projects() {
 	}, []);
 	const ThemeContextLocal = useContext(ThemeContext);
 	var ModalStyle = {
-		backgroundColor: ThemeContextLocal.theme === "dark" ? "#1b1e21" : "#FFFFFF",
+		backgroundColor:
+			ThemeContextLocal.theme === "dark" ? "#1b1e21" : "#FFFFFF",
 		color: ThemeContextLocal.theme === "dark" ? "#eee" : "#000000",
 	};
 	var CloseButtonLinkStyle = {
@@ -28,7 +30,7 @@ export default function Projects() {
 	const [videoLink, setVideoLink] = useState("");
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
-	
+
 	const handleVideoClick = (event) => {
 		var pname = event.target.getAttribute("data-name");
 		var videolink = event.target.getAttribute("data-videolink");
@@ -38,7 +40,7 @@ export default function Projects() {
 	};
 	return (
 		<section className="projects-container" id="projects">
-			<h1 className="projects-heading">Top Projects</h1>
+			<h1 className="projects-heading">All Projects</h1>
 			<div className="projects">
 				<div className="project-instance">
 					<div className="project-header">
@@ -90,6 +92,7 @@ export default function Projects() {
 					</div>
 					<hr />
 					<p className="project-description">
+						{/* <img src="/static/NutriAl.png" alt="img" /> */}
 						Nutrition Analysis, Built in React and react-router-dom
 						and Chart.js.
 						<br />
@@ -103,6 +106,55 @@ export default function Projects() {
 						It returns basic and complex nutrients information,
 						Graph view displays nutrients in a graph.
 						<br />
+					</p>
+				</div>
+				<div className="project-instance">
+					<div className="project-header">
+						<h3>InstaScrapy</h3>
+						<div className="project-links-container">
+							<div className="project-links">
+								[&nbsp;
+								<PrivateSVG />
+								&nbsp;
+								<a
+									className="link disabled-github-link"
+									target="_blank"
+									rel="noopener noreferrer"
+									href="#"
+								>
+									GitHub Private
+								</a>
+							</div>
+							{/* No Video of InstaScrapy availble at the moment */}
+							{/* <div className="project-links">
+								&nbsp;|&nbsp;
+								<VideoSVG />
+								&nbsp;
+								<a
+									className="link"
+									href="#modal"
+									rel="noopener noreferrer"
+									data-name="NutriAl"
+									data-videolink="/static/QuizGame.mp4"
+									onClick={handleVideoClick}
+								>
+									Video
+								</a>
+							</div> */}
+							&nbsp;]
+						</div>
+					</div>
+					<hr />
+					<p className="project-description">
+						InstaScrapy is a python script that
+						scrapes saved images from Instagram
+						<br />
+						Unlike other Instagram scrapers who just dump all the
+						saved collections and images in a single folder,
+						<br />
+						InstaScrapy script saves images in folders which
+						correspond to the saved collections folder in Instagram
+						meaning scrape data is more organized.
 					</p>
 				</div>
 				<div className="project-instance">

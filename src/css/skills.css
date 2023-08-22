@@ -4,6 +4,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	overflow: hidden;
 }
 .skills-subcontainer {
 	width: auto;
@@ -30,7 +31,8 @@
 	color: #EEE;
 }
 #skills {
-	padding-top: 52px;
+	/* padding-top: 52px; before custom nav */
+	padding-top: 120px;
   	/* margin-top: -52px; margin removed due to nav highlighting issue */ 
 }
 ul {
@@ -54,6 +56,7 @@ ul {
 		grid-row-gap: 0;
 	}
 	#skills {
-		padding-top: 60px;
+		/* padding-top: 60px; before custom-nav */
+		padding-top: 120px;
 	}
 }
