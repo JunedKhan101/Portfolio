@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from "react";
 import { createBucketClient } from "@cosmicjs/sdk";
-import { ThemeContext } from "../App";
+import { ThemeContext } from "./App";
 import BlogCard from "./BlogCard";
 import "../css/bloghomepage.css";
 
@@ -35,8 +35,8 @@ export default function BlogHomePage() {
 	}, [filter, cosmicObj]);
 	const initializeCosmic = async () => {
 		const cosmic = createBucketClient({
-			bucketSlug: import.meta.env.VITE_COSMIC_BUCKET_SLUG,
-			readKey: import.meta.env.VITE_COSMIC_API_KEY,
+			bucketSlug: process.env.REACT_APP_COSMIC_BUCKET_SLUG,
+			readKey: process.env.REACT_APP_COSMIC_API_KEY,
 		});
 		setIsLoading(true);
 		const obj = await cosmic.objects

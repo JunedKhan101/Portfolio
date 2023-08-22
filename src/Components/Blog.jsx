@@ -1,8 +1,8 @@
-import React, { useEffect, useState, useContext, useLayoutEffect } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import { createBucketClient } from "@cosmicjs/sdk";
-import { ThemeContext } from "../App";
+import { ThemeContext } from "./App";
 import "../css/blog.css";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
@@ -16,8 +16,8 @@ export default function Blog() {
 	useEffect(() => {
 		const getBlogPost = async () => {
 			const cosmic = createBucketClient({
-				bucketSlug: import.meta.env.VITE_COSMIC_BUCKET_SLUG,
-				readKey: import.meta.env.VITE_COSMIC_API_KEY,
+				bucketSlug: process.env.REACT_APP_COSMIC_BUCKET_SLUG,
+				readKey: process.env.REACT_APP_COSMIC_API_KEY,
 			});
 			setIsLoading(true);
 			var obj = await cosmic.objects
@@ -128,7 +128,7 @@ export default function Blog() {
 												""
 											)}
 											style={
-												theme == "dark"
+												theme === "dark"
 													? oneDark
 													: oneLight
 											}

@@ -1,7 +1,7 @@
 import React, { useEffect, useContext, useState } from "react";
 import { Container, Button, Modal } from "react-bootstrap";
 import AOS from "aos";
-import { ThemeContext } from "../App";
+import { ThemeContext } from "./App";
 import GitHubSVG from "./svg/GitHubSVG";
 import VideoSVG from "./svg/VideoSVG";
 import OpenLinkSVG from "./svg/OpenLinkSVG";
@@ -120,7 +120,7 @@ export default function ProjectsPage() {
 									className="link disabled-github-link"
 									target="_blank"
 									rel="noopener noreferrer"
-									href="#"
+									href="#github"
 								>
 									GitHub Private
 								</a>

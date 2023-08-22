@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import Switch from "react-switch";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import { ThemeContext } from "../App";
+import { ThemeContext } from "./App";
 import "../css/navbar.css";
 
 function getRelativeURL() {
