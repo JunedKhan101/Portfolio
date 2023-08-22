@@ -15,7 +15,7 @@ export default function BlogHomePage() {
 	}, []);
 	useEffect(() => {
 		const filterObjectsByTags = () => {
-			const matchingObjects = [];
+			const matchingObjects : Array<Object> = [];
 			
 			cosmicObj.forEach((item) => {
 				const tags = item.metadata.tags;
