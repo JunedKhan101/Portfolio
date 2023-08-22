@@ -167,7 +167,7 @@ export default function BlogHomePage() {
 							Clear Filters
 						</button>
 					</div>
-					<div className="filter-tags">
+					<div className="filter-tags w-100">
 						{uniqueTags.map((tag, index) => (
 							<button
 								key={index}
