@@ -8,22 +8,43 @@ export default function About() {
 			<div className="description-container">
 				<div className="sub-description">
 					<p>
-						I hold a Bachelor degree in Information Technology from University of
-						Mumbai, graduated in August 2021.
+						I hold a Bachelor in Information Technology from
+						University of Mumbai, graduated in 2021
 					</p>
 					<p>
-						I like to build projects, I'm always working on one behind the
-						scenes.
+						Currently working as a B2C Commerce Saleforce Developer
+						at Apexon
 						<br />
-						I'm currently teaching myself and reserching about image comparison algorithms to build a project.
+						Salesforce B2C Commerce is Salesforce proprietary
+						platform to create E-Commerce sites.
+						<br />
+						The tech stack is an express like Node.js framework with
+						HTML (ISML to be precise), SCSS, and JavaScript.
+					</p>
+					<p>I'm proficient in the JavaScript Ecosystem</p>
+					<p>
+						I'm open to hire! contact me{" "}
+						<a
+							href="/contact"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							here
+						</a>{" "}
+						or on{" "}
+						<a
+							href="https://www.linkedin.com/in/juned-khan-22b041204/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							LinkedIn
+						</a>
 					</p>
 					<p>
-						I really enjoy learning, and programming has taught me that there's
-						no end to it.
-					</p>
-					<p>
-						Bucket list: Networking, Security, Hardware, Electronics, Low level
-						programming, Embedded Systems, ML and AI.
+						In my spare time, I work on personal projects, learn new
+						technologies,
+						<br /> read books, watch some web series or go for a
+						walk.
 					</p>
 				</div>
 			</div>

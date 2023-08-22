@@ -6,7 +6,6 @@
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-
     /* padding-top: 52px; before custom nav */
 	padding-top: 120px;
     /* margin-top: -52px; margin removed due to nav highlighting issue */

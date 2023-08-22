@@ -19,23 +19,43 @@ export default function AboutPage() {
 				<div className="description-container-aboutpage">
 					<div className="sub-description-aboutpage">
 						<p>
-							I'm currently working as a B2C Commerce Saleforce Developer at Apexon
-							<br />
-							Salesforce B2C Commerce is Salesforce proprietary
-							platform to create E-Commerce sites.
-							<br />
-							The tech stack is an express like Node.js framework
-							with HTML (ISML to be precise), SCSS, and
-							JavaScript.
+							Hi! I'm Juned (pronouned as Ju-ned)
 						</p>
-						<p>I'm open to hire! contact me here or on LinkedIn</p>
+						<h5>What drives me?</h5>
 						<p>
-							In my spare time, I work on personal projects, learn new technologies,<br /> read books, watch some web
-							series or go for a walk.
+							I am just a super curious individual, driven by a thirst for understanding with a scientific mindset.
+							<br />
+							My passion lies in exploring the depths of knowledge and unraveling the mysteries that surround us.
+							<br />
+							I thrive on the thrill of discovery, diving headfirst into new subjects and emerging with a profound sense of fulfillment.
 						</p>
-						<p className="m-0 p-0">
+						<h5>Programming:</h5>
+						<p>
+							I really enjoy learning, and programming has taught
+							me that there's no end to it
+						</p>
+						<p>
+							I love to build projects, I'm always working on one
+							behind the scenes.
+							<br />
+							I'm currently teaching myself and reserching about
+							image comparison algorithms to build a project.
+						</p>
+						{/* <p>
+							Here a quote:
+							<br />
+							"Measuring programming progress by lines of code is
+							like measuring aircraft building progress by
+							weight." - Bill Gates
+						</p> */}
+						{/* <p>
+							Bucket list: Networking, Security, Hardware,
+							Electronics, Low level programming, Embedded
+							Systems, ML and AI.
+						</p> */}
+						<h5>
 							Here are some things you might wanna know about me:
-						</p>
+						</h5>
 						<ul className="mb-0">
 							<li>
 								I completed my Bachelor in Information
@@ -44,7 +64,13 @@ export default function AboutPage() {
 							</li>
 							<li>
 								I have contributed to some Open Source Projects
-								on <a href="https://github.com/JunedKhan101" rel="noopener noreferrer">GitHub</a>
+								on{" "}
+								<a
+									href="https://github.com/JunedKhan101"
+									rel="noopener noreferrer"
+								>
+									GitHub
+								</a>
 							</li>
 							<li>I prefer tabs instead of spaces</li>
 						</ul>
