@@ -92,7 +92,7 @@
 	color: #7c7c7c;
 }
 .tag-filter-btn.active {
-	background-color: #0069D9;
+	background-color: #002cb2;
 	color: white;
 }
 #dark .tag-filter-btn {
@@ -100,7 +100,7 @@
 	color: white;
 }
 #dark .tag-filter-btn.active {
-	background-color: #0069D9;
+	background-color: #002cb2;
 	color: white;
 }
 #dark .tag-filter-btn:hover {
