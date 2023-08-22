@@ -185,7 +185,7 @@ export default function NavBar() {
 								Background
 							</Nav.Link>
 							<Nav.Link className="mynav-links" href="#projects">
-								Top Projects
+								Projects
 							</Nav.Link>
 							<Nav.Link className="mynav-links" href="#skills">
 								Skills

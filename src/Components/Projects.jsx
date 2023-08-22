@@ -191,7 +191,7 @@ export default function Projects() {
 					<Modal.Footer className="border-0 justify-content-center">
 						<Button
 							className="modal-close-btn"
-							variant="dark"
+							variant={ThemeContextLocal.theme === "dark" ? "secondary" : "dark"}
 							onClick={handleClose}
 						>
 							Close
