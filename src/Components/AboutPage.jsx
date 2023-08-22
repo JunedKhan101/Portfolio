@@ -21,7 +21,7 @@ export default function AboutPage() {
 						<p>
 							Hi! I'm Juned (pronouned as Ju-ned)
 						</p>
-						<h5>What drives me?</h5>
+						<h4>What drives me?</h4>
 						<p>
 							I am just a super curious individual, driven by a thirst for understanding with a scientific mindset.
 							<br />
@@ -29,7 +29,7 @@ export default function AboutPage() {
 							<br />
 							I thrive on the thrill of discovery, diving headfirst into new subjects and emerging with a profound sense of fulfillment.
 						</p>
-						<h5>Programming:</h5>
+						<h4>Programming:</h4>
 						<p>
 							I really enjoy learning, and programming has taught
 							me that there's no end to it
@@ -53,9 +53,9 @@ export default function AboutPage() {
 							Electronics, Low level programming, Embedded
 							Systems, ML and AI.
 						</p> */}
-						<h5>
+						<h4>
 							Here are some things you might wanna know about me:
-						</h5>
+						</h4>
 						<ul className="mb-0">
 							<li>
 								I completed my Bachelor in Information
