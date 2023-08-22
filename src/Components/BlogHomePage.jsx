@@ -45,7 +45,7 @@ export default function BlogHomePage() {
 			})
 			.props(["title", "slug", "metadata.description", "metadata.tags"]);
 		setCosmicObj(obj.objects);
-		console.log(obj.objects);
+		// console.log(obj.objects);
 		setIsLoading(false);
 	};
 	const getAllUniqueTags = () => {

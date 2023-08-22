@@ -32,12 +32,15 @@ export default function Blog() {
 					"metadata.description",
 					"metadata.tags",
 				]);
-			console.log(obj.object);
+			// console.log(obj.object);
 			setCosmicObj(obj.object);
 			setIsLoading(false);
 		};
 		getBlogPost();
 	}, [slug]);
+	useEffect(() => {
+		addCopyButton(); // Call the function to add copy buttons after rendering
+	  }, [cosmicObj]);
 	function createCopyButton(codeEl) {
 		const button = document.createElement("button");
 		button.classList.add("prism-copy-button");
@@ -151,7 +154,6 @@ export default function Blog() {
 	return (
 		<section className="blog container" id="blog">
 			{renderBlogContent()}
-			{addCopyButton()}
 		</section>
 	);
 }
