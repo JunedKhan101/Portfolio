@@ -1,0 +1,63 @@
+.blog {
+	width: 100%;
+	min-height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+    padding-top: 60px;
+}
+.blog-heading {
+	font-weight: bold;
+}
+.md-content img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+code span {
+	font-size: 15px;
+}
+.blog-tags .tag {
+	display: inline-block;
+	border-radius: 3px;
+	background-color: lightblue;
+	padding: 5px;
+}
+#dark .tag {
+	background-color: gray;
+}
+.blog-tags-container {
+	width: fit-content;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	row-gap: 5px;
+}
+p img {
+	width: 100%;
+	height: auto;
+	object-fit: contain;
+}
+.prism-copy-button {
+	position: absolute;
+	top: 19px;
+	right: 15px;
+	border-width: 0;
+	color: black;
+	cursor: pointer;
+	background-color: transparent;
+}
+#dark .prism-copy-button {
+	color: #EEE;
+}
+.prism-copy-button[disabled] {
+	cursor: default;
+}
+.prism-copy-button .copied-svg {
+	display: none;
+}
+pre {
+	position: relative;
+}

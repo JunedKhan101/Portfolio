@@ -1,0 +1,14 @@
+footer {
+    margin-top: 60px;
+}
+footer .github-svg {
+    pointer-events: none;
+}
+@media screen and (max-width: 576px) {
+    footer {
+        margin-top: 120px;
+    }
+    .footer-nav {
+        flex-direction: column !important;
+    }
+}

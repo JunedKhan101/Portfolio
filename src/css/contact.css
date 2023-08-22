@@ -12,7 +12,7 @@
 	height: 100%;
 }
 #contact {
-	padding-top: 52px;
+	padding-top: 120px;
     /* margin-top: -52px; margin removed due to nav highlighting issue*/
 }
 .contact-heading, .chat-heading, .form-heading, .heading-success { text-align: center; }
@@ -70,7 +70,7 @@
 }
 @media only screen and (max-width: 768px) {
 	.chat-heading {
-		padding-top: 10px;;
+		padding-top: 10px;
 	}
 }
 @media only screen and (max-width: 485px) {

@@ -14,7 +14,7 @@
 	width: auto;
 	height: auto;
 }
-.projects-heading { text-align: center; padding-bottom: 10px;}
+.projects-heading { text-align: center; padding-bottom: 10px; }
 .projects {
 	max-width: 100%;
 	min-height: 100%;
@@ -35,6 +35,14 @@
 	white-space: pre-line;  
 	vertical-align: bottom;
 }
+.project-description img {
+	display: block;
+	width: 300px;
+	height: auto;
+	object-fit: contain;
+	border: 1px solid black;
+	border-radius: 10px;
+}
 .link { text-decoration: none; }
 .link:hover { text-decoration:underline; }
 .project-header h3 { 
@@ -46,7 +54,11 @@
 }
 .project-links svg {
     position: relative;
-    bottom: 3px;
+    bottom: 2px;
+}
+.disabled-github-link {
+	pointer-events: none;
+	color: gray;
 }
 hr { 
 	margin: 0.5rem 0;
