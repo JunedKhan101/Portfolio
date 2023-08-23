@@ -34,7 +34,7 @@ export default function BlogCard({cosmicObject} : Props) {
 							<p className="tags-text m-0">tags:&nbsp;</p>
 							<div className="tags">
 								{cosmicObject[i].metadata.tags.map(
-									(val : string, key : number) => {
+									(val : { title : string }, key : number) => {
 										// const tagStyle = {
 										// 	backgroundColor:
 										// 		val.metadata.color,
