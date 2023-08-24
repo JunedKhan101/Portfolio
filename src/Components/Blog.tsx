@@ -7,12 +7,12 @@ import "../css/blog.css";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
-import { CosmicObject } from "../types/cosmicObj";
+import { BlogObject } from "../types/cosmicObj";
 
 export default function Blog() {
 	var { slug } = useParams();
 	const [isLoading, setIsLoading] = useState<boolean>(false);
-	const [cosmicObj, setCosmicObj] = useState<CosmicObject>({
+	const [cosmicObj, setCosmicObj] = useState<BlogObject>({
 		slug: '',
 		title: '',
 		metadata: {
@@ -81,10 +81,10 @@ export default function Blog() {
 					button.classList.remove("active");
 					button.disabled = false;
 					if (copiedsvg) {
-						copiedsvg.style.display = "block";
+						copiedsvg.style.display = "none";
 					}
 					if (copysvg) {
-						copysvg.style.display = "none";
+						copysvg.style.display = "block";
 					}
 				}, 3000);
 			}

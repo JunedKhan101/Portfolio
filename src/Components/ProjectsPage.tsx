@@ -31,9 +31,10 @@ export default function ProjectsPage() {
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
 
-	const handleVideoClick = (event) => {
-		var pname = event.target.getAttribute("data-name");
-		var videolink = event.target.getAttribute("data-videolink");
+	const handleVideoClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+		const anchorElement = event.target as HTMLAnchorElement;
+		var pname = anchorElement.getAttribute("data-name") as string;
+		var videolink = anchorElement.getAttribute("data-videolink") as string;
 		setProjectName(pname);
 		setVideoLink(videolink);
 		handleShow();

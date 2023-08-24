@@ -10,15 +10,15 @@ import ProjectsPage from "./ProjectsPage";
 import { getRelativeURL } from "./NavBar";
 import Contact from "./Contact";
 import Footer from "./Footer";
+import { ThemeContextType } from "../types/ThemeContext";
 import "../css/app.css";
 
-type ThemeContextType = {
-	themeflag: boolean;
-	theme: string;
-	toggleTheme: () => void;
-  };
-  
-export const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+const defaultThemeContextValue: ThemeContextType = {
+    themeflag: false,
+    theme: 'light',
+    toggleTheme: () => {},
+};
+export const ThemeContext = createContext<ThemeContextType>(defaultThemeContextValue);
 
 function App() {
 	const [themeflag, setThemeFlag] = useState<boolean>(false); // false for light, true for dark theme
@@ -81,15 +81,9 @@ function App() {
 				document
 					.querySelector(".custom-nav a[href*=" + sectionId + "]")
 					?.classList.remove("active");
-				// document.querySelector(".custom-nav .resume-nav-link").classList.remove("active");
 			}
 		});
 	}
-	// const themeContextValue: ThemeContextType = {
-	// 	themeflag,
-	// 	theme,
-	// 	toggleTheme,
-	// };
 	return (
 		<ThemeContext.Provider value={{themeflag, theme, toggleTheme}}>
 			<div className="app" id={theme}>

@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useState } from "react";
+import React, { useEffect, useContext, useState, MouseEvent } from "react";
 import { Container, Button, Modal } from "react-bootstrap";
 import AOS from "aos";
 import { ThemeContext } from "./App";
@@ -29,9 +29,10 @@ export default function Projects() {
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
 	
-	const handleVideoClick = (event) => {
-		var pname = event.target.getAttribute("data-name");
-		var videolink = event.target.getAttribute("data-videolink");
+	const handleVideoClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+		const anchorElement = event.target as HTMLAnchorElement;
+		var pname = anchorElement.getAttribute("data-name") as string;
+		var videolink = anchorElement.getAttribute("data-videolink") as string;
 		setProjectName(pname);
 		setVideoLink(videolink);
 		handleShow();

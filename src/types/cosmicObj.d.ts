@@ -17,7 +17,11 @@ export interface Tag {
 }
 
 export interface Metadata {
-	content?: string;
+    description: string;
+    tags: Tag[];
+}
+export interface BlogMetadata {
+	content: string;
     description: string;
     tags: Tag[];
 }
@@ -26,4 +30,9 @@ export interface CosmicObject {
     slug: string;
     title: string;
     metadata: Metadata;
+}
+export interface BlogObject {
+    slug: string;
+    title: string;
+    metadata: BlogMetadata;
 }
