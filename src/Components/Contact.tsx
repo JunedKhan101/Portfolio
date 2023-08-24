@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState, MouseEvent } from "react";
 import { send } from "emailjs-com";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import { SocialIcon } from "react-social-icons";
@@ -11,14 +11,21 @@ export default function Contact() {
 		email: "",
 		message: "",
 	});
-	const [bool, setBool] = useState(undefined);
-	const handleChange = (e) => {
-		setToSend({ ...toSend, [e.target.name]: e.target.value });
+	const [bool, setBool] = useState<boolean | undefined>(undefined);
+	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		const { name, value } = e.target;
+		setToSend((prevToSend) => ({ ...prevToSend, [name]: value }));
 	};
-	const onSubmit = (e) => {
+	const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
-		document.getElementById("loading").style.display = "block";
-		document.getElementsByClassName("form")[0].style.display = "none";
+		const loadingElement = document.getElementById("loading");
+		const formElements = document.getElementsByClassName("form");
+		if (loadingElement) {
+			loadingElement.style.display = "block";
+		}
+		if (formElements.length > 0) {
+			(formElements[0] as HTMLElement).style.display = "none";
+		}
 
 		send(
 			import.meta.env.VITE_SERVICEID,
@@ -28,19 +35,23 @@ export default function Contact() {
 		)
 			.then((response) => {
 				setBool(true);
-				document.getElementById("loading").style.display = "none";
+				if (loadingElement) {
+					loadingElement.style.display = "none";
+				}
 			})
 			.catch((err) => {
 				setBool(false);
-				document.getElementById("loading").style.display = "none";
+				if (loadingElement) {
+					loadingElement.style.display = "none";
+				}
 				console.log("SENDING MSG FAILED: ", err);
 			});
 	};
-	const handleFacebookIconClick = (e) => {
+	const handleFacebookIconClick = (e: MouseEvent<HTMLAnchorElement>) => {
 		e.preventDefault();
 		alert(`I don't use Facebook anymore`);
 	};
-	const handleInstagramIconClick = (e) => {
+	const handleInstagramIconClick = (e: MouseEvent<HTMLAnchorElement>) => {
 		e.preventDefault();
 		alert(`I don't use Instagram anymore`);
 	};
@@ -87,7 +98,11 @@ export default function Contact() {
 								rows={5}
 							/>
 						</Form.Group>
-						<Button className="submit-btn" variant="dark" type="submit">
+						<Button
+							className="submit-btn"
+							variant="dark"
+							type="submit"
+						>
 							Submit
 						</Button>
 					</form>
@@ -96,7 +111,11 @@ export default function Contact() {
 		} else {
 			return (
 				<div className="form-msg">
-					<h2 className={bool === true ? "heading-success" : "heading fail"}>
+					<h2
+						className={
+							bool === true ? "heading-success" : "heading fail"
+						}
+					>
 						{bool === true
 							? "Message sent successfully!"
 							: "Something went wrong :("}
@@ -119,7 +138,9 @@ export default function Contact() {
 					<h2 className="contact-heading">Contact</h2>
 				</Row>
 				<Row>
-					<small className="primary-email">junedkhanc101@gmail.com</small>
+					<small className="primary-email">
+						junedkhanc101@gmail.com
+					</small>
 				</Row>
 				<Row className="pt-4">
 					<Col>
@@ -154,7 +175,11 @@ export default function Contact() {
 					<Col>
 						<div className="form-container">
 							{renderForm()}
-							<img id="loading" src="/static/loading.png" alt="loading" />
+							<img
+								id="loading"
+								src="/static/loading.png"
+								alt="loading"
+							/>
 						</div>
 					</Col>
 				</Row>

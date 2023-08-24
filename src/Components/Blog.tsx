@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
+import { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import { createBucketClient } from "@cosmicjs/sdk";
@@ -7,12 +7,21 @@ import "../css/blog.css";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { BlogObject } from "../types/cosmicObj";
 
 export default function Blog() {
 	var { slug } = useParams();
-	const [isLoading, setIsLoading] = useState(false);
-	const [cosmicObj, setCosmicObj] = useState({});
-	const { theme } = useContext(ThemeContext);
+	const [isLoading, setIsLoading] = useState<boolean>(false);
+	const [cosmicObj, setCosmicObj] = useState<BlogObject>({
+		slug: '',
+		title: '',
+		metadata: {
+			description: '',
+			content: '',
+			tags: [],
+		},
+	});
+	const { theme } = useContext(ThemeContext) as { theme: string };
 	useEffect(() => {
 		const getBlogPost = async () => {
 			const cosmic = createBucketClient({
@@ -40,8 +49,8 @@ export default function Blog() {
 	}, [slug]);
 	useEffect(() => {
 		addCopyButton(); // Call the function to add copy buttons after rendering
-	  }, [cosmicObj]);
-	function createCopyButton(codeEl) {
+	}, [cosmicObj]);
+	function createCopyButton(codeEl: HTMLElement) {
 		const button = document.createElement("button");
 		button.classList.add("prism-copy-button");
 		var svgs =
@@ -51,10 +60,19 @@ export default function Blog() {
 		button.addEventListener("click", () => {
 			if (!button.classList.contains("active")) {
 				button.classList.add("active");
-				let copysvg = button.querySelector(".copy-svg");
-				let copiedsvg = button.querySelector(".copied-svg");
-				copiedsvg.style.display = "block";
-				copysvg.style.display = "none";
+				let copysvg = button.querySelector(
+					".copy-svg"
+				) as HTMLElement | null;
+				let copiedsvg = button.querySelector(
+					".copied-svg"
+				) as HTMLElement | null;
+				if (copiedsvg) {
+					copiedsvg.style.display = "block";
+				}
+
+				if (copysvg) {
+					copysvg.style.display = "none";
+				}
 
 				navigator.clipboard.writeText(codeEl.textContent || "");
 				button.disabled = true;
@@ -62,8 +80,12 @@ export default function Blog() {
 				setTimeout(() => {
 					button.classList.remove("active");
 					button.disabled = false;
-					copiedsvg.style.display = "none";
-					copysvg.style.display = "block";
+					if (copiedsvg) {
+						copiedsvg.style.display = "none";
+					}
+					if (copysvg) {
+						copysvg.style.display = "block";
+					}
 				}, 3000);
 			}
 		});
@@ -73,11 +95,11 @@ export default function Blog() {
 	function addCopyButton() {
 		const allPres = document.querySelectorAll("pre");
 		for (const pre of allPres) {
-			if (pre && !pre.querySelector('.prism-copy-button')) {
-				const code = pre.firstElementChild;
+			if (pre && !pre.querySelector(".prism-copy-button")) {
+				const code = pre.firstElementChild as HTMLElement;
 				var btn = createCopyButton(code);
 				pre.appendChild(btn);
-			} 
+			}
 		}
 	}
 	const renderBlogContent = () => {
@@ -91,8 +113,7 @@ export default function Blog() {
 			);
 		} else if (Object.keys(cosmicObj).length === 0) {
 			return <h1>No Blog content to show</h1>;
-		}
-		else {
+		} else {
 			return (
 				<>
 					<div className="blogpost-container container pt-4">
@@ -103,15 +124,20 @@ export default function Blog() {
 							<div>
 								<span>Tags:</span>&nbsp;
 							</div>
-							{cosmicObj.metadata.tags.map((tag, index) => (
-								<div className="d-inline blog-tags" key={index}>
-									<span className="tag">{tag.title}</span>
-									&nbsp;
-								</div>
-							))}
+							{cosmicObj.metadata.tags.map(
+								(tag: { title: string }, index: number) => (
+									<div
+										className="d-inline blog-tags"
+										key={index}
+									>
+										<span className="tag">{tag.title}</span>
+										&nbsp;
+									</div>
+								)
+							)}
 						</div>
 						<ReactMarkdown
-							children={cosmicObj.metadata.content}
+							children={cosmicObj.metadata.content ? cosmicObj.metadata.content : ''}
 							components={{
 								code({
 									node,

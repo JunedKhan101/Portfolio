@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import Switch from "react-switch";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import Offcanvas from "react-bootstrap/Offcanvas";
@@ -12,7 +12,12 @@ function getRelativeURL() {
 }
 
 export default function NavBar() {
-	const { themeflag, theme, toggleTheme } = useContext(ThemeContext);
+	interface ThemeContextType {
+		themeflag: boolean;
+		theme: string;
+		toggleTheme: () => void;
+	}
+	const { themeflag, theme, toggleTheme } = useContext<ThemeContextType>(ThemeContext);
 	const [show, setShow] = useState(false);
 
 	const handleClose = () => setShow(false);
@@ -124,7 +129,7 @@ export default function NavBar() {
 					>
 						<Offcanvas.Header
 							closeButton
-							closeVariant={theme === "dark" ? "white" : null}
+							closeVariant={theme === "dark" ? "white" : undefined}
 						>
 							<Offcanvas.Title style={textColorStyle}>
 								<Navbar.Brand className="nav-brand" href="/">

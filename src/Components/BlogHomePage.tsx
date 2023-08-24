@@ -1,21 +1,22 @@
-import React, { useEffect, useState, useContext } from "react";
+import { useEffect, useState, useContext, MouseEvent } from "react";
 import { createBucketClient } from "@cosmicjs/sdk";
 import { ThemeContext } from "./App";
 import BlogCard from "./BlogCard";
 import "../css/bloghomepage.css";
+import { CosmicObject } from "../types/cosmicObj";
 
 export default function BlogHomePage() {
-	const [cosmicObj, setCosmicObj] = useState([]);
-	const [cosmicFilterObj, setCosmicFilterObj] = useState([]);
-	const [filter, setFilter] = useState([]);
-	const [isLoading, setIsLoading] = useState(false);
-	const { theme } = useContext(ThemeContext);
+	const [cosmicObj, setCosmicObj] = useState<CosmicObject[]>([]);
+	const [cosmicFilterObj, setCosmicFilterObj] = useState<CosmicObject[]>([]);
+	const [filter, setFilter] = useState<Array<string>>([]);
+	const [isLoading, setIsLoading] = useState<boolean>(false);
+	const { theme } = useContext(ThemeContext) as { theme: string };
 	useEffect(() => {
 		initializeCosmic();
 	}, []);
 	useEffect(() => {
 		const filterObjectsByTags = () => {
-			const matchingObjects = [];
+			const matchingObjects : Array<Object> = [];
 			
 			cosmicObj.forEach((item) => {
 				const tags = item.metadata.tags;
@@ -27,10 +28,10 @@ export default function BlogHomePage() {
 			return matchingObjects;
 		};
 		if (filter.length > 0) {
-			const filteredObjects = filterObjectsByTags();
+			const filteredObjects = filterObjectsByTags() as CosmicObject[];
 			setCosmicFilterObj(filteredObjects);
 		} else {
-			setCosmicFilterObj({});
+			setCosmicFilterObj([]);
 		}
 	}, [filter, cosmicObj]);
 	const initializeCosmic = async () => {
@@ -69,9 +70,10 @@ export default function BlogHomePage() {
 			return <BlogCard cosmicObject={cosmicFilterObj && cosmicFilterObj.length > 0 ? cosmicFilterObj : cosmicObj} />
 		}
 	}
-	const handleFilterClick = (event, tag) => {
-		if (event.target.classList.contains('active')) {
-			event.target.classList.remove('active');
+	const handleFilterClick = (event : MouseEvent<HTMLButtonElement>, tag : string) => {
+		const targetElement = event.target as HTMLElement;
+		if (targetElement.classList.contains('active')) {
+			targetElement.classList.remove('active');
 			var arr = [...filter];
 			var index = arr.indexOf(tag);
 			if (index > -1) {
@@ -80,14 +82,14 @@ export default function BlogHomePage() {
 			}
 		}
 		else {
-			event.target.classList.add('active');
+			targetElement.classList.add('active');
 			setFilter([...filter, tag]);
 		}
 	};
 	const handleClearFilter = () => {
 		setFilter([]);
 	};
-	const uniqueTags = getAllUniqueTags();
+	const uniqueTags = getAllUniqueTags() as string[];
 	return (
 		<>
 			<section className="blog-homepage" id="blog-homepage">
@@ -124,7 +126,7 @@ export default function BlogHomePage() {
 							</button>
 						</div>
 						<div className="filter-tags-small">
-							{uniqueTags.map((tag, index) => (
+							{uniqueTags.map((tag : string, index : number) => (
 								<button
 									key={index}
 									className={
@@ -168,7 +170,7 @@ export default function BlogHomePage() {
 						</button>
 					</div>
 					<div className="filter-tags w-100">
-						{uniqueTags.map((tag, index) => (
+						{uniqueTags.map((tag : string, index : number) => (
 							<button
 								key={index}
 								className={

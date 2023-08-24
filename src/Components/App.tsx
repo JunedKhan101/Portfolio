@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createContext } from "react";
+import { useState, useEffect, createContext } from "react";
 import { Routes, Route } from "react-router-dom";
 import NavBar from "./NavBar";
 import Main from "./Main";
@@ -10,13 +10,19 @@ import ProjectsPage from "./ProjectsPage";
 import { getRelativeURL } from "./NavBar";
 import Contact from "./Contact";
 import Footer from "./Footer";
+import { ThemeContextType } from "../types/ThemeContext";
 import "../css/app.css";
 
-export const ThemeContext = createContext(null);
+const defaultThemeContextValue: ThemeContextType = {
+    themeflag: false,
+    theme: 'light',
+    toggleTheme: () => {},
+};
+export const ThemeContext = createContext<ThemeContextType>(defaultThemeContextValue);
 
 function App() {
-	const [themeflag, setThemeFlag] = useState(false); // false for light, true for dark theme
-	var theme = themeflag ? "dark" : "light"; // string representation
+	const [themeflag, setThemeFlag] = useState<boolean>(false); // false for light, true for dark theme
+	var theme : string = themeflag ? "dark" : "light"; // string representation
 	const toggleTheme = () => {
 		setThemeFlag((themeflag) => !themeflag);
 
@@ -59,7 +65,7 @@ function App() {
 		let scrollY = window.scrollY;
 
 		// Now we loop through sections to get height, top and ID values for each
-		sections.forEach((current) => {
+		sections.forEach((current : any) => {
 			const sectionHeight = current.offsetHeight;
 			const sectionTop = current.offsetTop - 400; // earlier I was substracting 62
 			var sectionId = current.getAttribute("id");
@@ -70,23 +76,22 @@ function App() {
 			if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
 				document
 					.querySelector(".custom-nav a[href*=" + sectionId + "]")
-					.classList.add("active");
+					?.classList.add("active");
 			} else {
 				document
 					.querySelector(".custom-nav a[href*=" + sectionId + "]")
-					.classList.remove("active");
-				// document.querySelector(".custom-nav .resume-nav-link").classList.remove("active");
+					?.classList.remove("active");
 			}
 		});
 	}
 	return (
-		<ThemeContext.Provider value={{ themeflag, theme, toggleTheme }}>
+		<ThemeContext.Provider value={{themeflag, theme, toggleTheme}}>
 			<div className="app" id={theme}>
 				<NavBar />
 				<Routes>
-					<Route exact path="/" element={<Main />}></Route>
-					<Route exact path="/blog" element={<BlogHomePage />}></Route>
-					<Route exact path="/gear" element={<Gear />}></Route>
+					<Route path="/" element={<Main />}></Route>
+					<Route path="/blog" element={<BlogHomePage />}></Route>
+					<Route path="/gear" element={<Gear />}></Route>
 					<Route path="/blog/:slug" element={<Blog />} />;
 					<Route path="/about" element={<AboutPage />} />;
 					<Route path="/projects" element={<ProjectsPage />} />;

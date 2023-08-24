@@ -1,7 +1,10 @@
-import React from "react";
 import { Card } from "react-bootstrap";
 
-export default function BlogCard({cosmicObject}) {
+type Props = {
+	cosmicObject: Array<any>
+}
+
+export default function BlogCard({cosmicObject} : Props) {
 	var blog = [];
 	for (var i = 0; i < cosmicObject.length; i++) {
 		blog.push(
@@ -30,7 +33,7 @@ export default function BlogCard({cosmicObject}) {
 							<p className="tags-text m-0">tags:&nbsp;</p>
 							<div className="tags">
 								{cosmicObject[i].metadata.tags.map(
-									(val, key) => {
+									(val : { title : string }, key : number) => {
 										// const tagStyle = {
 										// 	backgroundColor:
 										// 		val.metadata.color,

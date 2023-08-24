@@ -1,4 +1,3 @@
-import React from "react";
 import "../css/intro.css";
 
 export default function Intro() {
