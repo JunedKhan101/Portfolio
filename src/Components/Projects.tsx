@@ -8,21 +8,16 @@ import OpenLinkSVG from "./svg/OpenLinkSVG";
 import "../css/projects.css";
 
 export default function Projects() {
+	const { theme } = useContext(ThemeContext) as { theme: string };
 	useEffect(() => {
 		AOS.init({
 			duration: 1000,
 		});
 	}, []);
-	const ThemeContextLocal = useContext(ThemeContext);
 	var ModalStyle = {
-		backgroundColor: ThemeContextLocal.theme === "dark" ? "#1b1e21" : "#FFFFFF",
-		color: ThemeContextLocal.theme === "dark" ? "#eee" : "#000000",
+		backgroundColor: theme === "dark" ? "#1b1e21" : "#FFFFFF",
+		color: theme === "dark" ? "#eee" : "#000000",
 	};
-	var CloseButtonLinkStyle = {
-		color: ThemeContextLocal.theme === "dark" ? "#eee" : "#000000",
-		textDecoration: "none",
-	};
-
 	const [show, setShow] = useState(false);
 	const [projectName, setProjectName] = useState("");
 	const [videoLink, setVideoLink] = useState("");
@@ -172,14 +167,12 @@ export default function Projects() {
 				<Container className="modal-container" style={ModalStyle}>
 					<Modal.Header>
 						<Modal.Title>{projectName}</Modal.Title>
-						<a
-							className="close-btn"
-							href="#close-btn"
+						<button
+							className={theme === "dark" ? "close-btn btn btn-secondary" : "btn btn-dark"}
 							onClick={handleClose}
-							style={CloseButtonLinkStyle}
 						>
 							X
-						</a>
+						</button>
 					</Modal.Header>
 					<Modal.Body>
 						<Container>
@@ -192,7 +185,7 @@ export default function Projects() {
 					<Modal.Footer className="border-0 justify-content-center">
 						<Button
 							className="modal-close-btn"
-							variant={ThemeContextLocal.theme === "dark" ? "secondary" : "dark"}
+							variant={theme === "dark" ? "secondary" : "dark"}
 							onClick={handleClose}
 						>
 							Close

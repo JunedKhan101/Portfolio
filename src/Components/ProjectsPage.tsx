@@ -14,15 +14,10 @@ export default function ProjectsPage() {
 			duration: 1000,
 		});
 	}, []);
-	const ThemeContextLocal = useContext(ThemeContext);
+	const { theme } = useContext(ThemeContext) as { theme: string };
 	var ModalStyle = {
-		backgroundColor:
-			ThemeContextLocal.theme === "dark" ? "#1b1e21" : "#FFFFFF",
-		color: ThemeContextLocal.theme === "dark" ? "#eee" : "#000000",
-	};
-	var CloseButtonLinkStyle = {
-		color: ThemeContextLocal.theme === "dark" ? "#eee" : "#000000",
-		textDecoration: "none",
+		backgroundColor: theme === "dark" ? "#1b1e21" : "#FFFFFF",
+		color: theme === "dark" ? "#eee" : "#000000",
 	};
 
 	const [show, setShow] = useState(false);
@@ -225,10 +220,8 @@ export default function ProjectsPage() {
 					<Modal.Header>
 						<Modal.Title>{projectName}</Modal.Title>
 						<a
-							className="close-btn"
-							href="#close-btn"
+							className={theme === "dark" ? "close-btn btn btn-secondary" : "btn btn-dark"}
 							onClick={handleClose}
-							style={CloseButtonLinkStyle}
 						>
 							X
 						</a>
@@ -244,7 +237,7 @@ export default function ProjectsPage() {
 					<Modal.Footer className="border-0 justify-content-center">
 						<Button
 							className="modal-close-btn"
-							variant={ThemeContextLocal.theme === "dark" ? "secondary" : "dark"}
+							variant={theme === "dark" ? "secondary" : "dark"}
 							onClick={handleClose}
 						>
 							Close
