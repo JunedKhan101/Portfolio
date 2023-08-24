@@ -41,7 +41,7 @@ export default function Blog() {
 					"metadata.description",
 					"metadata.tags",
 				]);
-			console.log(obj.object);
+			// console.log(obj.object);
 			setCosmicObj(obj.object);
 			setIsLoading(false);
 		};
