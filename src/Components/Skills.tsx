@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import AOS from "aos";
 import { Card } from "react-bootstrap";
 import "../css/skills.css";

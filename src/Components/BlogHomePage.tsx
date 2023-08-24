@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext, MouseEvent } from "react";
+import { useEffect, useState, useContext, MouseEvent } from "react";
 import { createBucketClient } from "@cosmicjs/sdk";
 import { ThemeContext } from "./App";
 import BlogCard from "./BlogCard";
