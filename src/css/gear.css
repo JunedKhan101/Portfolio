@@ -38,6 +38,8 @@ ul {
 .hardware-section {
     width: auto;
 }
+.link { text-decoration: none; }
+.link:hover { text-decoration: underline; }
 @media only screen and (min-width: 1799px) {
 	.gear-card {
 		width: 80%;

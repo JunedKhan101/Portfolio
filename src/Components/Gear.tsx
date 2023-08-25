@@ -35,9 +35,10 @@ export default function Gear() {
 							<ul>
 								<li>Blender</li>
 								<li>Bitwarden and KeePass</li>
-								<li>IrfanView</li>
+                                <li><a className="link" href="https://learn.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite" rel="noreferrer" target="_blank">Sysinternal Tools</a></li>
+								<li><a className="link" href="https://learn.microsoft.com/en-us/windows/powertoys/" rel="noreferrer" target="_blank">Microsoft PowerToys</a></li>
 								<li>Everything</li>
-                                <li><a href="https://learn.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite" rel="noreferrer" target="_blank">Sysinternal Tools</a></li>
+								<li>IrfanView</li>
 							</ul>
 						</Card.Body>
 					</Card>
