@@ -1,6 +1,7 @@
 import { useState, MouseEvent } from "react";
 import { send } from "emailjs-com";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
+import { getRelativeURL } from "./NavBar";
 import { SocialIcon } from "react-social-icons";
 import "../css/contact.css";
 
@@ -131,8 +132,13 @@ export default function Contact() {
 			);
 		}
 	};
+
+	var currentURL = getRelativeURL();
+	var contactStyle = {
+		paddingTop: currentURL === "/contact" ? "0" : ""
+	}
 	return (
-		<section className="contact-container" id="contact">
+		<section className="contact-container" id="contact" style={contactStyle}>
 			<Container className="contact">
 				<Row>
 					<h2 className="contact-heading">Contact</h2>

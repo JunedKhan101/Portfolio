@@ -1,8 +1,19 @@
 footer {
+    width: 100%;
     margin-top: 60px;
+    /* position: relative;
+    top: 100%;
+    bottom: 0; */
 }
 footer .github-svg {
     pointer-events: none;
+}
+.icons-footer {
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	grid-template-columns: auto auto auto auto;
+	grid-gap: 20px;
 }
 @media screen and (max-width: 576px) {
     footer {

@@ -7,9 +7,6 @@
 	flex-direction: column;
     padding-top: 60px;
 }
-.blog-heading {
-	font-weight: bold;
-}
 .md-content img {
     width: 100%;
     height: auto;

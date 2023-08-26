@@ -42,7 +42,7 @@ export default function Footer() {
 					</Navbar>
 				</Row>
 				<Row>
-					<div className="icons pb-4">
+					<div className="icons-footer pb-4">
 						<SocialIcon
 							target="_blank"
                             rel="noopener noreferrer"
