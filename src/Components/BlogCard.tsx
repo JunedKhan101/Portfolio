@@ -1,7 +1,8 @@
 import { Card } from "react-bootstrap";
+import { CosmicObject } from "../types/cosmicObj";
 
 type Props = {
-	cosmicObject: Array<any>
+	cosmicObject: CosmicObject[]
 }
 
 export default function BlogCard({cosmicObject} : Props) {

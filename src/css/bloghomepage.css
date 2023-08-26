@@ -43,6 +43,8 @@
 }
 #dark .blog-card-link .card {
 	border: 1px solid #eee;
+	color: #EEE;
+	background-color: #1b1e21;
 }
 .blog-card-link:hover {
 	transform: scale(1.05);
