@@ -23,6 +23,7 @@ export interface Metadata {
 export interface BlogMetadata {
 	content: string;
     description: string;
+    seokeywords: string;
     tags: Tag[];
 }
 

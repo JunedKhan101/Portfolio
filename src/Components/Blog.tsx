@@ -8,6 +8,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { BlogObject } from "../types/cosmicObj";
+import { Helmet } from "react-helmet";
 
 export default function Blog() {
 	var { slug } = useParams();
@@ -17,6 +18,7 @@ export default function Blog() {
 		title: '',
 		metadata: {
 			description: '',
+			seokeywords: '',
 			content: '',
 			tags: [],
 		},
@@ -39,6 +41,7 @@ export default function Blog() {
 					"title",
 					"metadata.content",
 					"metadata.description",
+					"metadata.seokeywords",
 					"metadata.tags",
 				]);
 			// console.log(obj.object);
@@ -116,6 +119,16 @@ export default function Blog() {
 		} else {
 			return (
 				<>
+					<Helmet>
+						<meta charSet="utf-8" />
+						<title>{cosmicObj.title}</title>
+						<meta name="title" content={cosmicObj.title} />
+						<meta name="description" content={cosmicObj.metadata.description} />
+						<meta name="keywords" content={cosmicObj.metadata.seokeywords ? cosmicObj.metadata.seokeywords : ""} />
+						<meta name="robots" content="index, follow" />
+						<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+						<meta name="language" content="English" />
+					</Helmet>
 					<div className="blogpost-container container pt-4">
 						<h1 className="blog-heading pb-4 display-1">
 							{cosmicObj.title}
