@@ -1,7 +1,7 @@
 import { useState, MouseEvent } from "react";
 import { send } from "emailjs-com";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
-import { getRelativeURL } from "./NavBar";
+import { getRelativeURL } from "../helpers/getRelativeURL";
 import { SocialIcon } from "react-social-icons";
 import "../css/contact.css";
 

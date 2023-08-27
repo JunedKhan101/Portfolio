@@ -1,31 +1,17 @@
 import { useState, useEffect, createContext, lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
-import NavBar from "./NavBar";
-// import Main from "./Main";
-// import BlogHomePage from "./BlogHomePage";
-// import Blog from "./Blog";
-// import Gear from "./Gear";
-// import AboutPage from "./AboutPage";
-// import ProjectsPage from "./ProjectsPage";
-import { getRelativeURL } from "./NavBar";
-// import Contact from "./Contact";
-import Footer from "./Footer";
 import { ThemeContextType } from "../types/ThemeContext";
-const About = lazy(() => import("./About"));
+import NavBar from "./NavBar";
+import Footer from "./Footer";
 const AboutPage = lazy(() => import("./AboutPage"));
 const Blog = lazy(() => import("./Blog"));
-const BlogCard = lazy(() => import("./BlogCard"));
 const BlogHomePage = lazy(() => import("./BlogHomePage"));
 const Contact = lazy(() => import("./Contact"));
-// const Footer = lazy(() => import("./Footer"));
 const Gear = lazy(() => import("./Gear"));
-const Intro = lazy(() => import("./Intro"));
 const Main = lazy(() => import("./Main"));
 const FallBack = lazy(() => import("./FallBack"));
-// const NavBar = lazy(() => import("./NavBar"));
-const Projects = lazy(() => import("./Projects"));
 const ProjectsPage = lazy(() => import("./ProjectsPage"));
-const Skills = lazy(() => import("./Skills"));
+import { getRelativeURL } from "../helpers/getRelativeURL";
 import "../css/app.css";
 
 const defaultThemeContextValue: ThemeContextType = {

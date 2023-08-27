@@ -3,13 +3,8 @@ import Switch from "react-switch";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { ThemeContext } from "./App";
+import { getRelativeURL } from "../helpers/getRelativeURL";
 import "../css/navbar.css";
-
-function getRelativeURL() {
-	const currentURL = window.location.href;
-	const parsedURL = new URL(currentURL);
-	return parsedURL.pathname || "/";
-}
 
 export default function NavBar() {
 	interface ThemeContextType {
