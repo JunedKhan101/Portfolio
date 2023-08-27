@@ -89,6 +89,7 @@ export default function Skills() {
 								<li>
 									<b>Agile-Scrum</b> Model
 								</li>
+								<li>SFML</li>
 								<li>DSA</li>
 								<li>Data Visualization</li>
 							</ul>

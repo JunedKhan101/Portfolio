@@ -1,8 +1,8 @@
 import About from "./About";
 import Projects from "./Projects";
 import Skills from "./Skills";
-import Contact from "./Contact";
 import Intro from "./Intro";
+import ToLearn from "./ToLearn";
 
 export default function Main() {
 	return (
@@ -11,7 +11,7 @@ export default function Main() {
 			<About />
 			<Projects />
 			<Skills />
-			<Contact />
+			<ToLearn />
 		</>
 	);
 }
