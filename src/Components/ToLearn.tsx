@@ -4,6 +4,7 @@ export default function ToLearn() {
 	return (
 		<section className="tolearn" id="tolearn">
             <h2>Things I want to learn</h2>
+            <p>(Future Ventures)</p>
 			<div className="tolearn-content">
 				<ul>
 					<li>Networking</li>
