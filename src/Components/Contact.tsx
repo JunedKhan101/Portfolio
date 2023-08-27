@@ -135,7 +135,7 @@ export default function Contact() {
 
 	var currentURL = getRelativeURL();
 	var contactStyle = {
-		paddingTop: currentURL === "/contact" ? "0" : ""
+		paddingTop: currentURL === "/contact" ? "70px" : ""
 	}
 	return (
 		<section className="contact-container" id="contact" style={contactStyle}>

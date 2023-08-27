@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createContext } from "react";
+import { useState, useEffect, createContext, lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import NavBar from "./NavBar";
 // import Main from "./Main";
@@ -9,23 +9,23 @@ import NavBar from "./NavBar";
 // import ProjectsPage from "./ProjectsPage";
 import { getRelativeURL } from "./NavBar";
 // import Contact from "./Contact";
-// import Footer from "./Footer";
+import Footer from "./Footer";
 import { ThemeContextType } from "../types/ThemeContext";
-const About = React.lazy(() => import("./About"));
-const AboutPage = React.lazy(() => import("./AboutPage"));
-const Blog = React.lazy(() => import("./Blog"));
-const BlogCard = React.lazy(() => import("./BlogCard"));
-const BlogHomePage = React.lazy(() => import("./BlogHomePage"));
-const Contact = React.lazy(() => import("./Contact"));
-const Footer = React.lazy(() => import("./Footer"));
-const Gear = React.lazy(() => import("./Gear"));
-const Intro = React.lazy(() => import("./Intro"));
-const Main = React.lazy(() => import("./Main"));
-const FallBack = React.lazy(() => import("./FallBack"));
-// const NavBar = React.lazy(() => import("./NavBar"));
-const Projects = React.lazy(() => import("./Projects"));
-const ProjectsPage = React.lazy(() => import("./ProjectsPage"));
-const Skills = React.lazy(() => import("./Skills"));
+const About = lazy(() => import("./About"));
+const AboutPage = lazy(() => import("./AboutPage"));
+const Blog = lazy(() => import("./Blog"));
+const BlogCard = lazy(() => import("./BlogCard"));
+const BlogHomePage = lazy(() => import("./BlogHomePage"));
+const Contact = lazy(() => import("./Contact"));
+// const Footer = lazy(() => import("./Footer"));
+const Gear = lazy(() => import("./Gear"));
+const Intro = lazy(() => import("./Intro"));
+const Main = lazy(() => import("./Main"));
+const FallBack = lazy(() => import("./FallBack"));
+// const NavBar = lazy(() => import("./NavBar"));
+const Projects = lazy(() => import("./Projects"));
+const ProjectsPage = lazy(() => import("./ProjectsPage"));
+const Skills = lazy(() => import("./Skills"));
 import "../css/app.css";
 
 const defaultThemeContextValue: ThemeContextType = {
@@ -109,57 +109,57 @@ function App() {
 					<Route
 						path="/"
 						element={
-							<React.Suspense fallback={<FallBack />}>
+							<Suspense fallback={<FallBack />}>
 								<Main />
-							</React.Suspense>
+							</Suspense>
 						}
 					/>
 					<Route
 						path="/blog"
 						element={
-							<React.Suspense fallback={<FallBack />}>
+							<Suspense fallback={<FallBack />}>
 								<BlogHomePage />
-							</React.Suspense>
+							</Suspense>
 						}
 					/>
 					<Route
 						path="/gear"
 						element={
-							<React.Suspense fallback={<FallBack />}>
+							<Suspense fallback={<FallBack />}>
 								<Gear />
-							</React.Suspense>
+							</Suspense>
 						}
 					/>
 					<Route
 						path="/blog/:slug"
 						element={
-							<React.Suspense fallback={<FallBack />}>
+							<Suspense fallback={<FallBack />}>
 								<Blog />
-							</React.Suspense>
+							</Suspense>
 						}
 					/>
 					<Route
 						path="/about"
 						element={
-							<React.Suspense fallback={<FallBack />}>
+							<Suspense fallback={<FallBack />}>
 								<AboutPage />
-							</React.Suspense>
+							</Suspense>
 						}
 					/>
 					<Route
 						path="/projects"
 						element={
-							<React.Suspense fallback={<FallBack />}>
+							<Suspense fallback={<FallBack />}>
 								<ProjectsPage />
-							</React.Suspense>
+							</Suspense>
 						}
 					/>
 					<Route
 						path="/contact"
 						element={
-							<React.Suspense fallback={<FallBack />}>
+							<Suspense fallback={<FallBack />}>
 								<Contact />
-							</React.Suspense>
+							</Suspense>
 						}
 					/>
 				</Routes>
