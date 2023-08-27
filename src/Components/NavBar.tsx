@@ -190,8 +190,8 @@ export default function NavBar() {
 							<Nav.Link className="mynav-links" href="#skills">
 								Skills
 							</Nav.Link>
-							<Nav.Link className="mynav-links" href="#contact">
-								Contact
+							<Nav.Link className="mynav-links" href="#tolearn">
+								To Learn
 							</Nav.Link>
 						</Nav>
 					</div>
