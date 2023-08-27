@@ -1,7 +1,7 @@
-import { useEffect, useState, useContext, MouseEvent } from "react";
+import { useEffect, useState, useContext, MouseEvent, lazy } from "react";
 import { createBucketClient } from "@cosmicjs/sdk";
 import { ThemeContext } from "./App";
-import BlogCard from "./BlogCard";
+const BlogCard = lazy(() => import("./BlogCard"));
 import "../css/bloghomepage.css";
 import { CosmicObject } from "../types/cosmicObj";
 

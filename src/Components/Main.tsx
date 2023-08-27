@@ -1,8 +1,9 @@
-import About from "./About";
-import Projects from "./Projects";
-import Skills from "./Skills";
-import Intro from "./Intro";
-import ToLearn from "./ToLearn";
+import { lazy } from "react";
+const About = lazy(() => import("./About"));
+const Projects = lazy(() => import("./Projects"));
+const Skills = lazy(() => import("./Skills"));
+const Intro = lazy(() => import("./Intro"));
+const ToLearn = lazy(() => import("./ToLearn"));
 
 export default function Main() {
 	return (

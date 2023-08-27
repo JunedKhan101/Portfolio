@@ -1,11 +1,11 @@
-import { useEffect, useContext, useState, MouseEvent } from "react";
+import { useEffect, useContext, useState, MouseEvent, lazy } from "react";
 import { Container, Button, Modal } from "react-bootstrap";
 import AOS from "aos";
 import { ThemeContext } from "./App";
-import GitHubSVG from "./svg/GitHubSVG";
-import VideoSVG from "./svg/VideoSVG";
-import OpenLinkSVG from "./svg/OpenLinkSVG";
-import PrivateSVG from "./svg/PrivateSVG";
+const GitHubSVG = lazy(() => import("./svg/GitHubSVG"));
+const VideoSVG = lazy(() => import("./svg/VideoSVG"));
+const OpenLinkSVG = lazy(() => import("./svg/OpenLinkSVG"));
+const PrivateSVG = lazy(() => import("./svg/PrivateSVG"));
 import "../css/projectspage.css";
 
 export default function ProjectsPage() {
