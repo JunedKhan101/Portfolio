@@ -40,13 +40,19 @@ export default function BlogHomePage() {
 			readKey: import.meta.env.VITE_COSMIC_API_KEY,
 		});
 		setIsLoading(true);
-		const obj = await cosmic.objects
-			.find({
-				type: "posts",
-			})
-			.props(["title", "slug", "metadata.description", "metadata.tags"]);
-		setCosmicObj(obj.objects);
-		// console.log(obj.objects);
+		try {
+			const obj = await cosmic.objects
+				.find({
+					type: "posts",
+				})
+				.props(["title", "slug", "metadata.description", "metadata.tags"]);
+			// console.log(obj.objects);
+			if (obj && obj.objects && obj.objects.length > 0)
+				setCosmicObj(obj.objects);
+		}
+		catch(err) {
+			setCosmicObj([]);
+		}
 		setIsLoading(false);
 	};
 	const getAllUniqueTags = () => {
