@@ -11,11 +11,11 @@ export default function ToLearn() {
 					<li>Security</li>
 					<li>Hardware and Electronics</li>
 					<li>Embedded Systems, Low Level Programming and IoT</li>
-                    <li>Distributed Systems</li>
+                    <li>Distributed Systems and High Level System Design</li>
 					<li>ML and AI</li>
                     <li>File servers / personal datacenter / NAS</li>
-                    <li>Blender, 3D Art, Artwork and Drawing</li>
-                    <li>SDL, OpenGL, VulKan, GLFW</li>
+                    <li>Blender / 3D Art / Artwork and Drawing</li>
+                    <li>SFML, SDL, OpenGL, VulKan, GLFW</li>
                     <li>Cooking Maggie in 2min</li>
 				</ul>
 			</div>
