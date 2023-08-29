@@ -1,0 +1,40 @@
+.aboutpage {
+	width: 100%;
+	min-height: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+    padding-top: 70px;
+}
+.oneline-intro { text-align: center;}
+.aboutpage-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	max-width: 90%;
+}
+.sub-description-aboutpage {
+	max-width: 90%;
+	margin: auto;
+	position: relative;
+	top: 5%;
+}
+.profileimg-container {
+	width: 200px;
+	height: auto;
+	border: 3px solid #212529;
+	border-radius: 15px;
+	margin-bottom: 20px;
+}
+#dark .profileimg-container {
+	border: 3px solid lightgray;
+}
+.profileimg-aboutpage {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}

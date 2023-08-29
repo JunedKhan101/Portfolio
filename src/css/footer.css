@@ -1,0 +1,24 @@
+footer {
+    width: 100%;
+    margin-top: 25px;
+    position: relative;
+    bottom: 0;
+}
+footer .github-svg {
+    pointer-events: none;
+}
+.icons-footer {
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	grid-template-columns: auto auto auto auto;
+	grid-gap: 20px;
+}
+@media screen and (max-width: 576px) {
+    footer {
+        margin-top: 120px;
+    }
+    .footer-nav {
+        flex-direction: column !important;
+    }
+}
