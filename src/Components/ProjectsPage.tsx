@@ -121,8 +121,7 @@ export default function ProjectsPage() {
 									GitHub Private
 								</a>
 							</div>
-							{/* No Video of InstaScrapy availble at the moment */}
-							{/* <div className="project-links">
+							<div className="project-links">
 								&nbsp;|&nbsp;
 								<VideoSVG />
 								&nbsp;
@@ -131,12 +130,12 @@ export default function ProjectsPage() {
 									href="#modal"
 									rel="noopener noreferrer"
 									data-name="NutriAl"
-									data-videolink="/static/QuizGame.mp4"
+									data-videolink="/static/InstaScrapy.mp4"
 									onClick={handleVideoClick}
 								>
 									Video
 								</a>
-							</div> */}
+							</div>
 							&nbsp;]
 						</div>
 					</div>
