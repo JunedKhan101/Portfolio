@@ -15,7 +15,7 @@ export default function About() {
 						at Apexon
 						<br />
 						Salesforce B2C Commerce is Salesforce proprietary
-						platform to create E-Commerce sites.
+						platform to create/manage E-Commerce sites.
 						<br />
 						The tech stack is an express like Node.js framework with
 						HTML (ISML to be precise), SCSS, and JavaScript.

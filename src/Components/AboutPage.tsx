@@ -18,14 +18,14 @@ export default function AboutPage() {
 				<div className="description-container-aboutpage">
 					<div className="sub-description-aboutpage">
 						<p>
-							Hi! I'm Juned (pronouned as Ju-ned)
+							Hi I'm Juned! (pronouned as Ju-ned)
 						</p>
 						<h4>What drives me?</h4>
 						<p>
-							I am just a super curious individual, driven by a thirst for understanding with a scientific mindset.
+							I am just a super curious individual, driven by a thirst for understanding things with a scientific mindset.
 							<br />
-							My passion lies in exploring the depths of knowledge and unraveling the mysteries that surround us.
-							<br />
+							{/* My passion lies in exploring the depths of knowledge and unraveling the mysteries that surround us.
+							<br /> */}
 							I thrive on the thrill of discovery, diving headfirst into new subjects and emerging with a profound sense of fulfillment.
 						</p>
 						<h4>Programming:</h4>
