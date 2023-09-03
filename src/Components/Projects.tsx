@@ -163,7 +163,7 @@ export default function Projects() {
 					</p>
 				</div>
 			</div>
-			<Modal size="xl" centered show={show} onHide={handleClose}>
+			<Modal size="lg" centered show={show} onHide={handleClose}>
 				<Container className="modal-container" style={ModalStyle}>
 					<Modal.Header>
 						<Modal.Title>{projectName}</Modal.Title>
