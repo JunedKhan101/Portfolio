@@ -93,7 +93,7 @@ export default function ProjectsPage() {
 						and Chart.js.
 						<br />
 						Data is fetched from{" "}
-						<a href="https://developer.edamam.com/edamam-nutrition-api">
+						<a href="https://developer.edamam.com/edamam-nutrition-api" target="_blank">
 							Edamam Nutrition Analysis API
 						</a>
 						<br />
@@ -205,7 +205,7 @@ export default function ProjectsPage() {
 						Built in React.js, react-router-dom and Material UI.
 						<br />
 						Data is fetched from a{" "}
-						<a href="https://opentdb.com/api_config.php">
+						<a href="https://opentdb.com/api_config.php" target="_blank">
 							3rd party quiz API
 						</a>
 						<br />
