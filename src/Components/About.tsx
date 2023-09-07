@@ -11,7 +11,7 @@ export default function About() {
 						University of Mumbai, graduated in 2021
 					</p>
 					<p>
-						Currently working as a B2C Commerce Saleforce Developer
+						Currently working as a B2C Commerce Salesforce Developer
 						at Apexon
 						<br />
 						Salesforce B2C Commerce is Salesforce proprietary
