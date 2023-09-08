@@ -38,6 +38,54 @@ export default function ProjectsPage() {
 		<section className="projects-container" id="projects">
 			<h1 className="projects-heading">All Projects</h1>
 			<div className="projects">
+			<div className="project-instance">
+					<div className="project-header">
+						<h3>InstaScrapy</h3>
+						<div className="project-links-container">
+							<div className="project-links">
+								[&nbsp;
+								<PrivateSVG />
+								&nbsp;
+								<a
+									className="link disabled-github-link"
+									target="_blank"
+									rel="noopener noreferrer"
+									href="#github"
+								>
+									GitHub Private
+								</a>
+							</div>
+							<div className="project-links">
+								&nbsp;|&nbsp;
+								<VideoSVG />
+								&nbsp;
+								<a
+									className="link"
+									href="#modal"
+									rel="noopener noreferrer"
+									data-name="NutriAl"
+									data-videolink="/static/InstaScrapy.mp4"
+									onClick={handleVideoClick}
+								>
+									Video
+								</a>
+							</div>
+							&nbsp;]
+						</div>
+					</div>
+					<hr />
+					<p className="project-description">
+						InstaScrapy is a python script that
+						scrapes saved images from Instagram
+						<br />
+						Unlike other Instagram scrapers who just dump all the
+						saved collections and images in a single folder,
+						<br />
+						InstaScrapy script saves images in folders which
+						correspond to the saved collections folder in Instagram
+						meaning scrape data is more organized.
+					</p>
+				</div>
 				<div className="project-instance">
 					<div className="project-header">
 						<h3>NutriAl</h3>
@@ -102,54 +150,6 @@ export default function ProjectsPage() {
 						It returns basic and complex nutrients information,
 						Graph view displays nutrients in a graph.
 						<br />
-					</p>
-				</div>
-				<div className="project-instance">
-					<div className="project-header">
-						<h3>InstaScrapy</h3>
-						<div className="project-links-container">
-							<div className="project-links">
-								[&nbsp;
-								<PrivateSVG />
-								&nbsp;
-								<a
-									className="link disabled-github-link"
-									target="_blank"
-									rel="noopener noreferrer"
-									href="#github"
-								>
-									GitHub Private
-								</a>
-							</div>
-							<div className="project-links">
-								&nbsp;|&nbsp;
-								<VideoSVG />
-								&nbsp;
-								<a
-									className="link"
-									href="#modal"
-									rel="noopener noreferrer"
-									data-name="NutriAl"
-									data-videolink="/static/InstaScrapy.mp4"
-									onClick={handleVideoClick}
-								>
-									Video
-								</a>
-							</div>
-							&nbsp;]
-						</div>
-					</div>
-					<hr />
-					<p className="project-description">
-						InstaScrapy is a python script that
-						scrapes saved images from Instagram
-						<br />
-						Unlike other Instagram scrapers who just dump all the
-						saved collections and images in a single folder,
-						<br />
-						InstaScrapy script saves images in folders which
-						correspond to the saved collections folder in Instagram
-						meaning scrape data is more organized.
 					</p>
 				</div>
 				<div className="project-instance">
