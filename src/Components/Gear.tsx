@@ -17,10 +17,10 @@ export default function Gear() {
 							<ul>
 								<li>Dell Inspiron 15 5518 Laptop</li>
 								<li>LG 24MK600M Monitor</li>
-								<li>Redragon K530 Keyboard</li>
-								<li>Asus ROG Strix Scope RX Keyboard</li>
-								<li>Logitech MX Anywhere 3 Mouse</li>
-								<li>Logitech Ergo M575 Mouse</li>
+								<li>Redragon K530</li>
+								<li>Asus ROG Strix Scope RX</li>
+								<li>Logitech MX Anywhere 3</li>
+								<li>Logitech Ergo M575</li>
 								<li>JBL Live 660NC Headphones</li>
 								<li>Galaxy Buds Pro</li>
 								<li>WD My Passport 2TB HDD x2</li>

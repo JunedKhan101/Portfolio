@@ -7,8 +7,7 @@ export default function ToLearn() {
             <p>(Future Ventures)</p>
 			<div className="tolearn-content">
 				<ul>
-					<li>Networking</li>
-					<li>Security</li>
+					<li>Network and Security</li>
 					<li>Hardware and Electronics</li>
 					<li>Embedded Systems, Low Level Programming and IoT</li>
                     <li>Distributed Systems and High Level System Design</li>

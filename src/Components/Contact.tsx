@@ -1,11 +1,13 @@
-import { useState, MouseEvent } from "react";
+import { useState, MouseEvent, useContext } from "react";
 import { send } from "emailjs-com";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import { getRelativeURL } from "../helpers/getRelativeURL";
 import { SocialIcon } from "react-social-icons";
+import { ThemeContext } from "./App";
 import "../css/contact.css";
 
 export default function Contact() {
+	const { theme } = useContext(ThemeContext) as { theme: string };
 	const [toSend, setToSend] = useState({
 		name: "",
 		subject: "",
@@ -101,7 +103,7 @@ export default function Contact() {
 						</Form.Group>
 						<Button
 							className="submit-btn"
-							variant="dark"
+							variant={theme == "dark" ? "outline-secondary" : "outline-dark"}
 							type="submit"
 						>
 							Submit
@@ -124,7 +126,7 @@ export default function Contact() {
 					<Button
 						className="back-btn"
 						onClick={() => setBool(undefined)}
-						variant="dark"
+						variant={theme == "dark" ? "outline-secondary" : "outline-dark"}
 					>
 						Back
 					</Button>

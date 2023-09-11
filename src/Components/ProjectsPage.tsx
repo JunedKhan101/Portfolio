@@ -38,6 +38,54 @@ export default function ProjectsPage() {
 		<section className="projects-container" id="projects">
 			<h1 className="projects-heading">All Projects</h1>
 			<div className="projects">
+			<div className="project-instance">
+					<div className="project-header">
+						<h3>InstaScrapy</h3>
+						<div className="project-links-container">
+							<div className="project-links">
+								[&nbsp;
+								<PrivateSVG />
+								&nbsp;
+								<a
+									className="link disabled-github-link"
+									target="_blank"
+									rel="noopener noreferrer"
+									href="#github"
+								>
+									GitHub Private
+								</a>
+							</div>
+							<div className="project-links">
+								&nbsp;|&nbsp;
+								<VideoSVG />
+								&nbsp;
+								<a
+									className="link"
+									href="#modal"
+									rel="noopener noreferrer"
+									data-name="NutriAl"
+									data-videolink="/static/InstaScrapy.mp4"
+									onClick={handleVideoClick}
+								>
+									Video
+								</a>
+							</div>
+							&nbsp;]
+						</div>
+					</div>
+					<hr />
+					<p className="project-description">
+						InstaScrapy is a python script that
+						scrapes saved images from Instagram
+						<br />
+						Unlike other Instagram scrapers who just dump all the
+						saved collections and images in a single folder,
+						<br />
+						InstaScrapy script saves images in folders which
+						correspond to the saved collections folder in Instagram
+						meaning scrape data is more organized.
+					</p>
+				</div>
 				<div className="project-instance">
 					<div className="project-header">
 						<h3>NutriAl</h3>
@@ -93,7 +141,7 @@ export default function ProjectsPage() {
 						and Chart.js.
 						<br />
 						Data is fetched from{" "}
-						<a href="https://developer.edamam.com/edamam-nutrition-api">
+						<a href="https://developer.edamam.com/edamam-nutrition-api" target="_blank">
 							Edamam Nutrition Analysis API
 						</a>
 						<br />
@@ -102,55 +150,6 @@ export default function ProjectsPage() {
 						It returns basic and complex nutrients information,
 						Graph view displays nutrients in a graph.
 						<br />
-					</p>
-				</div>
-				<div className="project-instance">
-					<div className="project-header">
-						<h3>InstaScrapy</h3>
-						<div className="project-links-container">
-							<div className="project-links">
-								[&nbsp;
-								<PrivateSVG />
-								&nbsp;
-								<a
-									className="link disabled-github-link"
-									target="_blank"
-									rel="noopener noreferrer"
-									href="#github"
-								>
-									GitHub Private
-								</a>
-							</div>
-							{/* No Video of InstaScrapy availble at the moment */}
-							{/* <div className="project-links">
-								&nbsp;|&nbsp;
-								<VideoSVG />
-								&nbsp;
-								<a
-									className="link"
-									href="#modal"
-									rel="noopener noreferrer"
-									data-name="NutriAl"
-									data-videolink="/static/QuizGame.mp4"
-									onClick={handleVideoClick}
-								>
-									Video
-								</a>
-							</div> */}
-							&nbsp;]
-						</div>
-					</div>
-					<hr />
-					<p className="project-description">
-						InstaScrapy is a python script that
-						scrapes saved images from Instagram
-						<br />
-						Unlike other Instagram scrapers who just dump all the
-						saved collections and images in a single folder,
-						<br />
-						InstaScrapy script saves images in folders which
-						correspond to the saved collections folder in Instagram
-						meaning scrape data is more organized.
 					</p>
 				</div>
 				<div className="project-instance">
@@ -206,7 +205,7 @@ export default function ProjectsPage() {
 						Built in React.js, react-router-dom and Material UI.
 						<br />
 						Data is fetched from a{" "}
-						<a href="https://opentdb.com/api_config.php">
+						<a href="https://opentdb.com/api_config.php" target="_blank">
 							3rd party quiz API
 						</a>
 						<br />
@@ -215,12 +214,12 @@ export default function ProjectsPage() {
 					</p>
 				</div>
 			</div>
-			<Modal size="xl" centered show={show} onHide={handleClose}>
+			<Modal size="lg" centered show={show} onHide={handleClose}>
 				<Container className="modal-container" style={ModalStyle}>
 					<Modal.Header>
 						<Modal.Title>{projectName}</Modal.Title>
 						<a
-							className={theme === "dark" ? "close-btn btn btn-secondary" : "btn btn-dark"}
+							className={theme === "dark" ? "close-btn btn btn-outline-secondary" : "btn btn-outline-dark"}
 							onClick={handleClose}
 						>
 							X
@@ -237,7 +236,7 @@ export default function ProjectsPage() {
 					<Modal.Footer className="border-0 justify-content-center">
 						<Button
 							className="modal-close-btn"
-							variant={theme === "dark" ? "secondary" : "dark"}
+							variant={theme === "dark" ? "outline-secondary" : "outline-dark"}
 							onClick={handleClose}
 						>
 							Close

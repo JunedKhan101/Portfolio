@@ -55,6 +55,10 @@ hr {
 .video {
 	width: 100%;
 }
+.disabled-github-link {
+	pointer-events: none;
+	color: gray;
+}
 @media only screen and (max-width: 576px) {
 	#projects {
 		/* padding-top: 60px; before custom nav */
