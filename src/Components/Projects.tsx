@@ -156,7 +156,7 @@ export default function Projects() {
 					<Modal.Header>
 						<Modal.Title>{projectName}</Modal.Title>
 						<button
-							className={theme === "dark" ? "close-btn btn btn-secondary" : "btn btn-dark"}
+							className={theme === "dark" ? "close-btn btn btn-outline-secondary" : "btn btn-outline-dark"}
 							onClick={handleClose}
 						>
 							X
@@ -173,7 +173,7 @@ export default function Projects() {
 					<Modal.Footer className="border-0 justify-content-center">
 						<Button
 							className="modal-close-btn"
-							variant={theme === "dark" ? "secondary" : "dark"}
+							variant={theme === "dark" ? "outline-secondary" : "outline-dark"}
 							onClick={handleClose}
 						>
 							Close
