@@ -7,7 +7,7 @@ import "../css/blog.css";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
-import { BlogObject } from "../types/cosmicObj";
+import { BlogObject, CosmicObject } from "../types/cosmicObj";
 import { Helmet } from "react-helmet";
 
 export default function Blog() {
@@ -21,6 +21,7 @@ export default function Blog() {
 			seokeywords: '',
 			content: '',
 			tags: [],
+			createdat: '',
 		},
 	});
 	const { theme } = useContext(ThemeContext) as { theme: string };
@@ -43,6 +44,7 @@ export default function Blog() {
 					"metadata.description",
 					"metadata.seokeywords",
 					"metadata.tags",
+					"metadata.createdat"
 				]);
 			// console.log(obj.object);
 			setCosmicObj(obj.object);
@@ -149,6 +151,13 @@ export default function Blog() {
 								)
 							)}
 						</div>
+						{cosmicObj.metadata.createdat ?
+							<div>
+								<p>Posted at: {cosmicObj.metadata.createdat}</p>
+							</div>
+							:
+							null
+						}
 						<ReactMarkdown
 							children={cosmicObj.metadata.content ? cosmicObj.metadata.content : ''}
 							components={{

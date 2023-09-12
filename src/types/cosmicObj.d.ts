@@ -25,6 +25,7 @@ export interface BlogMetadata {
     description: string;
     seokeywords: string;
     tags: Tag[];
+    createdat: string;
 }
 
 export interface CosmicObject {
