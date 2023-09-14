@@ -11,21 +11,15 @@ export default function About() {
 						University of Mumbai, graduated in 2021
 					</p>
 					<p>
-						Currently working as a B2C Commerce Salesforce Developer
-						at <b>Apexon</b>
+						Currently working as a Software Engineer
+						at Apexon
 						<br />
-						B2C Commerce is Salesforce proprietary platform to
+						{/* B2C Commerce is Salesforce proprietary platform to
 						create/manage E-Commerce sites.
+						<br /> */}
+						I work in MVC (Model-View-Controller) and MVVM (Model-View-ViewModel) Architecture
 						<br />
-						The Architecture is in{" "}
-						<b>MVVM (Model-View-ViewModel)</b>
-						<br />
-						The tech stack is an <b>Express</b> like <b>Node.js</b>{" "}
-						framework with{" "}
-						<b>
-							HTML (ISML specifically), SCSS, JavaScript, jQuery
-							and Java
-						</b>
+						The tech stack I use on my job is Express, Node.js, HTML, SASS, JavaScript, jQuery and Java
 					</p>
 					<p>I'm proficient in the JavaScript Ecosystem</p>
 					<p>
