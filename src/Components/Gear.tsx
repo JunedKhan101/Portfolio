@@ -63,7 +63,8 @@ export default function Gear() {
 							<Card.Title>Notes/Productivity</Card.Title>
 							<hr />
 							<ul>
-								<li>Notion and OneNote</li>
+								<li>Notion</li>
+								<li>OneNote</li>
 								<li>TickTick</li>
 							</ul>
 						</Card.Body>
