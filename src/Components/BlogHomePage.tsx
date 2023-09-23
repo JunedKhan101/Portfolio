@@ -102,8 +102,7 @@ export default function BlogHomePage() {
 				<div className="blog-homepage-subcontainer">
 					<h1>Blog</h1>
 					<p className="blog-intro-text text-center">
-						Writing on software development, system design, and in
-						general tech.
+						Writing on software development, system design, and tech in general
 					</p>
 					<div
 						className={
