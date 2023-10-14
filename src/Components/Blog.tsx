@@ -119,6 +119,20 @@ export default function Blog() {
 		} else if (Object.keys(cosmicObj).length === 0) {
 			return <h1>No Blog content to show</h1>;
 		} else {
+			var formattedCreatedAtDate;
+			if (cosmicObj.metadata.createdat) {
+				var date = new Date(cosmicObj.metadata.createdat);
+				// Define an array of month names
+				const monthNames = [
+					"Jan", "Feb", "Mar", "Apr", "May", "Jun",
+					"Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+				];
+				const day = date.getDate();
+				const month = date.getMonth(); // Month is zero-based (0 = January, 1 = February, etc.)
+				const year = date.getFullYear();
+				formattedCreatedAtDate = `${day} ${monthNames[month]} ${year}`;
+			}
+
 			return (
 				<>
 					<Helmet>
@@ -151,9 +165,9 @@ export default function Blog() {
 								)
 							)}
 						</div>
-						{cosmicObj.metadata.createdat ?
+						{formattedCreatedAtDate ?
 							<div>
-								<p>Posted at: {cosmicObj.metadata.createdat}</p>
+								<p>Posted at: {formattedCreatedAtDate}</p>
 							</div>
 							:
 							null
