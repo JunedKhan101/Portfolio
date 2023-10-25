@@ -14,9 +14,6 @@ export default function About() {
 						Currently working as a Software Engineer
 						at Apexon
 						<br />
-						{/* B2C Commerce is Salesforce proprietary platform to
-						create/manage E-Commerce sites.
-						<br /> */}
 						I work in MVC (Model-View-Controller) and MVVM (Model-View-ViewModel) Architecture
 						<br />
 						The tech stack I use on my job is Express, Node.js, HTML, SASS, JavaScript, jQuery and Java

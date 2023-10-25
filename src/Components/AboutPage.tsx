@@ -24,8 +24,6 @@ export default function AboutPage() {
 						<p>
 							I am just a super curious individual, driven by a thirst for understanding things with a scientific mindset.
 							<br />
-							{/* My passion lies in exploring the depths of knowledge and unraveling the mysteries that surround us.
-							<br /> */}
 							I thrive on the thrill of discovery, diving headfirst into new subjects and emerging with a profound sense of fulfillment.
 						</p>
 						<h4>Programming:</h4>
@@ -40,18 +38,6 @@ export default function AboutPage() {
 							I'm currently teaching myself and reserching about
 							image comparison algorithms to build a project.
 						</p>
-						{/* <p>
-							Here a quote:
-							<br />
-							"Measuring programming progress by lines of code is
-							like measuring aircraft building progress by
-							weight." - Bill Gates
-						</p> */}
-						{/* <p>
-							Bucket list: Networking, Security, Hardware,
-							Electronics, Low level programming, Embedded
-							Systems, ML and AI.
-						</p> */}
 						<h4>
 							Here are some things you might wanna know about me:
 						</h4>
