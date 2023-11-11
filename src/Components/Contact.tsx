@@ -1,4 +1,4 @@
-import { useState, MouseEvent, useContext } from "react";
+import { useState, MouseEvent, useContext, useRef } from "react";
 import { send } from "emailjs-com";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import { getRelativeURL } from "../helpers/getRelativeURL";
@@ -15,19 +15,19 @@ export default function Contact() {
 		message: "",
 	});
 	const [bool, setBool] = useState<boolean | undefined>(undefined);
+	const loadingRef = useRef(null);
+	const formRef = useRef(null);
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const { name, value } = e.target;
 		setToSend((prevToSend) => ({ ...prevToSend, [name]: value }));
 	};
 	const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
-		const loadingElement = document.getElementById("loading");
-		const formElements = document.getElementsByClassName("form");
-		if (loadingElement) {
-			loadingElement.style.display = "block";
+		if (loadingRef.current) {
+			(loadingRef.current as HTMLElement).style.display = "block";
 		}
-		if (formElements.length > 0) {
-			(formElements[0] as HTMLElement).style.display = "none";
+		if (formRef.current) {
+			(formRef.current as HTMLElement).style.display = "none";
 		}
 
 		send(
@@ -38,14 +38,14 @@ export default function Contact() {
 		)
 			.then((response) => {
 				setBool(true);
-				if (loadingElement) {
-					loadingElement.style.display = "none";
+				if (loadingRef.current) {
+					(loadingRef.current as HTMLElement).style.display = "none";
 				}
 			})
 			.catch((err) => {
 				setBool(false);
-				if (loadingElement) {
-					loadingElement.style.display = "none";
+				if (loadingRef.current) {
+					(loadingRef.current as HTMLElement).style.display = "none";
 				}
 				console.log("SENDING MSG FAILED: ", err);
 			});
@@ -63,7 +63,7 @@ export default function Contact() {
 			return (
 				<div className="form-subcontainer">
 					<h2 className="form-heading">Send me a message</h2>
-					<form onSubmit={onSubmit} className="form">
+					<form onSubmit={onSubmit} className="form" ref={formRef}>
 						<Form.Group className="form-group" controlId="name">
 							<Form.Label>Name</Form.Label>
 							<Form.Control
@@ -187,6 +187,7 @@ export default function Contact() {
 								id="loading"
 								src="/static/loading.png"
 								alt="loading"
+								ref={loadingRef}
 							/>
 						</div>
 					</Col>
