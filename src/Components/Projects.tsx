@@ -35,7 +35,7 @@ export default function Projects() {
 	};
 	return (
 		<section className="projects-container" id="projects">
-			<h1 className="projects-heading">Top Projects</h1>
+			<h2 className="projects-heading">Top Projects</h2>
 			<div className="projects">
 			<div className="project-instance">
 					<div className="project-header">

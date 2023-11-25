@@ -16,7 +16,7 @@ export default function About() {
 						<br />
 						I work in MVC (Model-View-Controller) and MVVM (Model-View-ViewModel) Architecture
 						<br />
-						The tech stack I use on my job is Express, Node.js, HTML, SASS, JavaScript, jQuery and Java
+						The tech stack I use on my job is Express, Node.js, HTML, CSS/SASS, JavaScript, jQuery and Java
 					</p>
 					<p>I'm proficient in the JavaScript Ecosystem</p>
 					<p>

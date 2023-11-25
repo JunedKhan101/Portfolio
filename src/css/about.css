@@ -10,7 +10,10 @@
 	padding-top: 120px;
     /* margin-top: -52px; margin removed due to nav highlighting issue */
 }
-
+.description-container {
+	width: 90%;
+	display: flex;
+}
 .sub-description {
 	max-width: 90%;
 	margin: 0 auto;
