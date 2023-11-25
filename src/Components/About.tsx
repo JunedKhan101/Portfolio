@@ -3,9 +3,10 @@ import "../css/about.css";
 export default function About() {
 	return (
 		<section className="bio" id="bio">
-			<h2 className="bio-heading">Background</h2>
 			<div className="description-container">
 				<div className="sub-description">
+				<h2 className="bio-heading">Background</h2>
+					<hr />
 					<p>
 						I hold a Bachelor in Information Technology from
 						University of Mumbai, graduated in 2021

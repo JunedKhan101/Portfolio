@@ -35,9 +35,10 @@ export default function Projects() {
 	};
 	return (
 		<section className="projects-container" id="projects">
-			<h2 className="projects-heading">Top Projects</h2>
 			<div className="projects">
 			<div className="project-instance">
+					<h2 className="projects-heading">Top Projects</h2>
+					<hr />
 					<div className="project-header">
 						<h3>InstaScrapy</h3>
 						<div className="project-links-container">
@@ -72,7 +73,7 @@ export default function Projects() {
 							&nbsp;]
 						</div>
 					</div>
-					<hr />
+					{/* <hr /> */}
 					<p className="project-description">
 						InstaScrapy is a python script that
 						scrapes saved images from Instagram
@@ -133,7 +134,7 @@ export default function Projects() {
 							</div>
 						</div>
 					</div>
-					<hr />
+					{/* <hr /> */}
 					<p className="project-description">
 						Nutrition Analysis, Built in React and react-router-dom
 						and Chart.js.
