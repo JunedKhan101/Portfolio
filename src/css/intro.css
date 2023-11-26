@@ -5,22 +5,6 @@
 	/* padding-top: 120px; */
     /* margin-top: -52px; removed due to nav highlighting issue*/
 }
-.profile {
-	width: 300px;
-	height: 300px;
-	border-radius: 100%;
-	overflow: hidden;
-
-	border: 5px solid #2f3338;
-}
-#dark .profile {
-	border: 5px solid lightgray;
-}
-.profileimg {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
 .intro-text {
 	width: 100%;
 	text-align: center;
@@ -28,7 +12,6 @@
 .intro {
 	width: 100%;
 	height: 100%;
-
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -40,14 +23,8 @@
 	}
 }
 @media only screen and (max-height: 600px) {
-	.profile, .intro-text {
+	.intro-text {
 		position: relative;
 		top: 10%;
-	}
-}
-@media only screen and (max-height: 472px) {
-	.profile {
-		width: 200px;
-		height: 200px;
 	}
 }
