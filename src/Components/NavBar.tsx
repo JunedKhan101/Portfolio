@@ -171,31 +171,6 @@ export default function NavBar() {
 						</Offcanvas.Body>
 					</Offcanvas>
 				</Container>
-				<Container
-					className={
-						currentURL === "/"
-							? "custom-nav-container"
-							: "d-none custom-nav-container"
-					}
-				>
-					<div className="container-wrapper d-flex flex-column align-items-center justify-content-center w-100">
-						<p className="page-nav-info">On this page:&nbsp;</p>
-						<Nav className="my-auto flex-row custom-nav justify-content-around">
-							<Nav.Link className="mynav-links" href="#bio">
-								Background
-							</Nav.Link>
-							<Nav.Link className="mynav-links" href="#projects">
-								Projects
-							</Nav.Link>
-							<Nav.Link className="mynav-links" href="#skills">
-								Skills
-							</Nav.Link>
-							<Nav.Link className="mynav-links" href="#tolearn">
-								To Learn
-							</Nav.Link>
-						</Nav>
-					</div>
-				</Container>
 			</Navbar>
 		</>
 	);
