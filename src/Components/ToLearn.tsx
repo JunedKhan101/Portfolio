@@ -1,22 +1,114 @@
+import { useState, useEffect } from "react";
+import { createBucketClient } from "@cosmicjs/sdk";
+import { CosmicObject } from "../types/cosmicObj";
+import { Card } from "react-bootstrap";
 import "../css/tolearn.css";
 
 export default function ToLearn() {
+	const [cosmicObj, setCosmicObj] = useState<CosmicObject[]>([]);
+	const [isLoading, setIsLoading] = useState<boolean>(false);
+	useEffect(() => {
+		initializeCosmic();
+	}, []);
+	const initializeCosmic = async () => {
+		const cosmic = createBucketClient({
+			bucketSlug: import.meta.env.VITE_COSMIC_BUCKET_SLUG,
+			readKey: import.meta.env.VITE_COSMIC_API_KEY,
+		});
+		setIsLoading(true);
+		try {
+			const obj = await cosmic.objects
+				.find({
+					type: "posts",
+				})
+				.props([
+					"title",
+					"slug",
+					"metadata.description",
+					"metadata.tags",
+					"metadata.createdat",
+				]);
+			if (obj && obj.objects && obj.objects.length > 0) {
+				obj.objects.sort((a: any, b: any) => {
+					const dateA = new Date(a.metadata.createdat).getTime();
+    				const dateB = new Date(b.metadata.createdat).getTime();
+					return dateA - dateB;
+				});
+				// console.log(obj.objects);
+				const mostRecentBlogs = obj.objects.slice(0, 3);
+				setCosmicObj(mostRecentBlogs);
+			}
+		} catch (err) {
+			setCosmicObj([]);
+		}
+		setIsLoading(false);
+	};
+	const renderRecentBlogs = () => {
+		var blog = [];
+		for (var i = 0; i < cosmicObj.length; i++) {
+			blog.push(
+				<a
+					key={cosmicObj[i].slug}
+					className="recent-blog-card-link"
+					id="recent-blog-card-link"
+					href={`/blog/${cosmicObj[i].slug}`}
+				>
+					<Card className="recent-blog-card">
+						<Card.Body className="recent-blog-card-body">
+							<Card.Title
+								className={
+									cosmicObj[i].metadata.description
+										? "pb-2 w-100"
+										: "m-0"
+								}
+							>
+								{cosmicObj[i].title}
+							</Card.Title>
+							{cosmicObj[i].metadata.description ? (
+								<p className="m-0 w-100 mr-auto">
+									{cosmicObj[i].metadata.description}
+								</p>
+							) : null}
+						</Card.Body>
+					</Card>
+				</a>
+			);
+		}
+		return blog;
+	}
 	return (
 		<section className="tolearn" id="tolearn">
-            <h2>Things I want to learn</h2>
-            <p>(Future Ventures)</p>
-			<div className="tolearn-content">
-				<ul>
-					<li>Network and Security</li>
-					<li>Hardware and Electronics</li>
-					<li>Embedded Systems, Low Level Programming and IoT</li>
-                    <li>Distributed Systems and High Level System Design</li>
-					<li>ML and AI</li>
-                    <li>File servers / personal datacenter / NAS</li>
-                    <li>Blender / 3D Art / Artwork and Drawing</li>
-                    <li>SFML, SDL, OpenGL, VulKan, GLFW</li>
-                    <li>Cooking Maggie in 2min</li>
-				</ul>
+			<div className="ending-container">
+				<div className="to-learn-container">
+					<h2>Things I want to learn</h2>
+					{/* <hr className="recent-blogs-hr" /> */}
+					<p>(Future ventures)</p>
+					<div className="tolearn-content">
+						<ul>
+							<li>Network and Security</li>
+							<li>Hardware and Electronics</li>
+							<li>
+								Embedded Systems, Low Level Programming and IoT
+							</li>
+							<li>
+								Distributed Systems and High Level System Design
+							</li>
+							<li>ML and AI</li>
+							<li>File servers / personal datacenter / NAS</li>
+							<li>Blender / 3D Art / Artwork and Drawing</li>
+							<li>SFML, SDL, OpenGL, VulKan, GLFW</li>
+							<li>Cooking Maggie in 2min</li>
+						</ul>
+					</div>
+				</div>
+				<div className="recent-blogs">
+					<h2>Recent blog articles</h2>
+					{/* <hr className="recent-blogs-hr" /> */}
+					{renderRecentBlogs()}
+				</div>
+			</div>
+			<div className="blog-btn d-block">
+				<button className="btn btn-secondary">Check out my blog {"=>"}</button>
 			</div>
 		</section>
 	);

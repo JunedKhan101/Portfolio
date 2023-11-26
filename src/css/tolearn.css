@@ -5,8 +5,60 @@
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+	padding-top: 120px;
+}
+.ending-container {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	max-width: 90%;
 }
 .tolearn-content {
     max-width: 90%;
     min-height: 100%;
+}
+.recent-blogs {
+	width: 50%;
+}
+.recent-blogs a {
+	text-decoration: none;
+}
+.recent-blog-card {
+	border: none;
+}
+#dark .recent-blog-card-link .recent-blog-card {
+	background-color: #1b1e21;
+	color: #EEE;
+}
+.recent-blog-card-body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+#recent-blog-card-link .recent-blog-card:hover {
+	background-color: #F8F9FA;
+}
+#dark #recent-blog-card-link .recent-blog-card:hover {
+	background-color: #212529;
+}
+#recent-blog-card-link .recent-blog-card:hover .card-title {
+	color: orange;
+}
+#dark #recent-blog-card-link .recent-blog-card:hover .card-title {
+	color: #FBBF24;
+}
+.recent-blogs-hr {
+	width: 78%;
+}
+@media only screen and (max-width: 1050px) {
+	.ending-container {
+		flex-direction: column;
+	}
+	.to-learn-container {
+		padding-bottom: 20px;
+	}
+	.recent-blogs {
+		width: auto;
+	}
 }
