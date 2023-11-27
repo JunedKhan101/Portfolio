@@ -31,7 +31,7 @@ export default function ToLearn() {
 			if (obj && obj.objects && obj.objects.length > 0) {
 				obj.objects.sort((a: any, b: any) => {
 					const dateA = new Date(a.metadata.createdat).getTime();
-    				const dateB = new Date(b.metadata.createdat).getTime();
+					const dateB = new Date(b.metadata.createdat).getTime();
 					return dateA - dateB;
 				});
 				// console.log(obj.objects);
@@ -75,7 +75,7 @@ export default function ToLearn() {
 			);
 		}
 		return blog;
-	}
+	};
 	return (
 		<section className="tolearn" id="tolearn">
 			<div className="ending-container">
@@ -107,8 +107,13 @@ export default function ToLearn() {
 					{renderRecentBlogs()}
 				</div>
 			</div>
-			<div className="blog-btn d-block">
-				<button className="btn btn-secondary">Check out my blog {"=>"}</button>
+			<div className="blog-btn-wrapper pt-4 d-flex">
+				<a href="/blog" rel="noopener noreferrer" target="_blank" className="read-blog-btn">
+					<span className="read-blog-btn-arrow">
+						<svg aria-hidden="true" className="h-6 w-6" fill="none" stroke="currentColor" width="25" height="25" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+					</span>
+					<span className="read-blog-btn-text">Read my blog</span>
+				</a>
 			</div>
 		</section>
 	);

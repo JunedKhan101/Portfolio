@@ -12,7 +12,7 @@ export default function Intro() {
 								`Hi, I'm Juned Khan;\nI'm a Software Enginner;`,
 							]}
 							speed={50}
-							style={{ whiteSpace: 'pre-line', fontWeight: '500' }}
+							style={{ whiteSpace: 'pre-line', fontWeight: '600' }}
 							repeat={3}
 						/>
 					</h1>
