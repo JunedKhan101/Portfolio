@@ -143,7 +143,7 @@ export default function Contact() {
 		<section className="contact-container" id="contact" style={contactStyle}>
 			<Container className="contact">
 				<Row>
-					<h2 className="contact-heading">Contact</h2>
+					<h2 className="contact-heading custom-header">Contact</h2>
 				</Row>
 				<Row>
 					<small className="primary-email">

@@ -37,7 +37,7 @@ export default function Projects() {
 		<section className="projects-container" id="projects">
 			<div className="projects">
 			<div className="project-instance">
-					<h2 className="projects-heading">Top Projects</h2>
+					<h2 className="projects-heading custom-header">Top Projects</h2>
 					<hr />
 					<div className="project-header">
 						<h3>InstaScrapy</h3>

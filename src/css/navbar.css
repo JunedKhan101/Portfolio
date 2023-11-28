@@ -35,7 +35,9 @@
 .offcanvas {
     border: none !important;
 }
-
+.dark-mode-toggler-sun-icon {
+    padding-left: 2.5px;
+}
 @media (max-width: 992px) {
     .dark-mode-toggler {
         display: none !important;

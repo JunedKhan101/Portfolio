@@ -80,7 +80,7 @@ export default function ToLearn() {
 		<section className="tolearn" id="tolearn">
 			<div className="ending-container">
 				<div className="to-learn-container">
-					<h2>Things I want to learn</h2>
+					<h2 className="custom-header">I want to learn</h2>
 					{/* <hr className="recent-blogs-hr" /> */}
 					<p>(Future ventures)</p>
 					<div className="tolearn-content">
@@ -102,7 +102,7 @@ export default function ToLearn() {
 					</div>
 				</div>
 				<div className="recent-blogs">
-					<h2>Recent blog articles</h2>
+					<h2 className="custom-header">Recent blog articles</h2>
 					{/* <hr className="recent-blogs-hr" /> */}
 					{renderRecentBlogs()}
 				</div>

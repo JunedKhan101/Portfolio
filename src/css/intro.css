@@ -4,10 +4,39 @@
 	padding-top: 52px; /* before custom nav */
 	/* padding-top: 120px; */
     /* margin-top: -52px; removed due to nav highlighting issue*/
+	background-image: url(/static/waves-purple-trasparent.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	/* parallax effect */
+	/* background-attachment: fixed; */
+}
+#dark .intro-container{
+	background-image: url(/static/waves-purple.svg);
 }
 .intro-text {
 	width: 100%;
 	text-align: center;
+	background-color: #3e187a;
+	background-image: linear-gradient(316deg, #3e187a 0%, #994ecc 74%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+#dark .intro-text {
+	background: -webkit-linear-gradient(319deg, #663dff 0%, #aa00ff 37%, #cc4499 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.index-module_type__E-SaG:after {
+	background-color: #3e187a;
+	background-image: linear-gradient(316deg, #3e187a 0%, #994ecc 74%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+#dark .index-module_type__E-SaG:after {
+	background: -webkit-linear-gradient(319deg, #663dff 0%, #aa00ff 37%, #cc4499 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 .intro {
 	width: 100%;
@@ -17,14 +46,20 @@
 	justify-content: center;
 	flex-direction: column;
 }
-@media only screen and (max-height: 416px) {
-	.intro-container {
-		height: 110%;
+.display-large {
+	margin: 0;
+	font-size: calc(1.625rem + 4.5vw);
+    line-height: 1.2;
+}
+@media only screen and (max-width: 576px) {
+	.display-large {
+		font-size: 30px;
+		line-height: normal;
 	}
 }
-@media only screen and (max-height: 600px) {
-	.intro-text {
-		position: relative;
-		top: 10%;
+@media only screen and (max-width: 768px) and (max-height: 576px) {
+	.display-large {
+		font-size: 30px;
+		line-height: normal;
 	}
 }

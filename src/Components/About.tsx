@@ -5,7 +5,7 @@ export default function About() {
 		<section className="bio" id="bio">
 			<div className="description-container">
 				<div className="sub-description">
-				<h2 className="bio-heading">Background</h2>
+				<h2 className="bio-heading custom-header">Background</h2>
 					<hr />
 					<p>
 						I hold a Bachelor in Information Technology from

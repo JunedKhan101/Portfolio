@@ -53,6 +53,7 @@ export default function NavBar() {
 									uncheckedIcon={
 										<img
 											alt="sun"
+											className="dark-mode-toggler-sun-icon"
 											src="https://img.icons8.com/color/28/000000/sun--v1.png"
 										/>
 									}
@@ -103,6 +104,7 @@ export default function NavBar() {
 										uncheckedIcon={
 											<img
 												alt="sun"
+												className="dark-mode-toggler-sun-icon"
 												src="https://img.icons8.com/color/28/000000/sun--v1.png"
 											/>
 										}

@@ -100,7 +100,7 @@ export default function BlogHomePage() {
 		<>
 			<section className="blog-homepage" id="blog-homepage">
 				<div className="blog-homepage-subcontainer">
-					<h1>Blog</h1>
+					<h1 className="custom-header">Blog</h1>
 					<p className="blog-intro-text text-center">
 						Writing on software development, system design, and tech in general
 					</p>
