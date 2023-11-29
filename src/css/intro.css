@@ -9,7 +9,7 @@
 	background-size: cover;
 	background-position: center;
 	/* parallax effect */
-	/* background-attachment: fixed; */
+	background-attachment: fixed;
 }
 #dark .intro-container{
 	background-image: url(/static/waves-purple.svg);
@@ -24,6 +24,7 @@
 }
 #dark .intro-text {
 	background: -webkit-linear-gradient(319deg, #663dff 0%, #aa00ff 37%, #cc4499 100%);
+	/* background: white; */
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }

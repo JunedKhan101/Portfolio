@@ -16,7 +16,7 @@ export default function Projects() {
 		});
 	}, []);
 	var ModalStyle = {
-		backgroundColor: theme === "dark" ? "#1b1e21" : "#FFFFFF",
+		backgroundColor: theme === "dark" ? "#001220 " : "#FFFFFF",
 		color: theme === "dark" ? "#eee" : "#000000",
 	};
 	const [show, setShow] = useState(false);

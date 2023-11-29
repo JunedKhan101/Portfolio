@@ -11,7 +11,7 @@ export default function Footer() {
 		alert(`I don't use Facebook anymore`);
 	};
 	return (
-		<footer className={theme === "dark" ? "bg-dark" : "bg-light"}>
+		<footer className="my-footer">
 			<Container className="footer-container">
 				<Row>
 					<Navbar id="footer-navbar" variant={theme}>

@@ -16,7 +16,7 @@ export default function ProjectsPage() {
 	}, []);
 	const { theme } = useContext(ThemeContext) as { theme: string };
 	var ModalStyle = {
-		backgroundColor: theme === "dark" ? "#1b1e21" : "#FFFFFF",
+		backgroundColor: theme === "dark" ? "#001220 " : "#FFFFFF",
 		color: theme === "dark" ? "#eee" : "#000000",
 	};
 
