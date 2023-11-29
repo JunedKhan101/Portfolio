@@ -122,7 +122,7 @@ export default function NavBar() {
 					<Offcanvas
 						show={show}
 						onHide={handleClose}
-						className={theme === "dark" ? "bg-dark" : "bg-white"}
+						id={theme === "dark" ? "offcanvas-dark" : "offcanvas-light"}
 					>
 						<Offcanvas.Header
 							closeButton
@@ -136,15 +136,10 @@ export default function NavBar() {
 						</Offcanvas.Header>
 						<Offcanvas.Body>
 							<Navbar
-								className={theme === "dark" ? "bg-dark" : "bg-white"}
 								variant={theme}
 							>
 								<Nav
-									className={
-										theme === "dark"
-											? "bg-dark offcanvas-nav flex-column"
-											: "bg-white offcanvas-nav flex-column"
-									}
+									className="flex-column"
 								>
 									<Nav.Link
 										className="mynav-links resume-nav-link"

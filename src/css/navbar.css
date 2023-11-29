@@ -36,6 +36,12 @@
 .offcanvas {
     border: none !important;
 }
+#offcanvas-dark {
+    background-color: #00172a;
+}
+#offcanvas-light {
+    background-color: #F8F9FA;
+}
 .dark-mode-toggler-sun-icon {
     padding-left: 2.5px;
 }
