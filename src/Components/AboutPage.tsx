@@ -54,7 +54,7 @@ export default function AboutPage() {
 				</div>
 				<div className="description-container-aboutpage">
 					<div className="sub-description-aboutpage">
-						<p>Hi I'm Juned! (pronouned as Ju-ned)</p>
+						<p>Hi I'm Juned! (pronounced as Ju-ned)</p>
 						<h4>What drives me?</h4>
 						<p>
 							I am just a super curious individual, driven by a

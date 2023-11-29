@@ -63,7 +63,8 @@
 }
 #dark .profile-links { color: white; }
 #dark .profile-links:hover {
-	color: #C12EBA;
+	/* color: #C12EBA; */
+	color: #AC99EA;
 }
 @media only screen and (max-width: 1024px) {
 	.aboutpage-container {
