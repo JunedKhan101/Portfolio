@@ -45,36 +45,46 @@ export default function ToLearn() {
 	};
 	const renderRecentBlogs = () => {
 		var blog = [];
-		for (var i = 0; i < cosmicObj.length; i++) {
-			blog.push(
-				<a
-					key={cosmicObj[i].slug}
-					className="recent-blog-card-link"
-					id="recent-blog-card-link"
-					href={`/blog/${cosmicObj[i].slug}`}
-				>
-					<Card className="recent-blog-card">
-						<Card.Body className="recent-blog-card-body">
-							<Card.Title
-								className={
-									cosmicObj[i].metadata.description
-										? "pb-2 w-100"
-										: "m-0"
-								}
-							>
-								{cosmicObj[i].title}
-							</Card.Title>
-							{cosmicObj[i].metadata.description ? (
-								<p className="m-0 w-100 mr-auto">
-									{cosmicObj[i].metadata.description}
-								</p>
-							) : null}
-						</Card.Body>
-					</Card>
-				</a>
+		if (isLoading) {
+			return (
+				<img id="loading-recent-blog" src="static/loading.png" alt="loading" />
 			);
 		}
-		return blog;
+		else if (cosmicObj && cosmicObj.length === 0) {
+			return <h5 className="text-center">No recent Blogs to show</h5>;
+		}
+		else if (cosmicObj && cosmicObj.length > 0) {
+			for (var i = 0; i < cosmicObj.length; i++) {
+				blog.push(
+					<a
+						key={cosmicObj[i].slug}
+						className="recent-blog-card-link"
+						id="recent-blog-card-link"
+						href={`/blog/${cosmicObj[i].slug}`}
+					>
+						<Card className="recent-blog-card">
+							<Card.Body className="recent-blog-card-body">
+								<Card.Title
+									className={
+										cosmicObj[i].metadata.description
+											? "pb-2 w-100"
+											: "m-0"
+									}
+								>
+									{cosmicObj[i].title}
+								</Card.Title>
+								{cosmicObj[i].metadata.description ? (
+									<p className="m-0 w-100 mr-auto">
+										{cosmicObj[i].metadata.description}
+									</p>
+								) : null}
+							</Card.Body>
+						</Card>
+					</a>
+				);
+			}
+			return blog;
+		}
 	};
 	return (
 		<section className="tolearn" id="tolearn">

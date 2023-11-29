@@ -48,7 +48,7 @@ export default function Skills() {
 							<hr />
 							<ul>
 								<li>MySQL</li>
-								<li>MongoDB and Mongoose</li>
+								<li>MongoDB/Mongoose</li>
 							</ul>
 						</Card.Body>
 					</Card>

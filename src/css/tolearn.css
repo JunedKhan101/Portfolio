@@ -20,6 +20,12 @@
 .recent-blogs {
 	width: 50%;
 }
+#loading-recent-blog {
+	display: block;
+	width: 130px;
+	height: 130px;
+	margin: auto auto;
+}
 .recent-blogs a {
 	text-decoration: none;
 }

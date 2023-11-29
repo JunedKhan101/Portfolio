@@ -1,21 +1,22 @@
 .aboutpage {
 	width: 100%;
 	min-height: 100%;
-
+	padding-top: 70px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-
-    padding-top: 70px;
 }
 .oneline-intro { text-align: center;}
 .aboutpage-container {
 	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
+	flex-direction: row;
 	max-width: 90%;
+}
+.description-container-aboutpage {
+	width: fit-content;
 }
 .sub-description-aboutpage {
 	max-width: 90%;
@@ -23,8 +24,15 @@
 	position: relative;
 	top: 5%;
 }
+.profile-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: auto;
+}
 .profileimg-container {
-	width: 200px;
+	width: 300px;
 	height: auto;
 	border: 3px solid #212529;
 	border-radius: 15px;
@@ -37,4 +45,34 @@
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+}
+.profile-links-container {
+	width: 100%;
+}
+.profile-links {
+	display: block;
+	text-decoration: none;
+	color: black;
+	margin-bottom: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+.profile-links:hover {
+	color: #772EFF
+}
+#dark .profile-links { color: white; }
+#dark .profile-links:hover {
+	color: #C12EBA;
+}
+@media only screen and (max-width: 1024px) {
+	.aboutpage-container {
+		flex-direction: column;
+	}
+	.profile-container {
+		width: 100%;
+	}
+	.profile-links-container {
+		width: auto;
+	}
 }

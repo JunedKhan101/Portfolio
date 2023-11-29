@@ -41,7 +41,7 @@ export default function About() {
 					<p>
 						In my spare time, I work on personal projects, learn new
 						technologies,
-						<br /> read books, watch some web series or go for a
+						<br /> read books, watch NetFlix or go for a
 						walk.
 					</p>
 				</div>
