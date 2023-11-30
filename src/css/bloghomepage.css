@@ -49,6 +49,12 @@
 .blog-card-link:hover {
 	transform: scale(1.05);
 }
+.blog-card-link:hover .card-title {
+	color: #570BE4;
+}
+#dark .blog-card-link:hover .card-title {
+	color: #AC99EA;
+}
 .blog-card-body {
 	display: flex;
 	align-items: center;
