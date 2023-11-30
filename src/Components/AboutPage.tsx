@@ -82,8 +82,7 @@ export default function AboutPage() {
 						<ul className="mb-0">
 							<li>
 								I completed my Bachelor in Information
-								Technology from Rizvi College, University of
-								Mumbai in August 2021
+								Technology from Rizvi College in August 2021
 							</li>
 							<li>
 								I have contributed to some Open Source Projects

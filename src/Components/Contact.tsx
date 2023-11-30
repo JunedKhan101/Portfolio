@@ -103,7 +103,6 @@ export default function Contact() {
 						</Form.Group>
 						<Button
 							className="submit-btn"
-							variant={theme == "dark" ? "outline-secondary" : "outline-dark"}
 							type="submit"
 						>
 							Submit

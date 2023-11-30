@@ -52,12 +52,28 @@
 .back-btn {
 	margin-top: 10px;
 }
-#dark .submit-btn {
-	color: #eee;
+.submit-btn, .back-btn {
+	border: 1px solid #8240B7;
+	color: black;
+	background: none;
+	font-weight: 500;
 }
-#dark .back-btn {
-	color: #eee;
+.submit-btn:hover, .back-btn:hover {
+	border: 1px solid #8240B7;
+	background-color: #8240B7;
 }
+#dark .submit-btn, #dark .back-btn {
+	border: 1px solid #B20FE9;
+	color: #EEE;
+	background: none;
+}
+#dark .submit-btn:hover, #dark .back-btn:hover {
+	color: black;
+	background-color: #B20FE9;
+}
+/* #dark .back-btn {
+	color: #eee;
+} */
 .form-group { padding-bottom: 10px; }
 
 #dark .form-control {

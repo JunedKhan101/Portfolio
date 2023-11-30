@@ -67,6 +67,26 @@ hr {
 .video {
 	width: 100%;
 }
+.modal-close-btn, .x-close-btn {
+	border: 1px solid #8240B7;
+	color: black;
+	background: none;
+	font-weight: 500;
+}
+.modal-close-btn:hover, .x-close-btn:hover {
+	color: #EEE;
+	border: 1px solid #8240B7;
+	background-color: #8240B7;
+}
+#modal-dark .modal-close-btn, #modal-dark .x-close-btn {
+	border: 1px solid #B20FE9;
+	color: #EEE;
+	background: none;
+}
+#modal-dark .modal-close-btn:hover, #modal-dark .x-close-btn:hover {
+	color: black;
+	background-color: #B20FE9;
+}
 @media only screen and (max-width: 576px) {
 	#projects {
 		/* padding-top: 60px; before custom nav */

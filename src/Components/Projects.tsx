@@ -152,12 +152,12 @@ export default function Projects() {
 					</p>
 				</div>
 			</div>
-			<Modal size="lg" centered show={show} onHide={handleClose}>
+			<Modal size="lg" centered show={show} onHide={handleClose} id={theme === "dark" ? "modal-dark" : "" }>
 				<Container className="modal-container" style={ModalStyle}>
 					<Modal.Header>
 						<Modal.Title>{projectName}</Modal.Title>
 						<button
-							className={theme === "dark" ? "close-btn btn btn-outline-secondary" : "btn btn-outline-dark"}
+							className="x-close-btn btn"
 							onClick={handleClose}
 						>
 							X
@@ -174,7 +174,6 @@ export default function Projects() {
 					<Modal.Footer className="border-0 justify-content-center">
 						<Button
 							className="modal-close-btn"
-							variant={theme === "dark" ? "outline-secondary" : "outline-dark"}
 							onClick={handleClose}
 						>
 							Close
