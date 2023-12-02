@@ -23,7 +23,7 @@
 	-webkit-text-fill-color: transparent;
 }
 #dark .intro-text {
-	background: -webkit-linear-gradient(319deg, #663dff 0%, #aa00ff 37%, #cc4499 100%);
+	background: #EEE;
 	/* background: white; */
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -35,7 +35,7 @@
 	-webkit-text-fill-color: transparent;
 }
 #dark .index-module_type__E-SaG:after {
-	background: -webkit-linear-gradient(319deg, #663dff 0%, #aa00ff 37%, #cc4499 100%);
+	background: #EEE;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
