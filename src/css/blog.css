@@ -58,3 +58,6 @@ p img {
 pre {
 	position: relative;
 }
+.blog-heading {
+	font-weight: 700;
+}
