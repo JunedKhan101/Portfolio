@@ -7,7 +7,7 @@ import "../css/aboutpage.css";
 export default function AboutPage() {
 	return (
 		<div className="aboutpage" id="aboutpage">
-			<h2 className="aboutpage-heading text-center custom-header">
+			<h2 className="aboutpage-heading text-center aboutpage-header-style">
 				About Myself
 			</h2>
 			<p className="oneline-intro">

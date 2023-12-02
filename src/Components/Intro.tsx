@@ -6,7 +6,7 @@ export default function Intro() {
 		<div className="intro-container" id="intro">
 			<div className="intro">
 				<div className="intro-text">
-					<h1 className="display-large	">	
+					<h1 className="display-large">
 						<TypeAnimation
 							sequence={[
 								`Hi, I'm Juned Khan\nI'm a Software Engineer`,

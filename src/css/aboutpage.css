@@ -65,6 +65,25 @@
 #dark .profile-links:hover {
 	color: #AC99EA;
 }
+#dark .aboutpage-header-style {
+	/* font-size: calc(0.1rem + 2.7vw); */
+	font-size: 40px;
+    font-weight: 700;
+	background-color: #663dff;
+	background: -webkit-linear-gradient(319deg, #663dff 0%, #aa00ff 60%, #cc4499 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.aboutpage-header-style {
+	font-size: 40px;
+    font-weight: 700;
+	background-color: #3e187a;
+	background-image: linear-gradient(316deg, #3e187a 0%, #994ecc 74%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
 @media only screen and (max-width: 1024px) {
 	.aboutpage-container {
 		flex-direction: column;
