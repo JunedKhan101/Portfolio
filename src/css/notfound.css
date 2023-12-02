@@ -1,0 +1,10 @@
+.notfound {
+	width: 100%;
+	min-height: 100%;
+	/* min-height: fit-content; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+    padding-top: 52px;
+}

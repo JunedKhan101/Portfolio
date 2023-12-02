@@ -1,22 +1,24 @@
 .bio {
 	width: 100%;
-	min-height: 100%;
+	/* min-height: 100%; */
+	min-height: fit-content;
 
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
     /* padding-top: 52px; before custom nav */
-	padding-top: 120px;
+	padding: 120px 0 40px 0;
     /* margin-top: -52px; margin removed due to nav highlighting issue */
 }
 .description-container {
 	width: 90%;
 	display: flex;
+	flex-direction: column;
 }
 .sub-description {
 	max-width: 90%;
-	margin: 0 auto;
+	/* margin: 0 auto; */
 	position: relative;
 	top: 5%;
 }

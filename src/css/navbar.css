@@ -1,8 +1,9 @@
-.navbar {
+.navbar-container {
     background-color: #F8F9FA;
 }
-#dark .navbar {
-    background-color: #212529;
+#dark .navbar-container {
+    /* background-color: #212529;; */
+    background-color: #00172a;
 }
 #dark .nav-links {
     color: #eee !important;
@@ -20,23 +21,6 @@
     margin: 0 auto;
     padding-right: 30px;
 }
-.custom-nav-container {
-    padding-top: 5px;
-    width: 100%;
-    text-decoration: none;
-    font-size: 15px;
-}
-.custom-nav {
-    width: 260px;
-    font-size: 12px;;
-    text-align: center;
-    border: 1px solid gray;
-    border-radius: 20px;
-}
-.container-wrapper-navbar {
-    margin-right: 100px;
-    display: none;
-}
 .page-nav-info {
     margin: 0;
     width: 250px;
@@ -52,7 +36,15 @@
 .offcanvas {
     border: none !important;
 }
-
+#offcanvas-dark {
+    background-color: #00172a;
+}
+#offcanvas-light {
+    background-color: #F8F9FA;
+}
+.dark-mode-toggler-sun-icon {
+    padding-left: 2.5px;
+}
 @media (max-width: 992px) {
     .dark-mode-toggler {
         display: none !important;

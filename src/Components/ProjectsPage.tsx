@@ -16,7 +16,7 @@ export default function ProjectsPage() {
 	}, []);
 	const { theme } = useContext(ThemeContext) as { theme: string };
 	var ModalStyle = {
-		backgroundColor: theme === "dark" ? "#1b1e21" : "#FFFFFF",
+		backgroundColor: theme === "dark" ? "#001220 " : "#FFFFFF",
 		color: theme === "dark" ? "#eee" : "#000000",
 	};
 
@@ -36,7 +36,7 @@ export default function ProjectsPage() {
 	};
 	return (
 		<section className="projects-container" id="projects">
-			<h1 className="projects-heading">All Projects</h1>
+			<h1 className="projects-heading custom-header">All Projects</h1>
 			<div className="projects">
 			<div className="project-instance">
 					<div className="project-header">
@@ -214,12 +214,12 @@ export default function ProjectsPage() {
 					</p>
 				</div>
 			</div>
-			<Modal size="lg" centered show={show} onHide={handleClose}>
+			<Modal size="lg" centered show={show} onHide={handleClose} id={theme === "dark" ? "modal-dark" : "" }>
 				<Container className="modal-container" style={ModalStyle}>
 					<Modal.Header>
 						<Modal.Title>{projectName}</Modal.Title>
 						<a
-							className={theme === "dark" ? "close-btn btn btn-outline-secondary" : "btn btn-outline-dark"}
+							className="x-close-btn btn"
 							onClick={handleClose}
 						>
 							X
@@ -236,7 +236,6 @@ export default function ProjectsPage() {
 					<Modal.Footer className="border-0 justify-content-center">
 						<Button
 							className="modal-close-btn"
-							variant={theme === "dark" ? "outline-secondary" : "outline-dark"}
 							onClick={handleClose}
 						>
 							Close

@@ -16,7 +16,7 @@ export default function Projects() {
 		});
 	}, []);
 	var ModalStyle = {
-		backgroundColor: theme === "dark" ? "#1b1e21" : "#FFFFFF",
+		backgroundColor: theme === "dark" ? "#001220 " : "#FFFFFF",
 		color: theme === "dark" ? "#eee" : "#000000",
 	};
 	const [show, setShow] = useState(false);
@@ -35,9 +35,10 @@ export default function Projects() {
 	};
 	return (
 		<section className="projects-container" id="projects">
-			<h2 className="projects-heading">Top Projects</h2>
 			<div className="projects">
 			<div className="project-instance">
+					<h2 className="projects-heading custom-header">Top Projects</h2>
+					<hr />
 					<div className="project-header">
 						<h3>InstaScrapy</h3>
 						<div className="project-links-container">
@@ -72,7 +73,7 @@ export default function Projects() {
 							&nbsp;]
 						</div>
 					</div>
-					<hr />
+					{/* <hr /> */}
 					<p className="project-description">
 						InstaScrapy is a python script that
 						scrapes saved images from Instagram
@@ -133,7 +134,7 @@ export default function Projects() {
 							</div>
 						</div>
 					</div>
-					<hr />
+					{/* <hr /> */}
 					<p className="project-description">
 						Nutrition Analysis, Built in React and react-router-dom
 						and Chart.js.
@@ -151,12 +152,12 @@ export default function Projects() {
 					</p>
 				</div>
 			</div>
-			<Modal size="lg" centered show={show} onHide={handleClose}>
+			<Modal size="lg" centered show={show} onHide={handleClose} id={theme === "dark" ? "modal-dark" : "" }>
 				<Container className="modal-container" style={ModalStyle}>
 					<Modal.Header>
 						<Modal.Title>{projectName}</Modal.Title>
 						<button
-							className={theme === "dark" ? "close-btn btn btn-outline-secondary" : "btn btn-outline-dark"}
+							className="x-close-btn btn"
 							onClick={handleClose}
 						>
 							X
@@ -173,7 +174,6 @@ export default function Projects() {
 					<Modal.Footer className="border-0 justify-content-center">
 						<Button
 							className="modal-close-btn"
-							variant={theme === "dark" ? "outline-secondary" : "outline-dark"}
 							onClick={handleClose}
 						>
 							Close

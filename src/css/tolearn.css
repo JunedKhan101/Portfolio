@@ -5,8 +5,127 @@
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+	padding-top: 120px;
+}
+.ending-container {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	max-width: 90%;
 }
 .tolearn-content {
     max-width: 90%;
     min-height: 100%;
+}
+.recent-blogs {
+	width: 50%;
+}
+#loading-recent-blog {
+	display: block;
+	width: 130px;
+	height: 130px;
+	margin: auto auto;
+}
+.recent-blogs a {
+	text-decoration: none;
+}
+.recent-blog-card {
+	border: none;
+}
+#dark .recent-blog-card-link .recent-blog-card {
+	background-color: #001220 ;
+	color: #EEE;
+}
+.recent-blog-card-body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+#recent-blog-card-link .recent-blog-card:hover {
+	background-color: #F8F9FA;
+}
+#dark #recent-blog-card-link .recent-blog-card:hover {
+	background-color: #212529;
+}
+#recent-blog-card-link .recent-blog-card:hover .card-title {
+	color: #570BE4;
+}
+#dark #recent-blog-card-link .recent-blog-card:hover .card-title {
+	color: #AC99EA;
+}
+.recent-blogs-hr {
+	width: 78%;
+}
+/* read blog btn */
+.read-blog-btn {
+	margin: 0;
+	color: black;
+	width: 200px;
+	height: 60px;
+	text-align: center;
+	display: block;
+	border: 1px solid #6200EE;
+	background-color: transparent;
+	border-radius: 50px;
+	padding: 20px;
+	text-decoration: none;
+	font-size: large;
+	letter-spacing: 1px;
+	position: relative;
+	left: 0;
+	overflow: hidden;
+}
+#dark .read-blog-btn {
+	color: white;
+	border: 1px solid #6200EE;
+}
+.read-blog-btn-arrow {
+	color: white;
+	position: absolute;
+	top: 0;
+    right: 0;
+    bottom: 0;
+    left: -100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	background-color: #6200EE;
+	transition: left 0.3s;
+	z-index: 2;
+}
+.read-blog-btn-text {
+	position: absolute;
+	top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	background-color: transparent;
+	z-index: 1;
+	transition: left 0.3s;
+}
+.read-blog-btn:hover .read-blog-btn-text {
+	left: 100%;
+}
+.read-blog-btn:hover .read-blog-btn-arrow {
+	left: 0;
+}
+
+@media only screen and (max-width: 1050px) {
+	.ending-container {
+		flex-direction: column;
+	}
+	.to-learn-container {
+		padding-bottom: 20px;
+	}
+	.recent-blogs {
+		width: auto;
+	}
 }

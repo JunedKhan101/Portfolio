@@ -6,7 +6,7 @@ export default function Gear() {
 		<section className="gear" id="gear">
 			<div className="gear-subcontainer">
 				<div className="gear-header-section">
-					<h1>My Gear</h1>
+					<h1 className="custom-header">My Gear</h1>
 					<p>Here's a list of gear that I use on a daily basis.</p>
 				</div>
 				<div className="gear-card">

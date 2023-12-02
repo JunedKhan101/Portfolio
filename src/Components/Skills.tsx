@@ -12,9 +12,9 @@ export default function Skills() {
 	return (
 		<section className="skills-container" id="skills">
 			<div className="skills-subcontainer">
-				<h2 className="skills-heading">Skills</h2>
+				<h2 className="skills-heading custom-header">Skills</h2>
 				<div className="skills">
-					<Card data-aos="fade-up" style={{ width: "18rem" }}>
+					<Card className="skills-card" data-aos="fade-up" style={{ width: "18rem" }}>
 						<Card.Body>
 							<Card.Title>Frontend</Card.Title>
 							<hr />
@@ -29,7 +29,7 @@ export default function Skills() {
 						</Card.Body>
 					</Card>
 
-					<Card data-aos="fade-up" style={{ width: "18rem" }}>
+					<Card className="skills-card" data-aos="fade-up" style={{ width: "18rem" }}>
 						<Card.Body>
 							<Card.Title>Backend</Card.Title>
 							<hr />
@@ -42,18 +42,18 @@ export default function Skills() {
 						</Card.Body>
 					</Card>
 
-					<Card data-aos="fade-up" style={{ width: "18rem" }}>
+					<Card className="skills-card" data-aos="fade-up" style={{ width: "18rem" }}>
 						<Card.Body>
 							<Card.Title>Database</Card.Title>
 							<hr />
 							<ul>
 								<li>MySQL</li>
-								<li>MongoDB and Mongoose</li>
+								<li>MongoDB/Mongoose</li>
 							</ul>
 						</Card.Body>
 					</Card>
 
-					<Card data-aos="fade-up" style={{ width: "18rem" }}>
+					<Card className="skills-card" data-aos="fade-up" style={{ width: "18rem" }}>
 						<Card.Body>
 							<Card.Title>Programming Languages</Card.Title>
 							<hr />
@@ -66,7 +66,7 @@ export default function Skills() {
 						</Card.Body>
 					</Card>
 
-					<Card data-aos="fade-up" style={{ width: "18rem" }}>
+					<Card className="skills-card" data-aos="fade-up" style={{ width: "18rem" }}>
 						<Card.Body>
 							<Card.Title>Libraries and Frameworks</Card.Title>
 							<hr />
@@ -79,7 +79,7 @@ export default function Skills() {
 						</Card.Body>
 					</Card>
 
-					<Card data-aos="fade-up" style={{ width: "18rem" }}>
+					<Card className="skills-card" data-aos="fade-up" style={{ width: "18rem" }}>
 						<Card.Body>
 							<Card.Title>Other</Card.Title>
 							<hr />

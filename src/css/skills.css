@@ -26,8 +26,8 @@
 	position: relative;
 	top: 30px;
 }
-#dark .card {
-	background-color: #1b1e21;
+#dark .skills-card {
+	background-color: #001220 ;
 	color: #EEE;
 }
 #skills {
@@ -38,7 +38,7 @@
 ul {
   list-style: square outside none;
 }
-.skills > .card {
+.skills > .skills-card {
 	border: none;
 	align-self: start;
 	justify-self: center;

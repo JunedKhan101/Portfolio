@@ -44,10 +44,16 @@
 #dark .blog-card-link .card {
 	border: 1px solid #eee;
 	color: #EEE;
-	background-color: #1b1e21;
+	background-color: #001220 ;
 }
 .blog-card-link:hover {
 	transform: scale(1.05);
+}
+.blog-card-link:hover .card-title {
+	color: #570BE4;
+}
+#dark .blog-card-link:hover .card-title {
+	color: #AC99EA;
 }
 .blog-card-body {
 	display: flex;
@@ -58,6 +64,7 @@
 #loading-blog {
 	display: block;
 }
+/* tags */
 .tags-container {
 	display: flex;
 	align-items: flex-start;
@@ -74,17 +81,20 @@
 	flex-wrap: wrap;
 	row-gap: 5px;
 }
+/* light mode tag */
 .tags .tag {
 	display: inline-block;
 	border-radius: 3px;
-	background-color: lightblue;
+	background-color: #d8bbff;
 	padding: 5px;
 }
+/* dark mode tag */
 #dark .tags .tag {
-	background-color: gray;
+	background-color: #6247aa;
 }
+/* light mode tag filter */
 .tag-filter-btn {
-	background-color: lightblue;
+	background-color: #d8bbff;
 	border: none;
 	border-radius: 5px;
 	padding: 5px;
@@ -97,8 +107,9 @@
 	background-color: #002cb2;
 	color: white;
 }
+/* dark mode tag filter */
 #dark .tag-filter-btn {
-	background-color: gray;
+	background-color: #6247aa;
 	color: white;
 }
 #dark .tag-filter-btn.active {

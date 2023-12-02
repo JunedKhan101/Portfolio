@@ -1,7 +1,6 @@
 import { useState, MouseEvent, useContext, useRef } from "react";
 import { send } from "emailjs-com";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
-import { getRelativeURL } from "../helpers/getRelativeURL";
 import { SocialIcon } from "react-social-icons";
 import { ThemeContext } from "./App";
 import "../css/contact.css";
@@ -103,7 +102,6 @@ export default function Contact() {
 						</Form.Group>
 						<Button
 							className="submit-btn"
-							variant={theme == "dark" ? "outline-secondary" : "outline-dark"}
 							type="submit"
 						>
 							Submit
@@ -134,16 +132,11 @@ export default function Contact() {
 			);
 		}
 	};
-
-	var currentURL = getRelativeURL();
-	var contactStyle = {
-		paddingTop: currentURL === "/contact" ? "70px" : ""
-	}
 	return (
-		<section className="contact-container" id="contact" style={contactStyle}>
+		<section className="contact-container" id="contact">
 			<Container className="contact">
 				<Row>
-					<h2 className="contact-heading">Contact</h2>
+					<h2 className="contact-heading custom-header">Contact</h2>
 				</Row>
 				<Row>
 					<small className="primary-email">

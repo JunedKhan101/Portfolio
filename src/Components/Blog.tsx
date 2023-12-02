@@ -7,11 +7,12 @@ import "../css/blog.css";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
-import { BlogObject, CosmicObject } from "../types/cosmicObj";
+import { BlogObject } from "../types/cosmicObj";
 import { Helmet } from "react-helmet";
 
 export default function Blog() {
 	var { slug } = useParams();
+	const [notfound, setNotFound] = useState<boolean>(false);
 	const [isLoading, setIsLoading] = useState<boolean>(false);
 	const [cosmicObj, setCosmicObj] = useState<BlogObject>({
 		slug: '',
@@ -32,23 +33,29 @@ export default function Blog() {
 				readKey: import.meta.env.VITE_COSMIC_API_KEY,
 			});
 			setIsLoading(true);
-			var obj = await cosmic.objects
-				.findOne({
-					type: "posts",
-					slug: slug,
-				})
-				.props([
-					"slug",
-					"title",
-					"metadata.content",
-					"metadata.description",
-					"metadata.seokeywords",
-					"metadata.tags",
-					"metadata.createdat"
-				]);
-			// console.log(obj.object);
-			setCosmicObj(obj.object);
-			setIsLoading(false);
+			try {
+				var obj = await cosmic.objects
+					.findOne({
+						type: "posts",
+						slug: slug,
+					})
+					.props([
+						"slug",
+						"title",
+						"metadata.content",
+						"metadata.description",
+						"metadata.seokeywords",
+						"metadata.tags",
+						"metadata.createdat"
+					]);
+					// console.log(obj.object);
+					setCosmicObj(obj.object);
+					setIsLoading(false);
+			}
+			catch (err) {
+				setIsLoading(false);
+				setNotFound(true);
+			}
 		};
 		getBlogPost();
 	}, [slug]);
@@ -116,7 +123,7 @@ export default function Blog() {
 					alt="loading"
 				/>
 			);
-		} else if (Object.keys(cosmicObj).length === 0) {
+		} else if (notfound || Object.keys(cosmicObj).length === 0) {
 			return <h1>No Blog content to show</h1>;
 		} else {
 			var formattedCreatedAtDate;

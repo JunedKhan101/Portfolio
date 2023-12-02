@@ -11,6 +11,7 @@ const Gear = lazy(() => import("./Gear"));
 const Main = lazy(() => import("./Main"));
 const FallBack = lazy(() => import("./FallBack"));
 const ProjectsPage = lazy(() => import("./ProjectsPage"));
+const NotFound = lazy(() => import("./NotFound"));
 import "../css/app.css";
 
 const defaultThemeContextValue: ThemeContextType = {
@@ -44,8 +45,8 @@ function App() {
 	var html = document.getElementsByTagName("html")[0];
 	var body = document.getElementsByTagName("body")[0];
 	if (theme === "dark" && themeflag === true) {
-		html.style.backgroundColor = "#1b1e21";
-		body.style.backgroundColor = "#1b1e21";
+		html.style.backgroundColor = "#001220";
+		body.style.backgroundColor = "#001220";
 		body.style.color = "#EEE";
 	} else if (theme === "light" && themeflag === false) {
 		html.style.backgroundColor = "#FFFFFF";
@@ -110,6 +111,14 @@ function App() {
 						element={
 							<Suspense fallback={<FallBack />}>
 								<Contact />
+							</Suspense>
+						}
+					/>
+					<Route
+						path="*"
+						element={
+							<Suspense fallback={<FallBack />}>
+								<NotFound />
 							</Suspense>
 						}
 					/>

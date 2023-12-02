@@ -3,7 +3,6 @@ import Switch from "react-switch";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { ThemeContext } from "./App";
-import { getRelativeURL } from "../helpers/getRelativeURL";
 import "../css/navbar.css";
 
 export default function NavBar() {
@@ -20,7 +19,6 @@ export default function NavBar() {
 	const textColorStyle = {
 		color: theme === "dark" ? "#EEE" : "",
 	};
-	var currentURL = getRelativeURL();
 	return (
 		<>
 			<Navbar
@@ -53,6 +51,7 @@ export default function NavBar() {
 									uncheckedIcon={
 										<img
 											alt="sun"
+											className="dark-mode-toggler-sun-icon"
 											src="https://img.icons8.com/color/28/000000/sun--v1.png"
 										/>
 									}
@@ -103,6 +102,7 @@ export default function NavBar() {
 										uncheckedIcon={
 											<img
 												alt="sun"
+												className="dark-mode-toggler-sun-icon"
 												src="https://img.icons8.com/color/28/000000/sun--v1.png"
 											/>
 										}
@@ -120,7 +120,7 @@ export default function NavBar() {
 					<Offcanvas
 						show={show}
 						onHide={handleClose}
-						className={theme === "dark" ? "bg-dark" : "bg-white"}
+						id={theme === "dark" ? "offcanvas-dark" : "offcanvas-light"}
 					>
 						<Offcanvas.Header
 							closeButton
@@ -134,15 +134,10 @@ export default function NavBar() {
 						</Offcanvas.Header>
 						<Offcanvas.Body>
 							<Navbar
-								className={theme === "dark" ? "bg-dark" : "bg-white"}
 								variant={theme}
 							>
 								<Nav
-									className={
-										theme === "dark"
-											? "bg-dark offcanvas-nav flex-column"
-											: "bg-white offcanvas-nav flex-column"
-									}
+									className="flex-column"
 								>
 									<Nav.Link
 										className="mynav-links resume-nav-link"
@@ -171,33 +166,7 @@ export default function NavBar() {
 						</Offcanvas.Body>
 					</Offcanvas>
 				</Container>
-				<Container
-					className={
-						currentURL === "/"
-							? "custom-nav-container"
-							: "d-none custom-nav-container"
-					}
-				>
-					<div className="container-wrapper d-flex flex-column align-items-center justify-content-center w-100">
-						<p className="page-nav-info">On this page:&nbsp;</p>
-						<Nav className="my-auto flex-row custom-nav justify-content-around">
-							<Nav.Link className="mynav-links" href="#bio">
-								Background
-							</Nav.Link>
-							<Nav.Link className="mynav-links" href="#projects">
-								Projects
-							</Nav.Link>
-							<Nav.Link className="mynav-links" href="#skills">
-								Skills
-							</Nav.Link>
-							<Nav.Link className="mynav-links" href="#tolearn">
-								To Learn
-							</Nav.Link>
-						</Nav>
-					</div>
-				</Container>
 			</Navbar>
 		</>
 	);
 }
-export { getRelativeURL };
