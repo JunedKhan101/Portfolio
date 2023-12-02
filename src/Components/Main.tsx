@@ -1,10 +1,9 @@
-import { lazy, useEffect } from "react";
+import { lazy } from "react";
 const About = lazy(() => import("./About"));
-const Projects = lazy(() => import("./Projects"));
+// const Projects = lazy(() => import("./Projects"));
 const Skills = lazy(() => import("./Skills"));
 const Intro = lazy(() => import("./Intro"));
 const ToLearn = lazy(() => import("./ToLearn"));
-import { getRelativeURL } from "../helpers/getRelativeURL";
 import { Helmet } from "react-helmet";
 
 export default function Main() {
@@ -30,7 +29,7 @@ export default function Main() {
 			</Helmet>
 			<Intro />
 			<About />
-			<Projects />
+			{/* <Projects /> */}
 			<Skills />
 			<ToLearn />
 		</>

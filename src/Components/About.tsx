@@ -5,19 +5,31 @@ export default function About() {
 		<section className="bio" id="bio">
 			<div className="description-container">
 				<div className="sub-description">
-				<h2 className="bio-heading custom-header">Background</h2>
+					<h2 className="custom-header">What I do</h2>
+					<p>
+						I am dedicated to designing, developing, and implementing cutting-edge software solutions.<br />
+						Proficient in multiple programming languages and well-versed in software development methodologies, I specialize in creating robust and scalable applications that meet the unique needs of clients and end-users.<br />
+						I help small and large businesses achieve their technical goals and clients to build their products.<br /><br />
+						My expertise extends to system architecture, code optimization, and troubleshooting, ensuring seamless functionality and exceptional performance.<br />
+						Whether collaborating with cross-functional teams or independently tackling complex challenges, I thrive on transforming ideas into efficient and reliable software solutions.<br />
+						Continuous learning and staying abreast of ever-changing industry trends are integral to my commitment to delivering state-of-the-art software that drives technological advancement.<br />
+					</p>
+				</div>
+				<div className="sub-description">
+					<h2 className="bio-heading custom-header">Background</h2>
 					<hr />
 					<p>
 						I hold a Bachelor in Information Technology from
 						University of Mumbai, graduated in 2021
 					</p>
 					<p>
-						Currently working as a Software Engineer
-						at Apexon
+						Currently working as a Software Engineer at Apexon
 						<br />
-						I work in MVC (Model-View-Controller) and MVVM (Model-View-ViewModel) Architecture
+						I work in MVC (Model-View-Controller) and MVVM
+						(Model-View-ViewModel) Architecture
 						<br />
-						The tech stack I use on my job is Express, Node.js, HTML, CSS/SASS, JavaScript, jQuery and Java
+						The tech stack I use on my job is Express, Node.js,
+						HTML, CSS/SASS, JavaScript, jQuery and Java
 					</p>
 					<p>I'm proficient in the JavaScript Ecosystem</p>
 					<p>
@@ -41,8 +53,7 @@ export default function About() {
 					<p>
 						In my spare time, I work on personal projects, learn new
 						technologies,
-						<br /> read books, watch NetFlix or go for a
-						walk.
+						<br /> read books, watch NetFlix or go for a walk.
 					</p>
 				</div>
 			</div>

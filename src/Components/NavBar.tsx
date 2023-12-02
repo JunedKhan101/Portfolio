@@ -3,7 +3,6 @@ import Switch from "react-switch";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { ThemeContext } from "./App";
-import { getRelativeURL } from "../helpers/getRelativeURL";
 import "../css/navbar.css";
 
 export default function NavBar() {
@@ -20,7 +19,6 @@ export default function NavBar() {
 	const textColorStyle = {
 		color: theme === "dark" ? "#EEE" : "",
 	};
-	var currentURL = getRelativeURL();
 	return (
 		<>
 			<Navbar
@@ -172,4 +170,3 @@ export default function NavBar() {
 		</>
 	);
 }
-export { getRelativeURL };

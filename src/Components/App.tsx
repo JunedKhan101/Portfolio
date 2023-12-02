@@ -11,6 +11,7 @@ const Gear = lazy(() => import("./Gear"));
 const Main = lazy(() => import("./Main"));
 const FallBack = lazy(() => import("./FallBack"));
 const ProjectsPage = lazy(() => import("./ProjectsPage"));
+const NotFound = lazy(() => import("./NotFound"));
 import "../css/app.css";
 
 const defaultThemeContextValue: ThemeContextType = {
@@ -110,6 +111,14 @@ function App() {
 						element={
 							<Suspense fallback={<FallBack />}>
 								<Contact />
+							</Suspense>
+						}
+					/>
+					<Route
+						path="*"
+						element={
+							<Suspense fallback={<FallBack />}>
+								<NotFound />
 							</Suspense>
 						}
 					/>

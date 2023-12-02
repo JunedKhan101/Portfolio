@@ -15,9 +15,11 @@ html, body, #root {
 	/* font-size: calc(0.1rem + 2.7vw); */
 	font-size: 40px;
     font-weight: 700;
-	background: -webkit-linear-gradient(319deg, #663dff 0%, #aa00ff 37%, #cc4499 100%);
-	-webkit-background-clip: text;
+	background-color: #663dff;
+	background: -webkit-linear-gradient(319deg, #663dff 0%, #aa00ff 40%, #cc4499 100%);
+	/* background-image: linear-gradient(316deg, #663dff 0%, #aa00ff 74%); */
 	background-clip: text;
+	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
 .custom-header {
@@ -25,6 +27,7 @@ html, body, #root {
     font-weight: 700;
 	background-color: #3e187a;
 	background-image: linear-gradient(316deg, #3e187a 0%, #994ecc 74%);
+	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
