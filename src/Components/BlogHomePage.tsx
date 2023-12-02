@@ -7,6 +7,7 @@ import { CosmicObject } from "../types/cosmicObj";
 
 export default function BlogHomePage() {
 	const [cosmicObj, setCosmicObj] = useState<CosmicObject[]>([]);
+	const [sort, setSort] = useState("DESC");
 	const [cosmicFilterObj, setCosmicFilterObj] = useState<CosmicObject[]>([]);
 	const [filter, setFilter] = useState<Array<string>>([]);
 	const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -34,6 +35,23 @@ export default function BlogHomePage() {
 			setCosmicFilterObj([]);
 		}
 	}, [filter, cosmicObj]);
+	useEffect(() => {
+		console.log(sort);
+		// Move the sorting logic inside a separate function
+		const sortCosmicObjects = () => {
+		  cosmicObj.sort((a: any, b: any) => {
+			const dateA = new Date(a.metadata.createdat).getTime();
+			const dateB = new Date(b.metadata.createdat).getTime();
+			return sort === "ASC" ? dateA - dateB : dateB - dateA;
+		  });
+		};
+	
+		// Call the sorting function if cosmicObj is not empty
+		if (cosmicObj.length > 0) {
+		  sortCosmicObjects();
+		//   setCosmicObj([...cosmicObj]); // Trigger a re-render by creating a new array reference
+		}
+	  }, [sort, cosmicObj]);
 	const initializeCosmic = async () => {
 		const cosmic = createBucketClient({
 			bucketSlug: import.meta.env.VITE_COSMIC_BUCKET_SLUG,
@@ -45,10 +63,11 @@ export default function BlogHomePage() {
 				.find({
 					type: "posts",
 				})
-				.props(["title", "slug", "metadata.description", "metadata.tags"]);
+				.props(["title", "slug", "metadata.description", "metadata.tags", "metadata.createdat"]);
 			// console.log(obj.objects);
-			if (obj && obj.objects && obj.objects.length > 0)
+			if (obj && obj.objects && obj.objects.length > 0) {
 				setCosmicObj(obj.objects);
+			}
 		}
 		catch(err) {
 			setCosmicObj([]);
@@ -75,6 +94,9 @@ export default function BlogHomePage() {
 		else if (cosmicObj && cosmicObj.length > 0) {
 			return <BlogCard cosmicObject={cosmicFilterObj && cosmicFilterObj.length > 0 ? cosmicFilterObj : cosmicObj} />
 		}
+	}
+	const handleSortChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+		setSort(event.target.value);
 	}
 	const handleFilterClick = (event : MouseEvent<HTMLButtonElement>, tag : string) => {
 		const targetElement = event.target as HTMLElement;
@@ -188,6 +210,15 @@ export default function BlogHomePage() {
 								{tag}
 							</button>
 						))}
+					</div>
+					<div className="sort-container pt-4">
+						<div className="form-group">
+							<label className="d-inline-block" htmlFor="sortSelect">Sort by:&nbsp;</label>
+							<select style={{width: 'auto'}} className="form-control form-select d-inline-block" id="sortSelect" value={sort} onChange={handleSortChange}>
+								<option>DESC</option>
+								<option>ASC</option>
+							</select>
+						</div>
 					</div>
 				</div>
 			</section>

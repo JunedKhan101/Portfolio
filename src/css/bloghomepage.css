@@ -123,7 +123,7 @@
 	width: 35%;
 	height: 100%;
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: flex-start;
 	flex-direction: column;
 	padding-top: 52px;
@@ -151,6 +151,12 @@
 }
 .clear-filter-btn-container-small {
 	display: none;
+}
+#dark .form-control {
+	background-color: #212529;
+	color: #EEE;
+	border-color: rgb(80, 80, 80);
+	/* border: none; */
 }
 @media only screen and (max-width: 576px) {
 	.blog-homepage-subcontainer h1 {
