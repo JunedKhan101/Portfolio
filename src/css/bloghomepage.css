@@ -85,7 +85,7 @@
 .tags .tag {
 	display: inline-block;
 	border-radius: 3px;
-	background-color: lightblue;
+	background-color: #d8bbff;
 	padding: 5px;
 }
 /* dark mode tag */
@@ -94,7 +94,7 @@
 }
 /* light mode tag filter */
 .tag-filter-btn {
-	background-color: lightblue;
+	background-color: #d8bbff;
 	border: none;
 	border-radius: 5px;
 	padding: 5px;
