@@ -18,7 +18,7 @@ code span {
 .blog-tags .tag {
 	display: inline-block;
 	border-radius: 3px;
-	background-color: lightblue;
+	background-color: #d8bbff;
 	padding: 5px;
 }
 #dark .tag {
