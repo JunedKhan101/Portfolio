@@ -11,6 +11,7 @@ export default function Intro() {
 							sequence={[
 								`Hi, I'm Juned Khan\nI'm a Software Engineer`,
 							]}
+							wrapper="div"
 							speed={50}
 							style={{ whiteSpace: 'pre-line', fontWeight: '600' }}
 							repeat={3}

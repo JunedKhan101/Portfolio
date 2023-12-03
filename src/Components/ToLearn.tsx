@@ -61,6 +61,8 @@ export default function ToLearn() {
 						className="recent-blog-card-link"
 						id="recent-blog-card-link"
 						href={`/blog/${cosmicObj[i].slug}`}
+						rel="noopener noreferrer"
+						target="_blank"
 					>
 						<Card className="recent-blog-card">
 							<Card.Body className="recent-blog-card-body">

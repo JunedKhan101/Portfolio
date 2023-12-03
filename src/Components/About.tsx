@@ -8,11 +8,10 @@ export default function About() {
 					<h2 className="custom-header">What I do</h2>
 					<p>
 						I am dedicated to designing, developing, and implementing cutting-edge software solutions.<br />
-						Proficient in multiple programming languages and well-versed in software development methodologies, I specialize in creating robust and scalable applications that meet the unique needs of clients and end-users.<br />
+						Proficient in multiple programming languages and well-versed in software development methodologies,<br />I specialize in creating robust and scalable applications that meet the unique needs of clients and end-users.<br />
 						I help small and large businesses achieve their technical goals and clients to build their products.<br /><br />
 						My expertise extends to system architecture, code optimization, and troubleshooting, ensuring seamless functionality and exceptional performance.<br />
 						Whether collaborating with cross-functional teams or independently tackling complex challenges, I thrive on transforming ideas into efficient and reliable software solutions.<br />
-						Continuous learning and staying abreast of ever-changing industry trends are integral to my commitment to delivering state-of-the-art software that drives technological advancement.<br />
 					</p>
 				</div>
 				<div className="sub-description">
