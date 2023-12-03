@@ -1,0 +1,31 @@
+/* styles copied from blog.css */
+.prism-copy-button {
+	position: absolute;
+	top: 19px;
+	right: 15px;
+	border-width: 0;
+	color: black;
+	cursor: pointer;
+	background-color: transparent;
+}
+pre {
+	position: relative;
+}
+#dark .prism-copy-button {
+	color: #EEE;
+}
+.prism-copy-button[disabled] {
+	cursor: default;
+}
+.prism-copy-button.active .bi.bi-clipboard {
+    display: none;
+}
+.prism-copy-button.active .bi.bi-check {
+    display: block;
+}
+.prism-copy-button .bi.bi-clipboard {
+    display: block;
+}
+.prism-copy-button .bi.bi-check {
+    display: none;
+}

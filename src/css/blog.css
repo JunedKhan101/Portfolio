@@ -37,27 +37,6 @@ p img {
 	height: auto;
 	object-fit: contain;
 }
-.prism-copy-button {
-	position: absolute;
-	top: 19px;
-	right: 15px;
-	border-width: 0;
-	color: black;
-	cursor: pointer;
-	background-color: transparent;
-}
-#dark .prism-copy-button {
-	color: #EEE;
-}
-.prism-copy-button[disabled] {
-	cursor: default;
-}
-.prism-copy-button .copied-svg {
-	display: none;
-}
-pre {
-	position: relative;
-}
 .blog-heading {
 	font-weight: 500;
 }
