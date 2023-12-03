@@ -124,7 +124,7 @@ export default function Blog() {
 		}
 	};
 	return (
-		<section className="blog container relative" id="blog">
+		<section className="blog container" id="blog">
 			{renderBlogContent()}
 			<Renderer content={cosmicObj.metadata.content ? cosmicObj.metadata.content : '' } />
 		</section>

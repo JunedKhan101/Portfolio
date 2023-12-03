@@ -73,7 +73,7 @@ export default function AboutPage() {
 							I love to build projects, I'm always working on one
 							behind the scenes.
 							<br />
-							I'm currently teaching myself and reserching about
+							I'm currently teaching myself and researching about
 							image comparison algorithms to build a project.
 						</p>
 						<h4>
