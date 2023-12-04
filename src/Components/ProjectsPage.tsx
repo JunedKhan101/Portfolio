@@ -36,7 +36,7 @@ export default function ProjectsPage() {
 	};
 	return (
 		<section className="projects-container" id="projects">
-			<h1 className="projects-heading custom-header">All Projects</h1>
+			<h1 className="projects-heading custom-header">Personal Projects</h1>
 			<div className="projects">
 			<div className="project-instance">
 					<div className="project-header">

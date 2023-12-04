@@ -19,7 +19,7 @@ export default function CopyButton({ content }: any) {
         currentBtn.classList.add("active");
         setTimeout(() => {
             currentBtn.classList.remove("active");
-        }, 3000)
+        }, 3000);
 	};
 	return (
 		<div>

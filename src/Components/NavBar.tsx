@@ -81,7 +81,7 @@ export default function NavBar() {
 								About
 							</Nav.Link>
 							<Nav.Link className="mynav-links" href="/projects">
-								All Projects
+								Projects
 							</Nav.Link>
 							<Nav.Link className="mynav-links" href="/gear">
 								Gear
