@@ -41,18 +41,6 @@ function App() {
 			else if (localtheme === "dark") setThemeFlag(true);
 		}
 	}, []);
-
-	var html = document.getElementsByTagName("html")[0];
-	var body = document.getElementsByTagName("body")[0];
-	if (theme === "dark" && themeflag === true) {
-		html.style.backgroundColor = "#001220";
-		body.style.backgroundColor = "#001220";
-		body.style.color = "#EEE";
-	} else if (theme === "light" && themeflag === false) {
-		html.style.backgroundColor = "#FFFFFF";
-		body.style.backgroundColor = "#FFFFFF";
-		body.style.color = "#000000";
-	}
 	return (
 		<ThemeContext.Provider value={{ themeflag, theme, toggleTheme }}>
 			<div className="app" id={theme}>
