@@ -152,6 +152,28 @@
 .clear-filter-btn-container-small {
 	display: none;
 }
+.clear-filter-btn, .clear-filter-btn-small {
+	border: 1px solid #8240B7;
+	color: black;
+	background: none;
+	font-weight: 500;
+	padding: 7px;
+	border-radius: 10px;
+}
+.clear-filter-btn:hover, .clear-filter-btn-small:hover {
+	border: 1px solid #8240B7;
+	color: #EEE;
+	background-color: #8240B7;
+}
+#dark .clear-filter-btn, #dark .clear-filter-btn-small {
+	border: 1px solid #B20FE9;
+	color: #EEE;
+	background: none;
+}
+#dark .clear-filter-btn:hover, #dark .clear-filter-btn-small:hover {
+	color: black;
+	background-color: #B20FE9;
+}
 @media only screen and (max-width: 576px) {
 	.blog-homepage-subcontainer h1 {
 		padding-top: 20px;

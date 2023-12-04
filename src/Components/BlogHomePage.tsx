@@ -120,11 +120,7 @@ export default function BlogHomePage() {
 							}
 						>
 							<button
-								className={
-									theme === "dark"
-										? "btn btn-secondary clear-filter-btn-small"
-										: "btn btn-dark clear-filter-btn-small"
-								}
+								className="clear-filter-btn-small"
 								onClick={() => handleClearFilter()}
 							>
 								Clear Filters
@@ -164,11 +160,7 @@ export default function BlogHomePage() {
 						}
 					>
 						<button
-							className={
-								theme === "dark"
-									? "btn btn-secondary clear-filter-btn"
-									: "btn btn-dark clear-filter-btn"
-							}
+							className={"clear-filter-btn"}
 							onClick={() => handleClearFilter()}
 						>
 							Clear Filters
