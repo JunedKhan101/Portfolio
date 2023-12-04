@@ -64,7 +64,7 @@ export default function Blog() {
 				/>
 			);
 		} else if (notfound || Object.keys(cosmicObj).length === 0) {
-			return <h1>No Blog content to show</h1>;
+			return <h1>No blog content found</h1>;
 		} else {
 			var formattedCreatedAtDate;
 			if (cosmicObj.metadata.createdat) {
