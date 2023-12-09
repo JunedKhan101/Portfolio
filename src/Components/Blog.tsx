@@ -85,7 +85,9 @@ export default function Blog() {
 						<meta charSet="utf-8" />
 						<title>{cosmicObj.title}</title>
 						<meta name="title" content={cosmicObj.title} />
+						<meta property="og:title" content={cosmicObj.title} />
 						<meta name="description" content={cosmicObj.metadata.description} />
+						<meta property="og:description" content={cosmicObj.metadata.description} />
 						<meta name="keywords" content={cosmicObj.metadata.seokeywords ? cosmicObj.metadata.seokeywords : ""} />
 						<meta name="robots" content="index, follow" />
 						<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
