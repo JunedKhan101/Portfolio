@@ -93,7 +93,7 @@ export default function Blog() {
 						<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 						<meta name="language" content="English" />
 					</Helmet>
-					<div className="blogpost-container container pt-4">
+					<div className="blogpost-container container m-0 p-0 pt-4">
 						<h1 className="blog-heading pb-4 display-1">
 							{cosmicObj.title}
 						</h1>
