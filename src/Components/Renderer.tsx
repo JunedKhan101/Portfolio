@@ -22,45 +22,43 @@ export default function CopyButton({ content }: any) {
         }, 3000);
 	};
 	return (
-		<div>
-			<ReactMarkdown
-				children={content ? content : ""}
-				components={{
-					code({ node, inline, className, children, ...props }) {
-						const match = /language-(\w+)/.exec(className || "");
-						return !inline && match ? (
-							<>
-								<CopyToClipboard text={String(children[0])}>
-									<button
-										onClick={handleCopy}
-										className="prism-copy-button"
-									>
-										<ClipBoardSVG />
-										<CheckSVG />
-									</button>
-								</CopyToClipboard>
-								<SyntaxHighlighter
-									{...props}
-									children={String(children).replace(
-										/\n$/,
-										""
-									)}
-									style={
-										theme === "dark" ? oneDark : oneLight
-									}
-									language={match[1]}
-									showLineNumbers={true}
-									PreTag="div"
-								/>
-							</>
-						) : (
-							<code {...props} className={className}>
-								{children}
-							</code>
-						);
-					},
-				}}
-			/>
-		</div>
+		<ReactMarkdown
+			children={content ? content : ""}
+			components={{
+				code({ node, inline, className, children, ...props }) {
+					const match = /language-(\w+)/.exec(className || "");
+					return !inline && match ? (
+						<>
+							<CopyToClipboard text={String(children[0])}>
+								<button
+									onClick={handleCopy}
+									className="prism-copy-button"
+								>
+									<ClipBoardSVG />
+									<CheckSVG />
+								</button>
+							</CopyToClipboard>
+							<SyntaxHighlighter
+								{...props}
+								children={String(children).replace(
+									/\n$/,
+									""
+								)}
+								style={
+									theme === "dark" ? oneDark : oneLight
+								}
+								language={match[1]}
+								showLineNumbers={true}
+								PreTag="div"
+							/>
+						</>
+					) : (
+						<code {...props} className={className}>
+							{children}
+						</code>
+					);
+				},
+			}}
+		/>
 	);
 }

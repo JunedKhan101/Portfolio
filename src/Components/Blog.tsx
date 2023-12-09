@@ -120,6 +120,7 @@ export default function Blog() {
 							:
 							null
 						}
+						<Renderer content={cosmicObj.metadata.content ? cosmicObj.metadata.content : '' } />
 					</div>
 				</>
 			);
@@ -128,7 +129,6 @@ export default function Blog() {
 	return (
 		<section className="blog container" id="blog">
 			{renderBlogContent()}
-			<Renderer content={cosmicObj.metadata.content ? cosmicObj.metadata.content : '' } />
 		</section>
 	);
 }
