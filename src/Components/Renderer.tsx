@@ -1,9 +1,9 @@
 // This component renders the blog content in markdown and highlights the syntax of the code
-import { useContext } from "react";
+import { useContext, lazy } from "react";
 import { ThemeContext } from "./App";
 import { CopyToClipboard } from "react-copy-to-clipboard";
-import ClipBoardSVG from "./svg/ClipBoardSVG";
-import CheckSVG from "./svg/CheckSVG";
+const ClipBoardSVG = lazy(() => import("./svg/ClipBoardSVG"));
+const CheckSVG = lazy(() => import("./svg/CheckSVG"));
 import "../css/renderer.css";
 
 import ReactMarkdown from "react-markdown";

@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, lazy } from "react";
 import { BlogObject } from "../types/cosmicObj";
-import Renderer from "./Renderer";
+const Renderer = lazy(() => import("./Renderer"));
 import { useParams } from "react-router-dom";
 import { createBucketClient } from "@cosmicjs/sdk";
 import { Helmet } from "react-helmet";

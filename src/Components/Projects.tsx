@@ -5,7 +5,7 @@ import { ThemeContext } from "./App";
 const GitHubSVG = lazy(() => import("./svg/GitHubSVG"));
 const VideoSVG = lazy(() => import("./svg/VideoSVG"));
 const OpenLinkSVG = lazy(() => import("./svg/OpenLinkSVG"));
-import PrivateSVG from "./svg/PrivateSVG";
+const PrivateSVG = lazy(() => import("./svg/PrivateSVG"));
 import "../css/projects.css";
 
 export default function Projects() {
