@@ -63,13 +63,13 @@
 	background-color: #8240B7;
 }
 #dark .submit-btn, #dark .back-btn {
-	border: 1px solid #B20FE9;
+	border: 1px solid #8225FF;
 	color: #EEE;
 	background: none;
 }
 #dark .submit-btn:hover, #dark .back-btn:hover {
 	color: black;
-	background-color: #B20FE9;
+	background-color: #8225FF;
 }
 /* #dark .back-btn {
 	color: #eee;

@@ -68,6 +68,7 @@ hr {
 	width: 100%;
 }
 .modal-close-btn, .x-close-btn {
+	/* border: 1px solid #8240B7; */
 	border: 1px solid #8240B7;
 	color: black;
 	background: none;
@@ -79,13 +80,13 @@ hr {
 	background-color: #8240B7;
 }
 #modal-dark .modal-close-btn, #modal-dark .x-close-btn {
-	border: 1px solid #B20FE9;
+	border: 1px solid #8225FF;
 	color: #EEE;
 	background: none;
 }
 #modal-dark .modal-close-btn:hover, #modal-dark .x-close-btn:hover {
 	color: black;
-	background-color: #B20FE9;
+	background-color: #8225FF;
 }
 @media only screen and (max-width: 576px) {
 	#projects {
