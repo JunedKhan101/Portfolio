@@ -32,7 +32,7 @@ export default function ToLearn() {
 				obj.objects.sort((a: any, b: any) => {
 					const dateA = new Date(a.metadata.createdat).getTime();
 					const dateB = new Date(b.metadata.createdat).getTime();
-					return dateA - dateB;
+					return dateB - dateA;
 				});
 				// console.log(obj.objects);
 				const mostRecentBlogs = obj.objects.slice(0, 3);
