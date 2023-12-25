@@ -1,6 +1,5 @@
 import { useEffect, useState, useContext, MouseEvent, lazy } from "react";
 import { createBucketClient } from "@cosmicjs/sdk";
-import { ThemeContext } from "./App";
 const BlogCard = lazy(() => import("./BlogCard"));
 import "../css/bloghomepage.css";
 import { CosmicObject } from "../types/cosmicObj";
@@ -10,7 +9,6 @@ export default function BlogHomePage() {
 	const [cosmicFilterObj, setCosmicFilterObj] = useState<CosmicObject[]>([]);
 	const [filter, setFilter] = useState<Array<string>>([]);
 	const [isLoading, setIsLoading] = useState<boolean>(false);
-	const { theme } = useContext(ThemeContext) as { theme: string };
 	useEffect(() => {
 		initializeCosmic();
 	}, []);
