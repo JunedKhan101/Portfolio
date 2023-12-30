@@ -18,7 +18,7 @@ export default function AboutPage() {
 					<div className="profileimg-container">
 						<img
 							className="profileimg-aboutpage"
-							src="/static/aboutme.png"
+							src="/static/aboutme.webp"
 							alt="profile.png"
 						/>
 					</div>
