@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { createBucketClient } from "@cosmicjs/sdk";
 import { CosmicObject } from "../types/cosmicObj";
 import { Card } from "react-bootstrap";
@@ -7,9 +7,6 @@ import "../css/tolearn.css";
 export default function ToLearn() {
 	const [cosmicObj, setCosmicObj] = useState<CosmicObject[]>([]);
 	const [isLoading, setIsLoading] = useState<boolean>(false);
-	useEffect(() => {
-		initializeCosmic();
-	}, []);
 	const initializeCosmic = async () => {
 		const cosmic = createBucketClient({
 			bucketSlug: import.meta.env.VITE_COSMIC_BUCKET_SLUG,
@@ -88,6 +85,34 @@ export default function ToLearn() {
 			return blog;
 		}
 	};
+	const targetRef = useRef(null);
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+		  ([entry]) => {
+			// If the target element is visible
+			if (entry.isIntersecting) {
+			  initializeCosmic();
+			  if (targetRef.current) {
+			  	observer.unobserve(targetRef.current);
+			  }
+			}
+		  },
+		  { threshold: 0.5 }
+		);
+	
+		// Start observing the target element
+		if (targetRef.current) {
+		  observer.observe(targetRef.current);
+		}
+	
+		// Cleanup: Stop observing when the component is unmounted
+		return () => {
+		  if (targetRef.current) {
+			observer.unobserve(targetRef.current);
+		  }
+		};
+	  }, []);
+	
 	return (
 		<section className="tolearn" id="tolearn">
 			<div className="ending-container">
@@ -113,7 +138,7 @@ export default function ToLearn() {
 						</ul>
 					</div>
 				</div>
-				<div className="recent-blogs">
+				<div ref={targetRef} className="recent-blogs">
 					<h2 className="custom-header">Recent blog articles</h2>
 					{/* <hr className="recent-blogs-hr" /> */}
 					{renderRecentBlogs()}
