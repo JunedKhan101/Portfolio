@@ -44,7 +44,7 @@ export default function ToLearn() {
 		var blog = [];
 		if (isLoading) {
 			return (
-				<img id="loading-recent-blog" src="static/loading.png" alt="loading" />
+				<img id="loading-recent-blog" src="static/loading.webp" alt="loading" />
 			);
 		}
 		else if (cosmicObj && cosmicObj.length === 0) {

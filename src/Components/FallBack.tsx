@@ -5,7 +5,7 @@ export default function FallBack() {
 		<div className="fallback w-100 h-100 d-flex align-items-center justify-content-center">
             <img
                 id="loading-fallback"
-                src="/static/loading.png"
+                src="/static/loading.webp"
                 alt="loading"
             />
             {/* <h5>Loading...</h5> */}

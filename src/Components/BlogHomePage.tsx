@@ -65,7 +65,7 @@ export default function BlogHomePage() {
 	function renderBlogs() {
 		if (isLoading) {
 			return (
-				<img id="loading-blog" src="static/loading.png" alt="loading" />
+				<img id="loading-blog" src="static/loading.webp" alt="loading" />
 			);
 		} else if (cosmicObj && cosmicObj.length === 0) {
 			return <h1>No Blog content to show</h1>;

@@ -59,7 +59,7 @@ export default function Blog() {
 			return (
 				<img
 					id="loading-blogpost"
-					src="/static/loading.png"
+					src="/static/loading.webp"
 					alt="loading"
 				/>
 			);

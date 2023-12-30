@@ -178,7 +178,7 @@ export default function Contact() {
 							{renderForm()}
 							<img
 								id="loading"
-								src="/static/loading.png"
+								src="/static/loading.webp"
 								alt="loading"
 								ref={loadingRef}
 							/>
