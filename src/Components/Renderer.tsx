@@ -7,6 +7,7 @@ const CheckSVG = lazy(() => import("./svg/CheckSVG"));
 import "../css/renderer.css";
 
 import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
@@ -24,8 +25,9 @@ export default function CopyButton({ content }: any) {
 	return (
 		<ReactMarkdown
 			children={content ? content : ""}
+			rehypePlugins={[rehypeRaw]}
 			components={{
-				code({ node, inline, className, children, ...props }) {
+				code({ node, inline, className, children, ...props }: {node: any, inline: any, className: any, children: any}) {
 					const match = /language-(\w+)/.exec(className || "");
 					return !inline && match ? (
 						<>

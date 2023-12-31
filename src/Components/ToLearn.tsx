@@ -64,11 +64,11 @@ export default function ToLearn() {
 						<Card className="recent-blog-card">
 							<Card.Body className="recent-blog-card-body">
 								<Card.Title
-									className={
+									className={`w-100 ${
 										cosmicObj[i].metadata.description
-											? "pb-2 w-100"
+											? "pb-2"
 											: "m-0"
-									}
+									}`}
 								>
 									{cosmicObj[i].title}
 								</Card.Title>
