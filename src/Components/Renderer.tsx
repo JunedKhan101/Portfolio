@@ -42,7 +42,6 @@ export default function Renderer({ content }: any) {
 								</button>
 							</CopyToClipboard>
 							<SyntaxHighlighter
-								{...props}
 								children={String(children).replace(
 									/\n$/,
 									""
@@ -53,7 +52,6 @@ export default function Renderer({ content }: any) {
 								language={match[1]}
 								showLineNumbers={true}
 								PreTag="div"
-								ref={(ref) => {}}
 							/>
 						</>
 					) : (
