@@ -1,5 +1,5 @@
 // This component renders the blog content in markdown and highlights the syntax of the code
-import { useContext, lazy, useRef, forwardRef } from "react";
+import { useContext, lazy } from "react";
 import { ThemeContext } from "./App";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 const ClipBoardSVG = lazy(() => import("./svg/ClipBoardSVG"));
