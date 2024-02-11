@@ -69,7 +69,8 @@ export default function Footer() {
 					</div>
 				</Row>
 				<Row>
-					<p className="text-center">&copy; {new Date().getFullYear()} Juned Khan</p>
+					<p className="text-center m-0">&copy; {new Date().getFullYear()} Juned Khan</p>
+					<p className="text-center m-0 pb-4">All rights reserved</p>
 				</Row>
 			</Container>
 		</footer>
