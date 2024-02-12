@@ -30,6 +30,8 @@
 	align-content: center;
 	justify-content: center;
 	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	/* grid-template-columns: auto auto; */
+	/* grid-column-gap: 50px; */
 }
 .project-content-container { width: 100% }
 .project-content { width: 100%; }
@@ -91,11 +93,11 @@ hr {
 	padding-bottom: 10px;
 }
 .project-img-container-desktop {
-	/* width: 100%; */
+	max-width: 95%;
 	display: block;
 	display: flex;
 	align-items: center;
-	justify-content: start;
+	justify-content: end;
 }
 .project-img-container-mobile img {
 	width: 100%;
@@ -105,8 +107,8 @@ hr {
 	border-radius: 15px;
 }
 .project-img-container-desktop img {
-	width: 90%;
-	height: 400px;
+	width: 40rem;
+	height: 25rem;
 	object-fit: cover;
 	border: 1px solid black;
 	border-radius: 15px;
