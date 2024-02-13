@@ -90,8 +90,9 @@ export default function ProjectsPage() {
 									saved images from Instagram.
 									<br />
 									Unlike other Instagram scrapers who just dump
-									all the saved collections and images in a single
-									folder,
+									all the saved collections and images
+									in a single folder.
+									<br />
 									InstaScrapy script saves images in folders which
 									correspond to the saved collections folder in
 									Instagram meaning scrape data is more organized.
