@@ -43,9 +43,9 @@ export default function ProjectsPage() {
 				<div className="projects">
 					<div className="project-instance">
 						<div className="project-img-container-desktop">
-							<img src="/static/insta.jpg" alt="img" />
+							<img src="/static/insta.webp" alt="img" />
 						</div>
-						<div className="project-content-container d-flex align-items-center justify-content-center">
+						<div className="project-content-container">
 							<div className="project-content">
 								<div className="project-header">
 									<h3>InstaScrapy</h3>
@@ -83,7 +83,7 @@ export default function ProjectsPage() {
 								</div>
 								<hr />
 								<div className="project-img-container-mobile">
-									<img src="/static/insta.jpg" alt="img" />
+									<img src="/static/insta.webp" alt="img" />
 								</div>
 								<p className="project-description">
 									InstaScrapy is a python script that scrapes
@@ -101,9 +101,9 @@ export default function ProjectsPage() {
 					</div>
 					<div className="project-instance">
 						<div className="project-img-container-desktop">
-							<img src="/static/NutriAl2.png" alt="img" />
+							<img src="/static/NutriAl2.webp" alt="img" />
 						</div>
-						<div className="project-content-container d-flex align-items-center justify-content-center">
+						<div className="project-content-container">
 							<div className="project-content">
 								<div className="project-header">
 									<h3>NutriAl</h3>
@@ -154,7 +154,7 @@ export default function ProjectsPage() {
 								</div>
 								<hr />
 								<div className="project-img-container-mobile">
-									<img src="/static/NutriAl2.png" alt="img" />
+									<img src="/static/NutriAl2.webp" alt="img" />
 								</div>
 								<p className="project-description">
 									Nutrition Analysis, Built in React and
@@ -181,9 +181,9 @@ export default function ProjectsPage() {
 					</div>
 					<div className="project-instance">
 						<div className="project-img-container-desktop">
-							<img src="/static/Quiz-Game2.png" alt="img" />
+							<img src="/static/Quiz-Game2.webp" alt="img" />
 						</div>
-						<div className="project-content-container d-flex align-items-center justify-content-center">
+						<div className="project-content-container">
 							<div className="project-content">
 								<div className="project-header">
 									<h3>Quiz Game</h3>
@@ -234,7 +234,7 @@ export default function ProjectsPage() {
 								</div>
 								<hr />
 								<div className="project-img-container-mobile">
-									<img src="/static/Quiz-Game2.png" alt="img" />
+									<img src="/static/Quiz-Game2.webp" alt="img" />
 								</div>
 								<p className="project-description">
 									Built in React.js, react-router-dom and Material
