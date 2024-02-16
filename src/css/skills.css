@@ -10,6 +10,10 @@
 	width: auto;
 	height: auto;
 	overflow: visible;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 }
 .skills-heading { text-align: center; }
 
@@ -37,6 +41,9 @@
 }
 ul {
   list-style: square outside none;
+}
+.skills-card-container {
+	width: 90%;
 }
 .skills > .skills-card {
 	border: none;
