@@ -25,7 +25,8 @@
     flex-direction: column;
 }
 .projects {
-	max-width: 95%;
+	/* 90% is prefered here need to change the layout of the projects link button to be able to do that */
+	max-width: 95%; 
 	width: auto;
 	display: flex;
     align-items: center;
@@ -45,16 +46,13 @@
 .project-instance:nth-child(2n) .project-content-container {
 	width: 100%;
 	order: -1;
-	justify-content: end;
+	justify-content: start;
 }
 .project-instance:nth-child(2n) .project-img-container-desktop {
 	justify-content: start;
 }
-.project-instance:nth-child(2n) .project-content-container .project-content {
-	width: 40rem;
-}
 .project-content-container { 
-	max-width: 95%; 
+	max-width: 90%; 
 	width: 100%;
 	display: flex;
 	align-items: center;
@@ -89,7 +87,7 @@
 }
 hr { 
 	margin: 0.5rem 0;
-	width: 90%;
+	width: 100%;
 }
 .video {
 	width: 100%;
@@ -120,7 +118,7 @@ hr {
 	padding-bottom: 10px;
 }
 .project-img-container-desktop {
-	max-width: 95%;
+	max-width: 90%;
 	display: flex;
 	align-items: center;
 	justify-content: end;
@@ -133,7 +131,8 @@ hr {
 	border-radius: 15px;
 }
 .project-img-container-desktop img {
-	max-width: 40rem;
+	/* max-width: 40rem; */
+	max-width: 100%;
 	width: 100%;
 	height: auto;
 	object-fit: cover;
@@ -171,3 +170,8 @@ hr {
 		width: 100%
 	}
 }
+/* @media only screen and (min-width: 2000px) {
+	.project-description {
+		font-size: 1.3rem;
+	}
+} */

@@ -13,6 +13,20 @@ export default function ProjectsPage() {
 		AOS.init({
 			duration: 1000,
 		});
+
+		const handleResize = () => {
+			if (window.innerWidth > 2000) {
+			  setModalSize('xl');
+			} else {
+			  setModalSize('lg');
+			}
+		  };
+	  
+		  handleResize(); // Initial check
+	  
+		  window.addEventListener('resize', handleResize);
+	  
+		  return () => window.removeEventListener('resize', handleResize);
 	}, []);
 	const { theme } = useContext(ThemeContext) as { theme: string };
 	var ModalStyle = {
@@ -21,6 +35,7 @@ export default function ProjectsPage() {
 	};
 
 	const [show, setShow] = useState(false);
+	const [modalSize, setModalSize] = useState<'lg' | 'xl'>('lg');
 	const [projectName, setProjectName] = useState("");
 	const [videoLink, setVideoLink] = useState("");
 	const handleClose = () => setShow(false);
@@ -41,6 +56,77 @@ export default function ProjectsPage() {
 			</h1>
 			<div className="projects-sub-container">
 				<div className="projects">
+					<div className="project-instance">
+						<div className="project-img-container-desktop">
+							<img src="/static/Mad-Scientist.webp" alt="img" />
+						</div>
+						<div className="project-content-container">
+							<div className="project-content">
+								<div className="project-header">
+									<h3>Mad Scientist Blog</h3>
+									<div className="project-links-container">
+										<div className="project-links">
+											[&nbsp;
+											<OpenLinkSVG />
+											&nbsp;
+											<a
+												className="link"
+												target="_blank"
+												rel="noopener noreferrer"
+												href="https://mad-scientist.netlify.app/"
+											>
+												Open
+											</a>
+										</div>
+										<div className="project-links">
+											&nbsp;|&nbsp;
+											<GitHubSVG />
+											&nbsp;
+											<a
+												className="link"
+												target="_blank"
+												rel="noopener noreferrer"
+												href="https://github.com/JunedKhan101/mad-scientist-blog"
+											>
+												GitHub
+											</a>
+										</div>
+										<div className="project-links">
+											&nbsp;|&nbsp;
+											<VideoSVG />
+											&nbsp;
+											<a
+												className="link"
+												href="#modal"
+												rel="noopener noreferrer"
+												data-name="Mad Scientist"
+												data-videolink="/static/Mad Scientist.mp4"
+												onClick={handleVideoClick}
+											>
+												Video
+											</a>
+											&nbsp;]
+										</div>
+									</div>
+								</div>
+								<hr />
+								<div className="project-img-container-mobile">
+									<img
+										src="/static/Mad-Scientist.webp"
+										alt="img"
+									/>
+								</div>
+								<p className="project-description">
+									The Mad Scientist Blog is a blog app built
+									in Astro, React, Tailwind and Cosmic.js.
+									<br />
+									The blog is capable of writing scientific
+									notations, markup and math symbols using
+									rehypeKatex and rehype raw plugin.
+								</p>
+							</div>
+						</div>
+					</div>
 					<div className="project-instance">
 						<div className="project-img-container-desktop">
 							<img src="/static/insta.webp" alt="img" />
@@ -89,13 +175,14 @@ export default function ProjectsPage() {
 									InstaScrapy is a python script that scrapes
 									saved images from Instagram.
 									<br />
-									Unlike other Instagram scrapers who just dump
-									all the saved collections and images
-									in a single folder.
+									Unlike other Instagram scrapers who just
+									dump all the saved collections and images in
+									a single folder.
 									<br />
-									InstaScrapy script saves images in folders which
-									correspond to the saved collections folder in
-									Instagram meaning scrape data is more organized.
+									InstaScrapy script saves images in folders
+									which correspond to the saved collections
+									folder in Instagram meaning scrape data is
+									more organized.
 								</p>
 							</div>
 						</div>
@@ -155,7 +242,10 @@ export default function ProjectsPage() {
 								</div>
 								<hr />
 								<div className="project-img-container-mobile">
-									<img src="/static/NutriAl2.webp" alt="img" />
+									<img
+										src="/static/NutriAl2.webp"
+										alt="img"
+									/>
 								</div>
 								<p className="project-description">
 									Nutrition Analysis, Built in React and
@@ -169,12 +259,12 @@ export default function ProjectsPage() {
 										Edamam Nutrition Analysis API
 									</a>
 									<br />
-									Users can efficiently see the nutrients a food
-									contains.
+									Users can efficiently see the nutrients a
+									food contains.
 									<br />
 									It returns basic and complex nutrients
-									information, Graph view displays nutrients in a
-									graph.
+									information, Graph view displays nutrients
+									in a graph.
 									<br />
 								</p>
 							</div>
@@ -235,11 +325,14 @@ export default function ProjectsPage() {
 								</div>
 								<hr />
 								<div className="project-img-container-mobile">
-									<img src="/static/Quiz-Game2.webp" alt="img" />
+									<img
+										src="/static/Quiz-Game2.webp"
+										alt="img"
+									/>
 								</div>
 								<p className="project-description">
-									Built in React.js, react-router-dom and Material
-									UI.
+									Built in React.js, react-router-dom and
+									Material UI.
 									<br />
 									Data is fetched from a{" "}
 									<a
@@ -249,8 +342,8 @@ export default function ProjectsPage() {
 										3rd party quiz API
 									</a>
 									<br />
-									Form view displays all quiz like a form and one
-									at a time in focused view.
+									Form view displays all quiz like a form and
+									one at a time in focused view.
 								</p>
 							</div>
 						</div>
@@ -258,7 +351,7 @@ export default function ProjectsPage() {
 				</div>
 			</div>
 			<Modal
-				size="lg"
+				size={modalSize}
 				centered
 				show={show}
 				onHide={handleClose}
