@@ -41,13 +41,15 @@ export default function ProjectsPage() {
 	const handleClose = () => setShow(false);
 	const handleShow = () => setShow(true);
 
-	const handleVideoClick = (event: MouseEvent<HTMLAnchorElement>) => {
-		const anchorElement = event.target as HTMLAnchorElement;
-		var pname = anchorElement.getAttribute("data-name") as string;
-		var videolink = anchorElement.getAttribute("data-videolink") as string;
-		setProjectName(pname);
-		setVideoLink(videolink);
-		handleShow();
+	const handleVideoClick = (event: React.MouseEvent<HTMLAnchorElement> | React.MouseEvent<SVGSVGElement, MouseEvent>) => {
+		const anchorElement = (event.target as HTMLElement).closest('a');
+		if (anchorElement) {
+			var pname = anchorElement.getAttribute("data-name") as string;
+			var videolink = anchorElement.getAttribute("data-videolink") as string;
+			setProjectName(pname);
+			setVideoLink(videolink);
+			handleShow();
+		}
 	};
 	return (
 		<section className="projects-container" id="projects">
@@ -64,7 +66,7 @@ export default function ProjectsPage() {
 							<div className="project-content">
 								<div className="project-header">
 									<h3>Mad Scientist Blog</h3>
-									<div className="project-links-container">
+									{/* <div className="project-links-container">
 										<div className="project-links">
 											[&nbsp;
 											<OpenLinkSVG />
@@ -107,7 +109,7 @@ export default function ProjectsPage() {
 											</a>
 											&nbsp;]
 										</div>
-									</div>
+									</div> */}
 								</div>
 								<hr />
 								<div className="project-img-container-mobile">
@@ -124,6 +126,44 @@ export default function ProjectsPage() {
 									notations, markup and math symbols using
 									rehypeKatex and rehype raw plugin.
 								</p>
+							</div>
+							<div className="fancy-projects-links-container">
+								<a className="fancy-project-link l-1 span-flex"
+									target="_blank"
+									rel="noopener noreferrer"
+									href="https://mad-scientist.netlify.app/">
+									<span>
+										<OpenLinkSVG />
+										<span>Open</span>
+									</span>
+									<svg viewBox="-5 -5 110 110" preserveAspectRatio="none" aria-hidden="true">
+										<path d="M0,0 C0,0 100,0 100,0 C100,0 100,100 100,100 C100,100 0,100 0,100 C0,100 0,0 0,0"/>
+									</svg>
+								</a>
+								<a
+									className="fancy-project-link l-2 span-flex"
+									target="_blank"
+									rel="noopener noreferrer"
+									href="https://github.com/JunedKhan101/mad-scientist-blog"
+								>
+									<span>
+										<GitHubSVG />
+										<span>GitHub</span>
+									</span>
+								</a>
+								<a
+									className="fancy-project-link l-3 span-flex"
+									href="#modal"
+									rel="noopener noreferrer"
+									data-name="Mad Scientist"
+									data-videolink="/static/Mad Scientist.mp4"
+									onClick={handleVideoClick}
+								>
+									<span>
+										<VideoSVG />
+										<span>Video</span>
+									</span>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -149,7 +189,7 @@ export default function ProjectsPage() {
 												GitHub Private
 											</a>
 										</div>
-										<div className="project-links">
+										{/* <div className="project-links">
 											&nbsp;|&nbsp;
 											<VideoSVG />
 											&nbsp;
@@ -157,13 +197,13 @@ export default function ProjectsPage() {
 												className="link"
 												href="#modal"
 												rel="noopener noreferrer"
-												data-name="NutriAl"
+												data-name="InstaScrapy"
 												data-videolink="/static/InstaScrapy.mp4"
 												onClick={handleVideoClick}
 											>
 												Video
 											</a>
-										</div>
+										</div> */}
 										&nbsp;]
 									</div>
 								</div>
@@ -185,6 +225,32 @@ export default function ProjectsPage() {
 									more organized.
 								</p>
 							</div>
+							<div className="fancy-projects-links-container">
+								{/* <a
+									className="fancy-project-link l-2 span-flex"
+									target="_blank"
+									rel="noopener noreferrer"
+									href="https://github.com/JunedKhan101/mad-scientist-blog"
+								>
+									<span>
+										<GitHubSVG />
+										<span>GitHub</span>
+									</span>
+								</a> */}
+								<a
+									className="fancy-project-link l-3 span-flex"
+									href="#modal"
+									rel="noopener noreferrer"
+									data-name="InstaScrapy"
+									data-videolink="/static/InstaScrapy.mp4"
+									onClick={handleVideoClick}
+								>
+									<span>
+										<VideoSVG />
+										<span>Video</span>
+									</span>
+								</a>
+							</div>
 						</div>
 					</div>
 					<div className="project-instance">
@@ -195,7 +261,7 @@ export default function ProjectsPage() {
 							<div className="project-content">
 								<div className="project-header">
 									<h3>NutriAl</h3>
-									<div className="project-links-container">
+									{/* <div className="project-links-container">
 										<div className="project-links">
 											[&nbsp;
 											<OpenLinkSVG />
@@ -238,7 +304,7 @@ export default function ProjectsPage() {
 											</a>
 											&nbsp;]
 										</div>
-									</div>
+									</div> */}
 								</div>
 								<hr />
 								<div className="project-img-container-mobile">
@@ -268,6 +334,44 @@ export default function ProjectsPage() {
 									<br />
 								</p>
 							</div>
+							<div className="fancy-projects-links-container">
+								<a className="fancy-project-link l-1 span-flex"
+									target="_blank"
+									rel="noopener noreferrer"
+									href="https://www.nutrition-analysis.com/">
+									<span>
+										<OpenLinkSVG />
+										<span>Open</span>
+									</span>
+									<svg viewBox="-5 -5 110 110" preserveAspectRatio="none" aria-hidden="true">
+										<path d="M0,0 C0,0 100,0 100,0 C100,0 100,100 100,100 C100,100 0,100 0,100 C0,100 0,0 0,0"/>
+									</svg>
+								</a>
+								<a
+									className="fancy-project-link l-2 span-flex"
+									target="_blank"
+									rel="noopener noreferrer"
+									href="https://github.com/JunedKhan101/NutriAl"
+								>
+									<span>
+										<GitHubSVG />
+										<span>GitHub</span>
+									</span>
+								</a>
+								<a
+									className="fancy-project-link l-3 span-flex"
+									href="#modal"
+									rel="noopener noreferrer"
+									data-name="NutriAl"
+									data-videolink="/static/NutriAl.mp4"
+									onClick={handleVideoClick}
+								>
+									<span>
+										<VideoSVG />
+										<span>Video</span>
+									</span>
+								</a>
+							</div>
 						</div>
 					</div>
 					<div className="project-instance">
@@ -278,7 +382,7 @@ export default function ProjectsPage() {
 							<div className="project-content">
 								<div className="project-header">
 									<h3>Quiz Game</h3>
-									<div className="project-links-container">
+									{/* <div className="project-links-container">
 										<div className="project-links">
 											[&nbsp;
 											<OpenLinkSVG />
@@ -321,7 +425,7 @@ export default function ProjectsPage() {
 											</a>
 											&nbsp;]
 										</div>
-									</div>
+									</div> */}
 								</div>
 								<hr />
 								<div className="project-img-container-mobile">
@@ -345,6 +449,44 @@ export default function ProjectsPage() {
 									Form view displays all quiz like a form and
 									one at a time in focused view.
 								</p>
+							</div>
+							<div className="fancy-projects-links-container">
+								<a className="fancy-project-link l-1 span-flex"
+									target="_blank"
+									rel="noopener noreferrer"
+									href="https://www.solo-quiz-game.com/">
+									<span>
+										<OpenLinkSVG />
+										<span>Open</span>
+									</span>
+									<svg viewBox="-5 -5 110 110" preserveAspectRatio="none" aria-hidden="true">
+										<path d="M0,0 C0,0 100,0 100,0 C100,0 100,100 100,100 C100,100 0,100 0,100 C0,100 0,0 0,0"/>
+									</svg>
+								</a>
+								<a
+									className="fancy-project-link l-2 span-flex"
+									target="_blank"
+									rel="noopener noreferrer"
+									href="https://github.com/JunedKhan101/Quiz-game"
+								>
+									<span>
+										<GitHubSVG />
+										<span>GitHub</span>
+									</span>
+								</a>
+								<a
+									className="fancy-project-link l-3 span-flex"
+									href="#modal"
+									rel="noopener noreferrer"
+									data-name="Quiz Game"
+									data-videolink="/static/QuizGame.mp4"
+									onClick={handleVideoClick}
+								>
+									<span>
+										<VideoSVG />
+										<span>Video</span>
+									</span>
+								</a>
 							</div>
 						</div>
 					</div>

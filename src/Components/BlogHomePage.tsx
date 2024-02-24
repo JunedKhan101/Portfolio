@@ -1,4 +1,4 @@
-import { useEffect, useState, useContext, MouseEvent, lazy } from "react";
+import { useEffect, useState, MouseEvent, lazy } from "react";
 import { createBucketClient } from "@cosmicjs/sdk";
 const BlogCard = lazy(() => import("./BlogCard"));
 import "../css/bloghomepage.css";
