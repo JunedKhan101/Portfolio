@@ -12,7 +12,7 @@ export default function Main() {
 				<meta name="title" content="Juned Khan - Software Engineer" />
 				<meta
 					name="description"
-					content="Juned Khan is a Software Engineer who loves to solves technical problems with his skills and expertise. A super curious individual and a lifelong learner"
+					content="Hi I'm Juned!, A full-stack software engineer"
 				/>
 				<meta
 					name="keywords"
