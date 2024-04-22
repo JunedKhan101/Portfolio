@@ -15,24 +15,35 @@
 	justify-content: center;
 	flex-direction: column;
 }
-.skills-heading { text-align: center; }
-
 .skills {
-	width: 100%;
+	width: 70%;
+	max-width: 50rem;
 	min-height: 100%;
-
+	position: relative;
+	top: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.toolbox-heading {
+	width: 100%;
+	text-align: left;
+}
+.icons img {
+	width: 70px;
+	height: auto;
+}
+.github-container {
+	width: 100%;
+}
+.icons {
+	width: 100%;
 	display: grid;
 	align-content: center;
 	justify-content: center;
-	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-	grid-row-gap: 50px;
-
-	position: relative;
-	top: 30px;
-}
-#dark .skills-card {
-	background-color: #001220 ;
-	color: #EEE;
+	grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+	grid-row-gap: 20px;
 }
 #skills {
 	/* padding-top: 52px; before custom nav */
@@ -44,18 +55,21 @@ ul {
 }
 .skills-card-container {
 	width: 90%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 }
-.skills > .skills-card {
-	border: none;
-	align-self: start;
-	justify-self: center;
+.github-stats-wrapper {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	gap: 20px;
+	flex-wrap: wrap;
 }
-
-@media only screen and (min-width: 1799px) {
-	.skills {
-		width: 90rem;
-		margin: 0 auto;
-	}
+.github-stats-wrapper img {
+	max-width: 100%;
+	height: 11rem;
 }
 @media only screen and (max-width: 576px) {
 	.skills {
@@ -66,4 +80,14 @@ ul {
 		/* padding-top: 60px; before custom-nav */
 		padding-top: 120px;
 	}
+	.icons {
+		grid-template-columns: auto auto auto;
+		grid-column-gap: 35px;
+	}
+	.toolbox-heading, .github-stats-heading {
+		text-align: center;
+	}
+}
+@media only screen and (max-width: 1123px) {
+	.skills { width: 100%; }
 }
