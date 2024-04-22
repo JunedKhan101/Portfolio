@@ -1,100 +1,61 @@
-import { useEffect } from "react";
-import AOS from "aos";
-import { Card } from "react-bootstrap";
+import { useContext } from "react";
+import { ThemeContext } from "./App";
 import "../css/skills.css";
 
 export default function Skills() {
-	useEffect(() => {
-		AOS.init({
-			duration: 1000,
-		});
-	}, []);
+	const { theme } = useContext(ThemeContext) as { theme: string };
 	return (
 		<section className="skills-container" id="skills">
 			<div className="skills-subcontainer">
-				<h2 className="skills-heading custom-header">Skills</h2>
 				<div className="skills-card-container">
 					<div className="skills">
-						<Card className="skills-card" data-aos="fade-up" style={{ width: "18rem" }}>
-							<Card.Body>
-								<Card.Title>Frontend</Card.Title>
-								<hr />
-								<ul>
-									<li>React</li>
-									<li>HTML5</li>
-									<li>CSS/SCSS/SASS</li>
-									<li>BootStrap</li>
-									<li>JavaScript</li>
-									<li>JQuery</li>
-								</ul>
-							</Card.Body>
-						</Card>
-
-						<Card className="skills-card" data-aos="fade-up" style={{ width: "18rem" }}>
-							<Card.Body>
-								<Card.Title>Backend</Card.Title>
-								<hr />
-								<ul>
-									<li>Node.js and Express</li>
-									<li>JWT Authentication</li>
-									<li>Django</li>
-									<li>PHP</li>
-								</ul>
-							</Card.Body>
-						</Card>
-
-						<Card className="skills-card" data-aos="fade-up" style={{ width: "18rem" }}>
-							<Card.Body>
-								<Card.Title>Database</Card.Title>
-								<hr />
-								<ul>
-									<li>MySQL</li>
-									<li>MongoDB/Mongoose</li>
-								</ul>
-							</Card.Body>
-						</Card>
-
-						<Card className="skills-card" data-aos="fade-up" style={{ width: "18rem" }}>
-							<Card.Body>
-								<Card.Title>Programming Languages</Card.Title>
-								<hr />
-								<ul>
-									<li>Python</li>
-									<li>JavaScript</li>
-									<li>Java</li>
-									<li>C/C++</li>
-								</ul>
-							</Card.Body>
-						</Card>
-
-						<Card className="skills-card" data-aos="fade-up" style={{ width: "18rem" }}>
-							<Card.Body>
-								<Card.Title>Libraries and Frameworks</Card.Title>
-								<hr />
-								<ul>
-									<li>Pandas</li>
-									<li>Matplotlib</li>
-									<li>Numpy</li>
-									<li>Chart.js</li>
-								</ul>
-							</Card.Body>
-						</Card>
-
-						<Card className="skills-card" data-aos="fade-up" style={{ width: "18rem" }}>
-							<Card.Body>
-								<Card.Title>Other</Card.Title>
-								<hr />
-								<ul>
-									<li>Git and GitHub</li>
-									<li>Jenkins</li>
-									<li>
-										<b>Agile-Scrum</b> Model
-									</li>
-									<li>DSA</li>
-									<li>Data Visualization</li>
-								</ul>
-							</Card.Body>
-						</Card>
+						<h2 className="toolbox-heading custom-header">
+							My Toolbox
+						</h2>
+						<div className="icons">
+							<img alt="javascript" src="https://skillicons.dev/icons?i=js" />
+							<img src="https://skillicons.dev/icons?i=ts" />
+							<img src="https://skillicons.dev/icons?i=jquery" />
+							<img src="https://skillicons.dev/icons?i=react" />
+							<img src="https://skillicons.dev/icons?i=nodejs" />
+							<img src="https://skillicons.dev/icons?i=next" />
+							<img src="https://skillicons.dev/icons?i=python" />
+							<img src="https://skillicons.dev/icons?i=django" />
+							<img src="https://skillicons.dev/icons?i=c" />
+							<img src="https://skillicons.dev/icons?i=cpp" />
+							<img src="https://skillicons.dev/icons?i=java" />
+							<img src="https://skillicons.dev/icons?i=cs" />
+							<img src="https://skillicons.dev/icons?i=mysql" />
+							<img src="https://skillicons.dev/icons?i=mongodb" />
+							<img src="https://skillicons.dev/icons?i=postgresql" />
+							<img src="https://skillicons.dev/icons?i=git" />
+							<img src="https://skillicons.dev/icons?i=bootstrap" />
+							<img src="https://skillicons.dev/icons?i=tailwind" />
+							<img src="https://skillicons.dev/icons?i=sass" />
+							<img src="https://skillicons.dev/icons?i=css" />
+							<img src="https://skillicons.dev/icons?i=docker" />
+						</div>
+						<div className="github-container">
+							<h2 className="pt-4 github-stats-heading custom-header">GitHub Stats</h2>
+							<div className="github-stats-wrapper">
+								<img
+									height="170rem"
+									src={`https://github-readme-stats.vercel.app/api?username=JunedKhan101&show_icons=false&hide_border=true&count_private=true&show_icons=true&theme=${
+										theme === "dark"
+											? "midnight-purple"
+											: "buefy"
+									}`}
+								/>
+								<img
+									height="170rem"
+									src={`https://github-readme-stats.vercel.app/api/top-langs/?username=JunedKhan101&hide=html,Jupyter%20Notebook&show_icons=true&hide_border=true&layout=compact&exclude_repo=Vim-configs&langs_count=6&theme=${
+										theme === "dark"
+											? "midnight-purple"
+											: "buefy"
+									}`}
+								/>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
