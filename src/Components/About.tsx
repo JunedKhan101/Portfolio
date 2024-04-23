@@ -10,8 +10,6 @@ export default function About() {
 						I am dedicated to designing, developing, and implementing cutting-edge software solutions.<br />
 						Proficient in multiple programming languages and well-versed in software development methodologies,<br />I specialize in creating robust and scalable applications that meet the unique needs of clients and end-users.<br />
 						I help small and large businesses achieve their technical goals and clients to build their products.<br /><br />
-						My expertise extends to system architecture, code optimization, and troubleshooting, ensuring seamless functionality and exceptional performance.<br />
-						Whether collaborating with cross-functional teams or independently tackling complex challenges, I thrive on transforming ideas into efficient and reliable software solutions.<br />
 					</p>
 				</div>
 				<div className="sub-description">
@@ -51,8 +49,7 @@ export default function About() {
 					</p>
 					<p>
 						In my spare time, I work on personal projects, learn new
-						technologies,
-						<br /> read books, watch NetFlix or go for a walk.
+						technologies, read books, watch NetFlix or go for a walk.
 					</p>
 				</div>
 			</div>
