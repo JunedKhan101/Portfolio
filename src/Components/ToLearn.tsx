@@ -117,9 +117,9 @@ export default function ToLearn() {
 		<section className="tolearn" id="tolearn">
 			<div className="ending-container">
 				<div className="to-learn-container">
-					<h2 className="custom-header">I want to learn</h2>
+					<h2 className="custom-header">To learn</h2>
 					{/* <hr className="recent-blogs-hr" /> */}
-					<p>(Future ventures)</p>
+					<p>(Things I wanna learn)</p>
 					<div className="tolearn-content">
 						<ul>
 							<li>Network and Security</li>
