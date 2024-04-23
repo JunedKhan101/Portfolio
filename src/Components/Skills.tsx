@@ -14,26 +14,26 @@ export default function Skills() {
 						</h2>
 						<div className="icons">
 							<img alt="javascript" src="https://skillicons.dev/icons?i=js" />
-							<img src="https://skillicons.dev/icons?i=ts" />
-							<img src="https://skillicons.dev/icons?i=jquery" />
-							<img src="https://skillicons.dev/icons?i=react" />
-							<img src="https://skillicons.dev/icons?i=nodejs" />
-							<img src="https://skillicons.dev/icons?i=next" />
-							<img src="https://skillicons.dev/icons?i=python" />
-							<img src="https://skillicons.dev/icons?i=django" />
-							<img src="https://skillicons.dev/icons?i=c" />
-							<img src="https://skillicons.dev/icons?i=cpp" />
-							<img src="https://skillicons.dev/icons?i=java" />
-							<img src="https://skillicons.dev/icons?i=cs" />
-							<img src="https://skillicons.dev/icons?i=mysql" />
-							<img src="https://skillicons.dev/icons?i=mongodb" />
-							<img src="https://skillicons.dev/icons?i=postgresql" />
-							<img src="https://skillicons.dev/icons?i=git" />
-							<img src="https://skillicons.dev/icons?i=bootstrap" />
-							<img src="https://skillicons.dev/icons?i=tailwind" />
-							<img src="https://skillicons.dev/icons?i=sass" />
-							<img src="https://skillicons.dev/icons?i=css" />
-							<img src="https://skillicons.dev/icons?i=docker" />
+							<img alt="typescript" src="https://skillicons.dev/icons?i=ts" />
+							<img alt="jquery" src="https://skillicons.dev/icons?i=jquery" />
+							<img alt="react" src="https://skillicons.dev/icons?i=react" />
+							<img alt="nodejs" src="https://skillicons.dev/icons?i=nodejs" />
+							<img alt="nextjs" src="https://skillicons.dev/icons?i=next" />
+							<img alt="python" src="https://skillicons.dev/icons?i=python" />
+							<img alt="django" src="https://skillicons.dev/icons?i=django" />
+							<img alt="c" src="https://skillicons.dev/icons?i=c" />
+							<img alt="cpp" src="https://skillicons.dev/icons?i=cpp" />
+							<img alt="java" src="https://skillicons.dev/icons?i=java" />
+							<img alt="csharp" src="https://skillicons.dev/icons?i=cs" />
+							<img alt="mysql" src="https://skillicons.dev/icons?i=mysql" />
+							<img alt="mongodb" src="https://skillicons.dev/icons?i=mongodb" />
+							<img alt="postgresSQL" src="https://skillicons.dev/icons?i=postgresql" />
+							<img alt="git" src="https://skillicons.dev/icons?i=git" />
+							<img alt="bootstrap" src="https://skillicons.dev/icons?i=bootstrap" />
+							<img alt="tailwind" src="https://skillicons.dev/icons?i=tailwind" />
+							<img alt="sass" src="https://skillicons.dev/icons?i=sass" />
+							<img alt="css" src="https://skillicons.dev/icons?i=css" />
+							<img alt="docker" src="https://skillicons.dev/icons?i=docker" />
 						</div>
 						<div className="github-container">
 							<h2 className="pt-4 github-stats-heading custom-header">GitHub Stats</h2>

@@ -6,6 +6,7 @@
 	justify-content: center;
 	overflow: hidden;
 }
+
 .skills-subcontainer {
 	width: auto;
 	height: auto;
@@ -15,6 +16,7 @@
 	justify-content: center;
 	flex-direction: column;
 }
+
 .skills {
 	width: 70%;
 	max-width: 50rem;
@@ -26,17 +28,21 @@
 	justify-content: center;
 	flex-direction: column;
 }
+
 .toolbox-heading {
 	width: 100%;
 	text-align: left;
 }
+
 .icons img {
 	width: 70px;
 	height: auto;
 }
+
 .github-container {
 	width: 100%;
 }
+
 .icons {
 	width: 100%;
 	display: grid;
@@ -45,14 +51,17 @@
 	grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
 	grid-row-gap: 20px;
 }
+
 #skills {
 	/* padding-top: 52px; before custom nav */
 	padding-top: 120px;
-  	/* margin-top: -52px; margin removed due to nav highlighting issue */ 
+	/* margin-top: -52px; margin removed due to nav highlighting issue */
 }
+
 ul {
-  list-style: square outside none;
+	list-style: square outside none;
 }
+
 .skills-card-container {
 	width: 90%;
 	display: flex;
@@ -60,6 +69,7 @@ ul {
 	justify-content: center;
 	flex-direction: column;
 }
+
 .github-stats-wrapper {
 	display: flex;
 	align-items: flex-start;
@@ -67,6 +77,7 @@ ul {
 	gap: 20px;
 	flex-wrap: wrap;
 }
+
 .github-stats-wrapper img {
 	max-width: 100%;
 	height: 11rem;
@@ -76,18 +87,25 @@ ul {
 		top: 10px;
 		grid-row-gap: 0;
 	}
+
 	#skills {
 		/* padding-top: 60px; before custom-nav */
 		padding-top: 120px;
 	}
+
 	.icons {
 		grid-template-columns: auto auto auto;
 		grid-column-gap: 35px;
 	}
-	.toolbox-heading, .github-stats-heading {
+
+	.toolbox-heading,
+	.github-stats-heading {
 		text-align: center;
 	}
 }
+
 @media only screen and (max-width: 1123px) {
-	.skills { width: 100%; }
+	.skills {
+		width: 100%;
+	}
 }
