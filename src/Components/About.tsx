@@ -6,7 +6,7 @@ export default function About() {
 			<div className="description-container">
 				<div className="sub-description">
 					<h2 className="custom-header">What I do</h2>
-					<p>
+					<p className="m-0">
 						I am dedicated to designing, developing, and implementing cutting-edge software solutions.<br />
 						Proficient in multiple programming languages and well-versed in software development methodologies,<br />I specialize in creating robust and scalable applications that meet the unique needs of clients and end-users.<br />
 						I help small and large businesses achieve their technical goals and clients to build their products.<br /><br />
