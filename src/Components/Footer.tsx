@@ -1,11 +1,11 @@
-import { useContext, MouseEvent } from "react";
+import { MouseEvent } from "react";
 import { Row, Container, Navbar, Nav } from "react-bootstrap";
 import { SocialIcon } from "react-social-icons";
-import { ThemeContext } from "./App";
+import { useTheme } from "../context/ThemeContext";
 import "../css/footer.css";
 
 export default function Footer() {
-    const { theme } = useContext(ThemeContext) as { theme: string };
+    const { theme } = useTheme();
     const handleFacebookIconClick = (e: MouseEvent<HTMLAnchorElement>) => {
 		e.preventDefault();
 		alert(`I don't use Facebook anymore`);

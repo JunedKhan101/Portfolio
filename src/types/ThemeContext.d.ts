@@ -3,3 +3,6 @@ export interface ThemeContextType {
     theme: string;
     toggleTheme: () => void;
 }
+export type ThemeContextProviderType = {
+    children: React.ReactNode
+}

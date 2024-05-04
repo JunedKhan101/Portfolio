@@ -1,11 +1,10 @@
-import { useContext } from "react";
-import { ThemeContext } from "./App";
+import { useTheme } from "../context/ThemeContext";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
 import "../css/skills.css";
 
 export default function Skills() {
-	const { theme } = useContext(ThemeContext) as { theme: string };
+	const { theme } = useTheme();
 	const skills = [
 		"javascript",
 		"typescript",

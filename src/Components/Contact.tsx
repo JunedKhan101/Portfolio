@@ -1,12 +1,12 @@
-import { useState, MouseEvent, useContext, useRef } from "react";
+import { useState, MouseEvent, useRef } from "react";
 import { send } from "emailjs-com";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import { SocialIcon } from "react-social-icons";
-import { ThemeContext } from "./App";
+import { useTheme } from "../context/ThemeContext";
 import "../css/contact.css";
 
 export default function Contact() {
-	const { theme } = useContext(ThemeContext) as { theme: string };
+	const { theme } = useTheme();
 	const [toSend, setToSend] = useState({
 		name: "",
 		subject: "",

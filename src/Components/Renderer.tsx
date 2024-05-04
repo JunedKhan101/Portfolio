@@ -1,6 +1,6 @@
 // This component renders the blog content in markdown and highlights the syntax of the code
-import { useContext, lazy } from "react";
-import { ThemeContext } from "./App";
+import { lazy } from "react";
+import { useTheme } from "../context/ThemeContext";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 const ClipBoardSVG = lazy(() => import("./svg/ClipBoardSVG"));
 const CheckSVG = lazy(() => import("./svg/CheckSVG"));
@@ -13,7 +13,7 @@ import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export default function Renderer({ content }: { content: string }) {
-	const { theme } = useContext(ThemeContext) as { theme: string };
+	const { theme } = useTheme();
 	const handleCopy = (event: React.MouseEvent<HTMLButtonElement>) => {
 		var currentBtn = event.currentTarget;
 		currentBtn.classList.add("active");

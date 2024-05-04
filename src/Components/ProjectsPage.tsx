@@ -1,7 +1,7 @@
 import { useEffect, useContext, useState, MouseEvent, lazy } from "react";
 import { Container, Button, Modal } from "react-bootstrap";
 import AOS from "aos";
-import { ThemeContext } from "./App";
+import { useTheme } from "../context/ThemeContext";
 const GitHubSVG = lazy(() => import("./svg/GitHubSVG"));
 const VideoSVG = lazy(() => import("./svg/VideoSVG"));
 const OpenLinkSVG = lazy(() => import("./svg/OpenLinkSVG"));
@@ -28,7 +28,7 @@ export default function ProjectsPage() {
 	  
 		  return () => window.removeEventListener('resize', handleResize);
 	}, []);
-	const { theme } = useContext(ThemeContext) as { theme: string };
+	const { theme } = useTheme();
 	var ModalStyle = {
 		backgroundColor: theme === "dark" ? "#001220 " : "#FFFFFF",
 		color: theme === "dark" ? "#eee" : "#000000",

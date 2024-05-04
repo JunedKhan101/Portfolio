@@ -1,8 +1,8 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import Switch from "react-switch";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import { ThemeContext } from "./App";
+import { useTheme } from "../context/ThemeContext";
 import "../css/navbar.css";
 
 export default function NavBar() {
@@ -11,7 +11,7 @@ export default function NavBar() {
 		theme: string;
 		toggleTheme: () => void;
 	}
-	const { themeflag, theme, toggleTheme } = useContext<ThemeContextType>(ThemeContext);
+	const { themeflag, theme, toggleTheme } = useTheme();
 	const [show, setShow] = useState(false);
 
 	const handleClose = () => setShow(false);
