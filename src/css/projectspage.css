@@ -55,7 +55,7 @@
 .project-instance:nth-child(2n) .project-content-container {
 	width: 100%;
 	order: -1;
-	justify-content: start;
+	justify-content: center;
 }
 
 .project-instance:nth-child(2n) .project-img-container-desktop {
