@@ -21,11 +21,8 @@ export default function ProjectsPage() {
 			  setModalSize('lg');
 			}
 		  };
-	  
 		  handleResize(); // Initial check
-	  
 		  window.addEventListener('resize', handleResize);
-	  
 		  return () => window.removeEventListener('resize', handleResize);
 	}, []);
 	const { theme } = useTheme();
@@ -338,7 +335,7 @@ export default function ProjectsPage() {
 								<a className="fancy-project-link l-1 span-flex"
 									target="_blank"
 									rel="noopener noreferrer"
-									href="https://www.nutrition-analysis.com/">
+									href="https://nutrial.netlify.app">
 									<span>
 										<OpenLinkSVG />
 										<span>Open</span>
@@ -454,7 +451,7 @@ export default function ProjectsPage() {
 								<a className="fancy-project-link l-1 span-flex"
 									target="_blank"
 									rel="noopener noreferrer"
-									href="https://www.solo-quiz-game.com/">
+									href="https://friendly-quiz-game.netlify.app">
 									<span>
 										<OpenLinkSVG />
 										<span>Open</span>
